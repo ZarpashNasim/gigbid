@@ -31,8 +31,8 @@ class IdempotencyStore:
 
 
 class RateLimiter:
-    """Token bucket per user, kept under GigSim's published limits (set rate/burst from its README)."""
-    def __init__(self, rate_per_s: float = 2.0, burst: int = 5, clock=time.monotonic):
+    """Token bucket per user, kept under GigSim's published limit (20 requests/minute; see gigsim/README.md)."""
+    def __init__(self, rate_per_s: float = 20 / 60, burst: int = 20, clock=time.monotonic):
         self.rate, self.burst, self.clock = rate_per_s, burst, clock
         self.state: dict[str, tuple[float, float]] = {}
 

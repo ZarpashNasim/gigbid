@@ -1,5 +1,6 @@
-"""GigSim adapter.  !! ENDPOINTS BELOW ARE GUESSES !! Fix paths/fields against the real GigSim README
-from the Classroom starter kit; nothing else in the system needs to change (that is the point of the port)."""
+"""GigSim adapter. Endpoints/fields match the self-built GigSim simulator documented in gigsim/README.md
+(the instructor's GigSim service was not provided). If the official service ever arrives, adjust the paths
+here to its README; nothing else in the system needs to change (that is the point of the port)."""
 from __future__ import annotations
 
 import time

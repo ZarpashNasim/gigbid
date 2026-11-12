@@ -1,6 +1,12 @@
-.PHONY: test eval eval-synth synth card lint dev seed demo
+.PHONY: test eval eval-synth synth card lint dev seed demo gigsim
 test:
 	python -m pytest tests mcp_servers -q
+
+# Self-built GigSim marketplace simulator (stand-in; the instructor's service was not in the kit).
+# Serves data/synthetic over HTTP on :8081 with bearer auth, a 20/min rate limit and simulated client replies.
+# See gigsim/README.md. Set GIGSIM_API_TOKEN in .env for a non-default token.
+gigsim:
+	python -m gigsim
 
 # Reruns the full variant comparison + ablation and rewrites evals/results/*.json (+ .md tables).
 # Point DATASET at the real dev set from the starter kit; the toy set only validates the machinery.

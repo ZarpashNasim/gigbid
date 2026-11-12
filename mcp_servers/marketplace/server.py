@@ -134,6 +134,8 @@ def http_app(mcp: FastMCP, tokens: dict[str, str]):
 
 if __name__ == "__main__":
     from .adapters.gigsim import GigSimBackend
-    be = GigSimBackend(os.environ["GIGSIM_URL"], os.environ["GIGSIM_API_KEY"])
+    url = os.environ.get("GIGSIM_BASE_URL") or os.environ.get("GIGSIM_URL", "http://localhost:8081")
+    tok = os.environ.get("GIGSIM_API_TOKEN") or os.environ.get("GIGSIM_API_KEY", "")
+    be = GigSimBackend(url, tok)
     build_server(be, AuditLog(os.environ.get("AUDIT_LOG", "audit.jsonl")),
                  IdempotencyStore(os.environ.get("IDEM_DB", "idem.sqlite"))).run()

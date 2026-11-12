@@ -28,8 +28,10 @@ def build_app():
     default_portfolio = f"data/synthetic/personas/{persona}/portfolio.json" if mode == "synthetic" else "data/sample/portfolio.json"
     # evidence index = verified work only; past proposals are claims and stay out of it
     corpus = Corpus.from_json(os.environ.get("PORTFOLIO_PATH", default_portfolio), eligible_only=True)
+    gigsim_url = os.environ.get("GIGSIM_BASE_URL") or os.environ.get("GIGSIM_URL", "http://localhost:8081")
+    gigsim_token = os.environ.get("GIGSIM_API_TOKEN") or os.environ.get("GIGSIM_API_KEY", "")
     backend = (SyntheticBackend(os.environ.get("SYNTHETIC_DIR", "data/synthetic"), os.environ.get("SYNTHETIC_SPLIT", "dev"))
-               if mode == "synthetic" else GigSimBackend(os.environ["GIGSIM_URL"], os.environ["GIGSIM_API_KEY"]))
+               if mode == "synthetic" else GigSimBackend(gigsim_url, gigsim_token))
     profiles = {}
     if mode == "synthetic":
         prof = json.loads(open(f"data/synthetic/personas/{persona}/freelancer.json").read())
