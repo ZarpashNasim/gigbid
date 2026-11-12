@@ -42,6 +42,28 @@ class HashEmbedder:
         return out / np.where(n == 0, 1, n)
 
 
+class OllamaEmbedder:
+    """Real open embedding model served by Ollama (default `nomic-embed-text`). Torch-free: talks HTTP to a local
+    `ollama serve` (default http://localhost:11434), so it runs on Python 3.14 where torch has no wheels yet.
+    L2-normalises so dot product == cosine, matching how HashEmbedder and Corpus.dense() work.
+    """
+    def __init__(self, model: str = "nomic-embed-text", host: str = "http://localhost:11434", timeout: float = 120.0):
+        import httpx
+        self.model = model
+        self.host = host.rstrip("/")
+        self._client = httpx.Client(timeout=timeout)
+
+    def embed(self, texts):
+        texts = list(texts)
+        if not texts:
+            return np.zeros((0, 1), dtype="float32")
+        r = self._client.post(f"{self.host}/api/embed", json={"model": self.model, "input": texts})
+        r.raise_for_status()
+        arr = np.asarray(r.json()["embeddings"], dtype="float32")
+        n = np.linalg.norm(arr, axis=1, keepdims=True)
+        return arr / np.where(n == 0, 1, n)
+
+
 def normalise_doc(d: dict) -> dict:
     """Accept both our flat schema (id/text/outcome) and the starter-kit schema (evidence_id/title/summary).
 

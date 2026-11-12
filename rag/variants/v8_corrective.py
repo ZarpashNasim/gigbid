@@ -33,9 +33,11 @@ def supports(req: str, ev: EvidenceItem, thr: float) -> bool:
 class V8Corrective:
     name = "v8_corrective"
 
-    def __init__(self, corpus: Corpus, threshold: float = 0.34, min_coverage: float = 0.5, max_retries: int = 1):
+    def __init__(self, corpus: Corpus, threshold: float = 0.34, min_coverage: float = 0.5, max_retries: int = 1,
+                 grader=None):
         self.base = Composed(corpus, decompose=True, hybrid=True)
         self.thr, self.min_cov, self.max_retries = threshold, min_coverage, max_retries
+        self.grader = grader   # optional LLMSupportGrader; None -> strict lexical supports() below
         g = StateGraph(S)
         g.add_node("retrieve", self._retrieve)
         g.add_node("grade", self._grade)
@@ -52,7 +54,13 @@ class V8Corrective:
 
     def _grade(self, s):
         reqs = s["job"].get("requirements") or [s["job"]["text"]]
-        sup = {r: [e.id for e in s["evidence"] if supports(r, e, self.thr)] for r in reqs}
+        ev = s["evidence"]
+        sup = {}
+        for r in reqs:
+            ids = self.grader.supported_ids(r, ev) if self.grader else None   # LLM grader (semantic) if configured
+            if ids is None:                                                   # else / on failure: strict lexical check
+                ids = {e.id for e in ev if supports(r, e, self.thr)}
+            sup[r] = [e.id for e in ev if e.id in ids]
         return {"supported": sup}
 
     def _route(self, s):

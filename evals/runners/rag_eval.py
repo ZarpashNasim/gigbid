@@ -32,15 +32,15 @@ class OracleReqs:
         return self.v.retrieve({**job, "requirements": job.get("requirements_oracle") or job["requirements"]}, k)
 
 
-def variants(corpus: Corpus) -> dict:
+def variants(corpus: Corpus, reranker=None, grader=None) -> dict:
     return {
         "V0 naive dense": V0Naive(corpus),
         "V1 decompose (naive reqs)": v1_decompose.make(corpus),
         "V1 decompose (oracle reqs)": OracleReqs(v1_decompose.make(corpus), "oracle"),
         "V2 hybrid": V2Hybrid(corpus),
-        "V3 hybrid+rerank": v3_rerank.make(corpus),
-        "V4 outcome-aware": v4_outcome.make(corpus),
-        "V8 corrective": V8Corrective(corpus),
+        "V3 hybrid+rerank": v3_rerank.make(corpus, reranker=reranker),
+        "V4 outcome-aware": v4_outcome.make(corpus, reranker=reranker),
+        "V8 corrective": V8Corrective(corpus, grader=grader),
     }
 
 
@@ -100,22 +100,28 @@ def load_groups(ds: dict, corpus_path=None, root=None, embedder=None, eligible_o
 
 
 def run(dataset_path: str, out: str, corpus_path: str | None = None, root: str | None = None, embedder=None,
-        eligible_only: bool = True) -> dict:
+        eligible_only: bool = True, reranker=None, grader=None,
+        embedder_name: str | None = None, reranker_name: str | None = None,
+        grader_name: str | None = None, llm_name: str | None = None) -> dict:
     ds = json.loads(Path(dataset_path).read_text())
     groups = load_groups(ds, corpus_path, root, embedder, eligible_only)
     acc: dict[str, list] = {}
     for _persona, (corpus, items) in groups.items():
-        for name, v in variants(corpus).items():
+        for name, v in variants(corpus, reranker, grader).items():
             rows, lat, ab = collect(v, items)
             a = acc.setdefault(name, [[], [], []])
             a[0] += rows; a[1] += lat; a[2] += ab
     first = next(iter(groups.values()))[0]
-    stand_ins = ["embedder" if type(first.embedder).__name__ == "HashEmbedder" else None, "reranker", "V8 grader (lexical)"]
+    emb_name = embedder_name or type(first.embedder).__name__
+    rr_name = reranker_name or "LexicalReranker(stand-in)"
+    gr_name = grader_name or "V8 grader (lexical)"
+    is_standin = lambda s: any(w in s.lower() for w in ("stand-in", "lexical", "hashembedder", "no key"))
+    stand_ins = [c for c, nm in (("embedder", emb_name), ("reranker", rr_name), ("V8 grader", gr_name)) if is_standin(nm)]
     res = {"meta": {"dataset": dataset_path, "split": ds.get("split"), "n_items": len(ds["items"]), "personas": sorted(groups),
                     "eligible_only": eligible_only, "synthetic": ds.get("synthetic", False), "is_toy": ds.get("is_toy", False),
                     "generator_version": ds.get("generator_version"), "dataset_note": ds.get("note"),
-                    "embedder": type(first.embedder).__name__, "reranker": "LexicalReranker(stand-in)",
-                    "stand_in_components": [c for c in stand_ins if c]},
+                    "embedder": emb_name, "reranker": rr_name, "v8_grader": gr_name, "llm": llm_name,
+                    "stand_in_components": stand_ins},
            "variants": {n: summarise(*a) for n, a in acc.items()}}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(json.dumps(res, indent=2))
@@ -124,16 +130,31 @@ def run(dataset_path: str, out: str, corpus_path: str | None = None, root: str |
 
 
 if __name__ == "__main__":
+    from rag.components import load_env, make_embedder, make_grader, make_llm, make_reranker
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--corpus", default=None)
     ap.add_argument("--dataset", default="evals/datasets/toy_dev.json")
     ap.add_argument("--root", default=None, help="overrides the dataset's corpora_root")
     ap.add_argument("--out", default="evals/results/rag_toy.json")
     ap.add_argument("--mixed", action="store_true", help="index past proposals together with evidence (stress test)")
+    ap.add_argument("--embedder", default="hash", help="hash | ollama[:model]")
+    ap.add_argument("--reranker", default="lexical", help="lexical | llm")
+    ap.add_argument("--grader", default="lexical", help="lexical | llm  (V8 support grader)")
+    ap.add_argument("--profile", default=None, help="override active LLM profile in agent/config.yaml (e.g. groq)")
     a = ap.parse_args()
-    r = run(a.dataset, a.out, a.corpus, a.root, eligible_only=not a.mixed)
+    load_env()
+    llm, llm_name = make_llm(a.profile) if (a.reranker == "llm" or a.grader == "llm") else (None, None)
+    embedder, emb_name = make_embedder(a.embedder)
+    reranker, rr_name = make_reranker(a.reranker, llm)
+    grader, gr_name = make_grader(a.grader, llm)
+    r = run(a.dataset, a.out, a.corpus, a.root, embedder=embedder, eligible_only=not a.mixed,
+            reranker=reranker, grader=grader, embedder_name=emb_name, reranker_name=rr_name,
+            grader_name=gr_name, llm_name=llm_name)
     print(markdown_table(r))
     m = r["meta"]
-    print(f"\ndataset={m['dataset']} synthetic={m['synthetic']} toy={m['is_toy']} stand-ins={m['stand_in_components']}")
+    print(f"\ndataset={m['dataset']} synthetic={m['synthetic']} toy={m['is_toy']}")
+    print(f"components: embedder={m['embedder']} reranker={m['reranker']} v8_grader={m['v8_grader']} llm={m['llm']}")
+    print(f"stand-ins remaining: {m['stand_in_components']}")
     if m["is_toy"] or m["synthetic"]:
         print("NOT real-world ground truth: report these as synthetic-dev results, with the stand-ins named.")
