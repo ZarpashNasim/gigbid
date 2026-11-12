@@ -1,5 +1,5 @@
 # Model profiles, budgets and thresholds. Nothing here is hard-coded in nodes.
-active_profile: open
+active_profile: groq
 
 profiles:
   open:                      # required: open-weight only (hosted provider or local)

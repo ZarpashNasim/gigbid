@@ -4,4 +4,5 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir . celery redis langgraph-checkpoint-postgres "psycopg[binary]"
 COPY . .
 ENV PYTHONPATH=/app
-CMD ["uvicorn", "--factory", "apps.api.entrypoint:build_app", "--host", "0.0.0.0", "--port", "8000"]
+# Shell form so Render's dynamic $PORT is honored; defaults to 8000 locally (docker-compose).
+CMD ["sh", "-c", "uvicorn --factory apps.api.entrypoint:build_app --host 0.0.0.0 --port ${PORT:-8000}"]

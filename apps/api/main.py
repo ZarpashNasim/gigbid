@@ -6,12 +6,14 @@ so a page refresh or an API restart never loses one.
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
 import time
 from concurrent.futures import ThreadPoolExecutor
 from typing import Literal
 
 from fastapi import Depends, FastAPI, Header, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from langgraph.types import Command
 from pydantic import ConfigDict, Field
@@ -82,6 +84,14 @@ class ApprovalIn(BaseModel):
 def create_app(deps, checkpointer, tokens: dict[str, str], registry_path: str = ":memory:",
                events: EventLog | None = None, executor=None) -> FastAPI:
     app = FastAPI(title="GigBid API")
+    # CORS so the browser web app can call the API cross-origin. Auth is a bearer header (not cookies),
+    # so "*" is safe here; set CORS_ORIGINS (comma-separated) to lock it to the web URL in production.
+    _origins = os.environ.get("CORS_ORIGINS", "*")
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"] if _origins.strip() == "*" else [o.strip() for o in _origins.split(",") if o.strip()],
+        allow_credentials=False, allow_methods=["*"], allow_headers=["*"],
+    )
     graph = build_bid_graph(deps, checkpointer)
     conv_graph = build_conversation_graph(deps, checkpointer)
 

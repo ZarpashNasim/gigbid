@@ -1,0 +1,55 @@
+# Render Blueprint — near one-click deploy of GigBid (API + web UI + Postgres).
+#
+# Steps:
+#   1. Push this repo to GitHub (public).
+#   2. render.com -> New -> Blueprint -> pick your repo. Render reads this file.
+#   3. Set the secret GROQ_API_KEY when prompted (keep agent/config.yaml active_profile: groq).
+#   4. After the API gets its URL (https://gigbid-api-XXXX.onrender.com), set NEXT_PUBLIC_API_URL on the
+#      gigbid-web service to that URL, then redeploy gigbid-web (NEXT_PUBLIC_* is baked at build time).
+#   5. Open the web URL (or the API's /docs), run one job, and paste the URL into your README.
+#
+# Deploys in MARKETPLACE_MODE=synthetic (in-process backend) for a reliable public demo. GigSim and the
+# Ollama embedder are for local runs (infra/docker-compose.demo.yml); they are not wired here on purpose.
+# Note: the web is Next.js 16 — if its build fails on Render, the API's /docs is still a valid reviewer URL.
+# If Render rejects `runtime: docker`, change each `runtime: docker` line to `env: docker`.
+
+databases:
+  - name: gigbid-db
+    plan: free
+    databaseName: gigbid
+    user: gigbid
+
+services:
+  - type: web
+    name: gigbid-api
+    runtime: docker
+    dockerfilePath: ./infra/docker/Dockerfile.api
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MARKETPLACE_MODE
+        value: synthetic
+      - key: PERSONA
+        value: ai_engineer
+      - key: EMBEDDER
+        value: hash
+      - key: API_TOKENS
+        value: '{"demo-token":"user1"}'
+      - key: CHECKPOINT_URL
+        fromDatabase:
+          name: gigbid-db
+          property: connectionString
+      - key: GROQ_API_KEY
+        sync: false            # secret: set in the Render dashboard, do not commit it
+
+  - type: web
+    name: gigbid-web
+    runtime: docker
+    dockerfilePath: ./infra/docker/Dockerfile.web
+    dockerContext: ./apps/web
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        sync: false            # set to the gigbid-api URL after its first deploy, then redeploy this service
