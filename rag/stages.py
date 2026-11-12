@@ -67,6 +67,33 @@ class LLMSupportGrader:
             return None
 
 
+class SemanticSupportGrader:
+    """Signature extension: grade requirement support by *embedding cosine*, not keyword overlap.
+
+    V8's strict lexical grader (rag/variants/v8_corrective.supports) only counts a requirement covered when the
+    evidence text literally shares enough tokens with it, so paraphrase ("speech-to-text" vs "Whisper
+    transcription") reads as unsupported and V8 abstains on most jobs. This grader embeds the requirement and
+    the candidate evidence with the SAME torch-free embedder the retriever uses (Ollama nomic-embed-text for a
+    real semantic signal; the hash stand-in stays lexical) and keeps every candidate whose cosine >= threshold.
+    Deterministic, offline, no API cost. Threshold is tuned on dev only (see docs/EXTENSION.md).
+
+    Interface matches LLMSupportGrader: supported_ids(requirement, items) -> set of supporting ids (or None
+    only when there are no items, so the caller's lexical fallback is a no-op there)."""
+    name = "SemanticSupportGrader"
+
+    def __init__(self, embedder=None, threshold: float = 0.60):   # 0.60 tuned on dev: keeps abstention, 3x recall
+        from rag.index.store import HashEmbedder
+        self.embedder = embedder or HashEmbedder()
+        self.threshold = threshold
+
+    def supported_ids(self, requirement: str, items: list) -> set | None:
+        if not items:
+            return None
+        vecs = self.embedder.embed([requirement] + [e.text for e in items])
+        sims = vecs[1:] @ vecs[0]                                   # cosine (embedder L2-normalises rows)
+        return {items[i].id for i in range(len(items)) if float(sims[i]) >= self.threshold}
+
+
 class LLMReranker:
     """Torch-free listwise reranker: ONE structured LLM call per query scores every candidate 0..1 for how directly
     the evidence proves the requirement (reuses the configured OpenRouter/Groq profile via the agent LLM). Listwise,

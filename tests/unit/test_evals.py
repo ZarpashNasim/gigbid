@@ -80,6 +80,32 @@ def test_v8_keeps_supported_evidence():
     assert [e.id for e in out][:1] == ["cs2"]
 
 
+# ---- signature extension: semantic support grader ----
+def _ev(i, text):
+    from agent.handoffs import EvidenceItem
+    return EvidenceItem(id=i, type="case_study", source="s", text=text)
+
+
+def test_semantic_grader_mechanics():
+    from rag.stages import SemanticSupportGrader
+    items = [_ev("e1", "Built a retrieval augmented generation chatbot on pgvector with FastAPI"),
+             _ev("e2", "Designed a mobile game interface in Unity with C#")]
+    g = SemanticSupportGrader(threshold=0.1)                       # hash embedder, deterministic
+    sup = g.supported_ids("retrieval augmented generation chatbot pgvector", items)
+    assert "e1" in sup and "e2" not in sup                         # cosine separates relevant from unrelated
+    assert g.supported_ids("anything", []) is None                # no items -> None (caller fallback is a no-op)
+    assert SemanticSupportGrader(threshold=1.1).supported_ids("x", items) == set()   # impossible threshold -> none
+    assert sup == g.supported_ids("retrieval augmented generation chatbot pgvector", items)  # deterministic
+
+
+def test_v8_uses_semantic_grader_when_configured():
+    from rag.stages import SemanticSupportGrader
+    c = Corpus.from_json(CORPUS)
+    v8 = V8Corrective(c, grader=SemanticSupportGrader(threshold=0.1))
+    out = v8.retrieve({"text": "dbt pipeline", "requirements": ["dbt Airflow pipeline"]}, k=5)
+    assert out and "cs2" in {e.id for e in out}                    # grader path keeps the supporting case study
+
+
 # ---- runners write traceable result files ----
 def test_rag_eval_writes_json_and_table(tmp_path):
     out = tmp_path / "r.json"

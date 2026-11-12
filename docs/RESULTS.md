@@ -65,6 +65,17 @@ The multi-agent graph skips all 33 flagged jobs and the verifier strips the plan
 
 The same runner on the holdout split reproduces both effects (`ab_retrieval_decisions_holdout.json`, `ab_single_vs_multi_holdout.json`): Exp A keeps the V2 ≳ V3 > V0 ranking (V2 bid rate 0.087, coverage 0.279 vs V0 0.054 / 0.228); Exp B stays at unsafe 0.000 / unsupported 0.000 (multi-agent) vs 1.000 / 1.000 (single-agent), 34/184 jobs flagged. Holdout was run once for this confirmation and not tuned against.
 
+## Signature extension — semantic support grader (synthetic dev subset)
+
+Replacing V8's strict-lexical support grader with an embedding-cosine grader (`SemanticSupportGrader`, same Ollama embedder, only the grader changed) **triples V8 recall while keeping its abstention discipline**:
+
+| V8 grader | Recall@5 | Coverage@5 | nDCG@10 | Abstain rate |
+|---|---|---|---|---|
+| lexical (baseline) | 0.156 | 0.250 | 0.200 | 0.75 |
+| semantic (thr 0.60) | 0.490 | 0.618 | 0.545 | 0.75 |
+
+Files: `rag_synth_dev_subset_v8_{lexical,semantic}.json`. Threshold tuning and the more permissive thr-0.55 point (recall 0.640 but abstain 0.50) are in `docs/EXTENSION.md` / `rag_synth_dev_subset_v8_semantic_thr055.json`. This directly addresses V8's over-abstention (noted above and in `docs/AI_USAGE.md` #8). The reranker remains a lexical stand-in; only the grader is now a real component.
+
 ## Real-data audit of the rule detector (NOT synthetic)
 
 The only non-circular check in this repo. A human (the project owner) labelled **60 real Upwork posts** (`upwork_50k_2024`: 30 rule-flagged + 30 unflagged, shown blind to the rule flags) as scam / injection / legit, then scored them against `agent/rules.py`.

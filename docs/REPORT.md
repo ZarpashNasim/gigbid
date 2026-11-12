@@ -54,8 +54,11 @@ optimism; Windows byte-determinism; contaminated Groq eval deleted).
 Docker compose + Dockerfiles (`infra/`), runbook (`docs/RUNBOOK.md`). Public deployment + reviewer access:
 TODO — record the URL and the end-to-end check you ran.
 
-## 8. Signature extension
-TODO: choose and document one extension (design + evaluation). `docs/EXTENSION.md` is a placeholder.
+## 8. Signature extension — semantic support grader
+Done: `SemanticSupportGrader` (`rag/stages.py`) replaces V8's strict-lexical grader with embedding cosine,
+tripling V8 recall (0.156→0.490) at unchanged abstention on the dev subset. Design, before/after, threshold
+tuning and limitations: `docs/EXTENSION.md`; numbers trace to `rag_synth_dev_subset_v8_{lexical,semantic}.json`.
+TODO: add your own commentary / any further ablation.
 
 ## 9. Limitations & honesty
 Synthetic evals; self-built GigSim; stand-in grader/reranker; single-auditor real-data study; worker stubs.

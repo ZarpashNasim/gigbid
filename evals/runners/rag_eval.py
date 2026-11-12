@@ -144,7 +144,8 @@ if __name__ == "__main__":
     ap.add_argument("--mixed", action="store_true", help="index past proposals together with evidence (stress test)")
     ap.add_argument("--embedder", default="hash", help="hash | ollama[:model]")
     ap.add_argument("--reranker", default="lexical", help="lexical | llm")
-    ap.add_argument("--grader", default="lexical", help="lexical | llm  (V8 support grader)")
+    ap.add_argument("--grader", default="lexical", help="lexical | llm | semantic  (V8 support grader)")
+    ap.add_argument("--grader-threshold", type=float, default=0.60, help="cosine threshold for --grader semantic")
     ap.add_argument("--profile", default=None, help="override active LLM profile in agent/config.yaml (e.g. groq)")
     ap.add_argument("--limit", type=int, default=None, help="only score the first N items (quick validation)")
     a = ap.parse_args()
@@ -152,7 +153,7 @@ if __name__ == "__main__":
     llm, llm_name = make_llm(a.profile) if (a.reranker == "llm" or a.grader == "llm") else (None, None)
     embedder, emb_name = make_embedder(a.embedder)
     reranker, rr_name = make_reranker(a.reranker, llm)
-    grader, gr_name = make_grader(a.grader, llm)
+    grader, gr_name = make_grader(a.grader, llm, embedder=embedder, threshold=a.grader_threshold)
     r = run(a.dataset, a.out, a.corpus, a.root, embedder=embedder, eligible_only=not a.mixed,
             reranker=reranker, grader=grader, embedder_name=emb_name, reranker_name=rr_name,
             grader_name=gr_name, llm_name=llm_name, limit=a.limit)

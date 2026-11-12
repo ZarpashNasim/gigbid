@@ -1,0 +1,1766 @@
+{
+  "meta": {
+    "dataset": "evals/datasets/synth_retrieval_dev_subset.json",
+    "split": "dev",
+    "n_items": 16,
+    "personas": [
+      "ai_engineer",
+      "data_engineer",
+      "fullstack",
+      "mobile"
+    ],
+    "eligible_only": true,
+    "synthetic": true,
+    "is_toy": false,
+    "generator_version": "1.0",
+    "dataset_note": "SYNTHETIC. Gold derived by rule from generator (see gigdata/synth.py docstring). Not real-world ground truth. SUBSET: 4 items/persona (2 good_fit,1 partial_fit,1 out_of_scope), deterministic, for a free-tier real-component run.",
+    "embedder": "ollama:nomic-embed-text",
+    "reranker": "LexicalReranker(stand-in)",
+    "v8_grader": "SemanticSupportGrader(ollama, thr=0.6)",
+    "llm": null,
+    "llm_fallbacks": {
+      "reranker": 0,
+      "grader": 0
+    },
+    "stand_in_components": [
+      "reranker"
+    ]
+  },
+  "variants": {
+    "V0 naive dense": {
+      "recall@5": 0.6158068783068783,
+      "coverage@5": 0.7916666666666666,
+      "mrr": 0.8402777777777778,
+      "ndcg@10": 0.8057061578902619,
+      "n_scored": 12,
+      "p50_ms": 158.26209995429963,
+      "p95_ms": 213.70159997604787,
+      "abstain_rate": 0.0,
+      "n_abstain_items": 4,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.6806547619047619,
+          "coverage@5": 0.8125,
+          "mrr": 0.7604166666666666,
+          "ndcg@10": 0.7738750475808892,
+          "n": 8
+        },
+        "4+ requirements": {
+          "recall@5": 0.4861111111111111,
+          "coverage@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.8693683785090071,
+          "n": 4
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 1.0,
+          "ndcg@10": 0.7850410192085815,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-013",
+            "syn-ai_engineer-010"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-ai_engineer-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.6,
+          "mrr": 1.0,
+          "ndcg@10": 0.8297197050122155,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-001",
+            "syn-ai_engineer-009"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-ai_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 1.0,
+          "returned": [
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-013",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-010"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.16666666666666666,
+          "mrr": 0.25,
+          "ndcg@10": 0.4344408246906201,
+          "returned": [
+            "syn-data_engineer-002",
+            "syn-data_engineer-004",
+            "syn-data_engineer-001",
+            "syn-data_engineer-006",
+            "syn-data_engineer-003"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-data_engineer-002",
+          "group": "4+ requirements",
+          "recall@5": 0.4444444444444444,
+          "mrr": 1.0,
+          "ndcg@10": 0.8987713917876998,
+          "returned": [
+            "syn-data_engineer-006",
+            "syn-data_engineer-004",
+            "syn-data_engineer-013",
+            "syn-data_engineer-001",
+            "syn-data_engineer-012"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-data_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 1.0,
+          "returned": [
+            "syn-data_engineer-003",
+            "syn-data_engineer-002",
+            "syn-data_engineer-004",
+            "syn-data_engineer-001",
+            "syn-data_engineer-006"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.42857142857142855,
+          "mrr": 1.0,
+          "ndcg@10": 0.7288898835959807,
+          "returned": [
+            "syn-fullstack-008",
+            "syn-fullstack-007",
+            "syn-fullstack-004",
+            "syn-fullstack-010",
+            "syn-fullstack-003"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-fullstack-002",
+          "group": "4+ requirements",
+          "recall@5": 0.625,
+          "mrr": 1.0,
+          "ndcg@10": 0.9062487935025676,
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-014",
+            "syn-fullstack-004",
+            "syn-fullstack-002",
+            "syn-fullstack-006"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.9349366583346496,
+          "returned": [
+            "syn-fullstack-004",
+            "syn-fullstack-002",
+            "syn-fullstack-007",
+            "syn-fullstack-014",
+            "syn-fullstack-013"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8874123095371794,
+          "returned": [
+            "syn-mobile-004",
+            "syn-mobile-002",
+            "syn-mobile-007",
+            "syn-mobile-010",
+            "syn-mobile-006"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-mobile-002",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 0.5,
+          "ndcg@10": 0.7606395682357036,
+          "returned": [
+            "syn-mobile-010",
+            "syn-mobile-006",
+            "syn-mobile-005",
+            "syn-mobile-007",
+            "syn-mobile-008"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.502373740777944,
+          "returned": [
+            "syn-mobile-006",
+            "syn-mobile-010",
+            "syn-mobile-012",
+            "syn-mobile-013",
+            "syn-mobile-001"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": [
+        {
+          "id": "syn-dev-ai_engineer-019",
+          "returned": [
+            "syn-ai_engineer-013",
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-012",
+            "syn-ai_engineer-006"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-data_engineer-019",
+          "returned": [
+            "syn-data_engineer-008",
+            "syn-data_engineer-003",
+            "syn-data_engineer-004",
+            "syn-data_engineer-006",
+            "syn-data_engineer-013"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-fullstack-019",
+          "returned": [
+            "syn-fullstack-013",
+            "syn-fullstack-004",
+            "syn-fullstack-010",
+            "syn-fullstack-001",
+            "syn-fullstack-007"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-mobile-019",
+          "returned": [
+            "syn-mobile-006",
+            "syn-mobile-010",
+            "syn-mobile-001",
+            "syn-mobile-013",
+            "syn-mobile-005"
+          ],
+          "abstained": false
+        }
+      ]
+    },
+    "V1 decompose (naive reqs)": {
+      "recall@5": 0.522089947089947,
+      "coverage@5": 0.6597222222222222,
+      "mrr": 0.7805555555555556,
+      "ndcg@10": 0.7633572399705613,
+      "n_scored": 12,
+      "p50_ms": 293.07649994734675,
+      "p95_ms": 445.75209997128695,
+      "abstain_rate": 0.0,
+      "n_abstain_items": 4,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.5261904761904762,
+          "coverage@5": 0.6458333333333334,
+          "mrr": 0.6708333333333333,
+          "ndcg@10": 0.702835795790246,
+          "n": 8
+        },
+        "4+ requirements": {
+          "recall@5": 0.5138888888888888,
+          "coverage@5": 0.6875,
+          "mrr": 1.0,
+          "ndcg@10": 0.8844001283311916,
+          "n": 4
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.625,
+          "mrr": 1.0,
+          "ndcg@10": 0.8987025955356566,
+          "returned": [
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-008",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-004"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-ai_engineer-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.4,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.6565062893041446,
+          "returned": [
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-009",
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-010"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-ai_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 0.2,
+          "ndcg@10": 0.45560514958746035,
+          "returned": [
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-010",
+            "syn-ai_engineer-003",
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-006"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.16666666666666666,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.5428899796310644,
+          "returned": [
+            "syn-data_engineer-003",
+            "syn-data_engineer-002",
+            "syn-data_engineer-009",
+            "syn-data_engineer-004",
+            "syn-data_engineer-001"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-data_engineer-002",
+          "group": "4+ requirements",
+          "recall@5": 0.5555555555555556,
+          "mrr": 1.0,
+          "ndcg@10": 0.9292442392789195,
+          "returned": [
+            "syn-data_engineer-004",
+            "syn-data_engineer-014",
+            "syn-data_engineer-002",
+            "syn-data_engineer-013",
+            "syn-data_engineer-003"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-data_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 0.8529278650606567,
+          "returned": [
+            "syn-data_engineer-004",
+            "syn-data_engineer-010",
+            "syn-data_engineer-013",
+            "syn-data_engineer-002",
+            "syn-data_engineer-003"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.14285714285714285,
+          "mrr": 0.5,
+          "ndcg@10": 0.5202575115704144,
+          "returned": [
+            "syn-fullstack-004",
+            "syn-fullstack-008",
+            "syn-fullstack-003",
+            "syn-fullstack-014",
+            "syn-fullstack-002"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-fullstack-002",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.9021484053648395,
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-004",
+            "syn-fullstack-006",
+            "syn-fullstack-002",
+            "syn-fullstack-013"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-fullstack-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.9709286432396581,
+          "returned": [
+            "syn-fullstack-002",
+            "syn-fullstack-003",
+            "syn-fullstack-004",
+            "syn-fullstack-007",
+            "syn-fullstack-010"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 1.0,
+          "ndcg@10": 0.8075052731453509,
+          "returned": [
+            "syn-mobile-005",
+            "syn-mobile-010",
+            "syn-mobile-006",
+            "syn-mobile-002",
+            "syn-mobile-012"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.9349366583346496,
+          "returned": [
+            "syn-mobile-006",
+            "syn-mobile-005",
+            "syn-mobile-010",
+            "syn-mobile-008",
+            "syn-mobile-012"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.6886342695939197,
+          "returned": [
+            "syn-mobile-012",
+            "syn-mobile-006",
+            "syn-mobile-010",
+            "syn-mobile-013",
+            "syn-mobile-001"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": [
+        {
+          "id": "syn-dev-ai_engineer-019",
+          "returned": [
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-012",
+            "syn-ai_engineer-010",
+            "syn-ai_engineer-008"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-data_engineer-019",
+          "returned": [
+            "syn-data_engineer-008",
+            "syn-data_engineer-003",
+            "syn-data_engineer-004",
+            "syn-data_engineer-013",
+            "syn-data_engineer-006"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-fullstack-019",
+          "returned": [
+            "syn-fullstack-010",
+            "syn-fullstack-013",
+            "syn-fullstack-001",
+            "syn-fullstack-004",
+            "syn-fullstack-012"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-mobile-019",
+          "returned": [
+            "syn-mobile-006",
+            "syn-mobile-001",
+            "syn-mobile-013",
+            "syn-mobile-012",
+            "syn-mobile-010"
+          ],
+          "abstained": false
+        }
+      ]
+    },
+    "V1 decompose (oracle reqs)": {
+      "recall@5": 0.6381613756613757,
+      "coverage@5": 0.7013888888888888,
+      "mrr": 0.8194444444444445,
+      "ndcg@10": 0.8068673934094338,
+      "n_scored": 12,
+      "p50_ms": 168.2609999552369,
+      "p95_ms": 327.98669999465346,
+      "abstain_rate": 0.0,
+      "n_abstain_items": 4,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.669047619047619,
+          "coverage@5": 0.7083333333333334,
+          "mrr": 0.7291666666666666,
+          "ndcg@10": 0.756796928986104,
+          "n": 8
+        },
+        "4+ requirements": {
+          "recall@5": 0.5763888888888888,
+          "coverage@5": 0.6875,
+          "mrr": 1.0,
+          "ndcg@10": 0.9070083222560932,
+          "n": 4
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8881917374298554,
+          "returned": [
+            "syn-ai_engineer-008",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-009"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-ai_engineer-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.4,
+          "mrr": 0.5,
+          "ndcg@10": 0.5939193190346003,
+          "returned": [
+            "syn-ai_engineer-009",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-011"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-ai_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 1.0,
+          "returned": [
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-001",
+            "syn-ai_engineer-010",
+            "syn-ai_engineer-009"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.16666666666666666,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.35455079436338505,
+          "returned": [
+            "syn-data_engineer-011",
+            "syn-data_engineer-003",
+            "syn-data_engineer-009",
+            "syn-data_engineer-002",
+            "syn-data_engineer-001"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-data_engineer-002",
+          "group": "4+ requirements",
+          "recall@5": 0.5555555555555556,
+          "mrr": 1.0,
+          "ndcg@10": 0.8550956239938449,
+          "returned": [
+            "syn-data_engineer-011",
+            "syn-data_engineer-003",
+            "syn-data_engineer-004",
+            "syn-data_engineer-014",
+            "syn-data_engineer-012"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-data_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 0.5,
+          "ndcg@10": 0.7328286204777911,
+          "returned": [
+            "syn-data_engineer-013",
+            "syn-data_engineer-003",
+            "syn-data_engineer-004",
+            "syn-data_engineer-002",
+            "syn-data_engineer-011"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.2857142857142857,
+          "mrr": 1.0,
+          "ndcg@10": 0.768023776953055,
+          "returned": [
+            "syn-fullstack-008",
+            "syn-fullstack-002",
+            "syn-fullstack-007",
+            "syn-fullstack-003",
+            "syn-fullstack-004"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-fullstack-002",
+          "group": "4+ requirements",
+          "recall@5": 0.625,
+          "mrr": 1.0,
+          "ndcg@10": 0.9830168297915423,
+          "returned": [
+            "syn-fullstack-004",
+            "syn-fullstack-002",
+            "syn-fullstack-007",
+            "syn-fullstack-006",
+            "syn-fullstack-003"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-fullstack-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 0.9558295932317544,
+          "returned": [
+            "syn-fullstack-002",
+            "syn-fullstack-003",
+            "syn-fullstack-007",
+            "syn-fullstack-014",
+            "syn-fullstack-004"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.625,
+          "mrr": 1.0,
+          "ndcg@10": 0.9017290978091301,
+          "returned": [
+            "syn-mobile-002",
+            "syn-mobile-003",
+            "syn-mobile-004",
+            "syn-mobile-014",
+            "syn-mobile-005"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-mobile-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.9709286432396581,
+          "returned": [
+            "syn-mobile-005",
+            "syn-mobile-006",
+            "syn-mobile-007",
+            "syn-mobile-009",
+            "syn-mobile-002"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.75,
+          "mrr": 0.5,
+          "ndcg@10": 0.678294684588588,
+          "returned": [
+            "syn-mobile-010",
+            "syn-mobile-012",
+            "syn-mobile-006",
+            "syn-mobile-013",
+            "syn-mobile-011"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": [
+        {
+          "id": "syn-dev-ai_engineer-019",
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-009",
+            "syn-ai_engineer-004"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-data_engineer-019",
+          "returned": [
+            "syn-data_engineer-008",
+            "syn-data_engineer-003",
+            "syn-data_engineer-001",
+            "syn-data_engineer-002",
+            "syn-data_engineer-013"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-fullstack-019",
+          "returned": [
+            "syn-fullstack-010",
+            "syn-fullstack-013",
+            "syn-fullstack-009",
+            "syn-fullstack-004",
+            "syn-fullstack-012"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-mobile-019",
+          "returned": [
+            "syn-mobile-013",
+            "syn-mobile-006",
+            "syn-mobile-012",
+            "syn-mobile-010",
+            "syn-mobile-001"
+          ],
+          "abstained": false
+        }
+      ]
+    },
+    "V2 hybrid": {
+      "recall@5": 0.6126653439153439,
+      "coverage@5": 0.8263888888888888,
+      "mrr": 0.8472222222222222,
+      "ndcg@10": 0.8010896844364771,
+      "n_scored": 12,
+      "p50_ms": 184.1333000920713,
+      "p95_ms": 274.9935999745503,
+      "abstain_rate": 0.0,
+      "n_abstain_items": 4,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.6776785714285715,
+          "coverage@5": 0.8333333333333334,
+          "mrr": 0.7708333333333334,
+          "ndcg@10": 0.7575704551628342,
+          "n": 8
+        },
+        "4+ requirements": {
+          "recall@5": 0.4826388888888889,
+          "coverage@5": 0.8125,
+          "mrr": 1.0,
+          "ndcg@10": 0.888128142983763,
+          "n": 4
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8053706965939337,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-013"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-ai_engineer-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.6,
+          "mrr": 1.0,
+          "ndcg@10": 0.8248239677678634,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-001"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-ai_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 0.9197207891481876,
+          "returned": [
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-009",
+            "syn-ai_engineer-014"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.5816197129886165,
+          "returned": [
+            "syn-data_engineer-002",
+            "syn-data_engineer-004",
+            "syn-data_engineer-009",
+            "syn-data_engineer-006",
+            "syn-data_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-002",
+          "group": "4+ requirements",
+          "recall@5": 0.5555555555555556,
+          "mrr": 1.0,
+          "ndcg@10": 0.9895948844467957,
+          "returned": [
+            "syn-data_engineer-013",
+            "syn-data_engineer-006",
+            "syn-data_engineer-014",
+            "syn-data_engineer-011",
+            "syn-data_engineer-004"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 1.0,
+          "returned": [
+            "syn-data_engineer-002",
+            "syn-data_engineer-004",
+            "syn-data_engineer-003",
+            "syn-data_engineer-006",
+            "syn-data_engineer-001"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.5714285714285714,
+          "mrr": 1.0,
+          "ndcg@10": 0.6920788373899057,
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-008",
+            "syn-fullstack-009",
+            "syn-fullstack-002",
+            "syn-fullstack-010"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-fullstack-002",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8881917374298554,
+          "returned": [
+            "syn-fullstack-014",
+            "syn-fullstack-007",
+            "syn-fullstack-002",
+            "syn-fullstack-006",
+            "syn-fullstack-013"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.8712137160156971,
+          "returned": [
+            "syn-fullstack-002",
+            "syn-fullstack-007",
+            "syn-fullstack-004",
+            "syn-fullstack-014",
+            "syn-fullstack-005"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 1.0,
+          "ndcg@10": 0.8693552534644672,
+          "returned": [
+            "syn-mobile-004",
+            "syn-mobile-002",
+            "syn-mobile-007",
+            "syn-mobile-010",
+            "syn-mobile-009"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.5994875209249216,
+          "returned": [
+            "syn-mobile-009",
+            "syn-mobile-010",
+            "syn-mobile-007",
+            "syn-mobile-002",
+            "syn-mobile-008"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 0.5,
+          "ndcg@10": 0.5716190970674814,
+          "returned": [
+            "syn-mobile-010",
+            "syn-mobile-011",
+            "syn-mobile-013",
+            "syn-mobile-009",
+            "syn-mobile-006"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": [
+        {
+          "id": "syn-dev-ai_engineer-019",
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-013",
+            "syn-ai_engineer-012"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-data_engineer-019",
+          "returned": [
+            "syn-data_engineer-013",
+            "syn-data_engineer-004",
+            "syn-data_engineer-008",
+            "syn-data_engineer-002",
+            "syn-data_engineer-007"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-fullstack-019",
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-013",
+            "syn-fullstack-010",
+            "syn-fullstack-014",
+            "syn-fullstack-002"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-mobile-019",
+          "returned": [
+            "syn-mobile-006",
+            "syn-mobile-009",
+            "syn-mobile-010",
+            "syn-mobile-001",
+            "syn-mobile-011"
+          ],
+          "abstained": false
+        }
+      ]
+    },
+    "V3 hybrid+rerank": {
+      "recall@5": 0.5228835978835978,
+      "coverage@5": 0.7916666666666666,
+      "mrr": 0.7569444444444445,
+      "ndcg@10": 0.691024433235312,
+      "n_scored": 12,
+      "p50_ms": 217.53190003801137,
+      "p95_ms": 332.0898999227211,
+      "abstain_rate": 0.0,
+      "n_abstain_items": 4,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.5273809523809524,
+          "coverage@5": 0.75,
+          "mrr": 0.6979166666666666,
+          "ndcg@10": 0.6595357052555184,
+          "n": 8
+        },
+        "4+ requirements": {
+          "recall@5": 0.5138888888888888,
+          "coverage@5": 0.875,
+          "mrr": 0.875,
+          "ndcg@10": 0.7540018891948993,
+          "n": 4
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8112689688197959,
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-ai_engineer-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.6,
+          "mrr": 1.0,
+          "ndcg@10": 0.8013122149737618,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-ai_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.5706417189553201,
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg@10": 0.6212653646768636,
+          "returned": [
+            "syn-data_engineer-009",
+            "syn-data_engineer-002",
+            "syn-data_engineer-013",
+            "syn-data_engineer-006",
+            "syn-data_engineer-003"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-data_engineer-002",
+          "group": "4+ requirements",
+          "recall@5": 0.5555555555555556,
+          "mrr": 1.0,
+          "ndcg@10": 0.9154462691617211,
+          "returned": [
+            "syn-data_engineer-005",
+            "syn-data_engineer-014",
+            "syn-data_engineer-002",
+            "syn-data_engineer-011",
+            "syn-data_engineer-006"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 0.9674679834891693,
+          "returned": [
+            "syn-data_engineer-002",
+            "syn-data_engineer-004",
+            "syn-data_engineer-006",
+            "syn-data_engineer-003",
+            "syn-data_engineer-005"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.2857142857142857,
+          "mrr": 0.5,
+          "ndcg@10": 0.6576956780275599,
+          "returned": [
+            "syn-fullstack-014",
+            "syn-fullstack-010",
+            "syn-fullstack-009",
+            "syn-fullstack-005",
+            "syn-fullstack-002"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-fullstack-002",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 0.5,
+          "ndcg@10": 0.5726430543240895,
+          "returned": [
+            "syn-fullstack-011",
+            "syn-fullstack-014",
+            "syn-fullstack-005",
+            "syn-fullstack-002",
+            "syn-fullstack-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8899603164338973,
+          "returned": [
+            "syn-fullstack-002",
+            "syn-fullstack-014",
+            "syn-fullstack-010",
+            "syn-fullstack-005",
+            "syn-fullstack-009"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.7166492644739907,
+          "returned": [
+            "syn-mobile-004",
+            "syn-mobile-003",
+            "syn-mobile-002",
+            "syn-mobile-009",
+            "syn-mobile-007"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.25,
+          "mrr": 0.25,
+          "ndcg@10": 0.2856436410275446,
+          "returned": [
+            "syn-mobile-009",
+            "syn-mobile-010",
+            "syn-mobile-004",
+            "syn-mobile-007",
+            "syn-mobile-011"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.25,
+          "mrr": 0.5,
+          "ndcg@10": 0.4822987244600303,
+          "returned": [
+            "syn-mobile-009",
+            "syn-mobile-011",
+            "syn-mobile-010",
+            "syn-mobile-004",
+            "syn-mobile-002"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": [
+        {
+          "id": "syn-dev-ai_engineer-019",
+          "returned": [
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-006"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-data_engineer-019",
+          "returned": [
+            "syn-data_engineer-002",
+            "syn-data_engineer-005",
+            "syn-data_engineer-013",
+            "syn-data_engineer-014",
+            "syn-data_engineer-009"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-fullstack-019",
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-014",
+            "syn-fullstack-005",
+            "syn-fullstack-009",
+            "syn-fullstack-011"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-mobile-019",
+          "returned": [
+            "syn-mobile-011",
+            "syn-mobile-009",
+            "syn-mobile-007",
+            "syn-mobile-002",
+            "syn-mobile-001"
+          ],
+          "abstained": false
+        }
+      ]
+    },
+    "V4 outcome-aware": {
+      "recall@5": 0.4337632275132275,
+      "coverage@5": 0.6944444444444445,
+      "mrr": 0.6736111111111112,
+      "ndcg@10": 0.6521868576446969,
+      "n_scored": 12,
+      "p50_ms": 369.21829998027533,
+      "p95_ms": 592.419599997811,
+      "abstain_rate": 0.0,
+      "n_abstain_items": 4,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.4232142857142857,
+          "coverage@5": 0.6666666666666666,
+          "mrr": 0.5729166666666666,
+          "ndcg@10": 0.5861926690616295,
+          "n": 8
+        },
+        "4+ requirements": {
+          "recall@5": 0.4548611111111111,
+          "coverage@5": 0.75,
+          "mrr": 0.875,
+          "ndcg@10": 0.7841752348108318,
+          "n": 4
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8120483967124719,
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-ai_engineer-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.6,
+          "mrr": 1.0,
+          "ndcg@10": 0.9228632535992205,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-006",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-ai_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.5249810332008933,
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-009"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.0,
+          "mrr": 0.16666666666666666,
+          "ndcg@10": 0.3818137049388446,
+          "returned": [
+            "syn-data_engineer-013",
+            "syn-data_engineer-002",
+            "syn-data_engineer-012",
+            "syn-data_engineer-011",
+            "syn-data_engineer-004"
+          ],
+          "coverage@5": 0.0
+        },
+        {
+          "id": "syn-dev-data_engineer-002",
+          "group": "4+ requirements",
+          "recall@5": 0.4444444444444444,
+          "mrr": 1.0,
+          "ndcg@10": 0.8307234529095261,
+          "returned": [
+            "syn-data_engineer-011",
+            "syn-data_engineer-002",
+            "syn-data_engineer-014",
+            "syn-data_engineer-004",
+            "syn-data_engineer-009"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-data_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 0.8529278650606567,
+          "returned": [
+            "syn-data_engineer-002",
+            "syn-data_engineer-006",
+            "syn-data_engineer-013",
+            "syn-data_engineer-003",
+            "syn-data_engineer-004"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.2857142857142857,
+          "mrr": 1.0,
+          "ndcg@10": 0.715676765051938,
+          "returned": [
+            "syn-fullstack-010",
+            "syn-fullstack-009",
+            "syn-fullstack-014",
+            "syn-fullstack-005",
+            "syn-fullstack-002"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-fullstack-002",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 0.5,
+          "ndcg@10": 0.6900515864473596,
+          "returned": [
+            "syn-fullstack-012",
+            "syn-fullstack-014",
+            "syn-fullstack-011",
+            "syn-fullstack-002",
+            "syn-fullstack-006"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-fullstack-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.5,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.6165954389682339,
+          "returned": [
+            "syn-fullstack-010",
+            "syn-fullstack-009",
+            "syn-fullstack-002",
+            "syn-fullstack-014",
+            "syn-fullstack-005"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8038775031739698,
+          "returned": [
+            "syn-mobile-004",
+            "syn-mobile-003",
+            "syn-mobile-002",
+            "syn-mobile-007",
+            "syn-mobile-010"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.25,
+          "mrr": 0.25,
+          "ndcg@10": 0.298254219601818,
+          "returned": [
+            "syn-mobile-014",
+            "syn-mobile-009",
+            "syn-mobile-011",
+            "syn-mobile-008",
+            "syn-mobile-012"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.25,
+          "mrr": 0.5,
+          "ndcg@10": 0.3764290720714305,
+          "returned": [
+            "syn-mobile-010",
+            "syn-mobile-011",
+            "syn-mobile-009",
+            "syn-mobile-002",
+            "syn-mobile-006"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": [
+        {
+          "id": "syn-dev-ai_engineer-019",
+          "returned": [
+            "syn-ai_engineer-004",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-010",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-005"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-data_engineer-019",
+          "returned": [
+            "syn-data_engineer-009",
+            "syn-data_engineer-002",
+            "syn-data_engineer-013",
+            "syn-data_engineer-008",
+            "syn-data_engineer-005"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-fullstack-019",
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-010",
+            "syn-fullstack-004",
+            "syn-fullstack-008",
+            "syn-fullstack-003"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-mobile-019",
+          "returned": [
+            "syn-mobile-011",
+            "syn-mobile-009",
+            "syn-mobile-008",
+            "syn-mobile-012",
+            "syn-mobile-003"
+          ],
+          "abstained": false
+        }
+      ]
+    },
+    "V8 corrective": {
+      "recall@5": 0.4899801587301587,
+      "coverage@5": 0.6180555555555556,
+      "mrr": 0.7916666666666666,
+      "ndcg@10": 0.545404017986194,
+      "n_scored": 12,
+      "p50_ms": 20938.11019998975,
+      "p95_ms": 24307.462400058284,
+      "abstain_rate": 0.75,
+      "n_abstain_items": 4,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.5214285714285715,
+          "coverage@5": 0.5833333333333334,
+          "mrr": 0.6875,
+          "ndcg@10": 0.5275231475075485,
+          "n": 8
+        },
+        "4+ requirements": {
+          "recall@5": 0.4270833333333333,
+          "coverage@5": 0.6875,
+          "mrr": 1.0,
+          "ndcg@10": 0.581165758943485,
+          "n": 4
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 1.0,
+          "ndcg@10": 0.5390031312763821,
+          "returned": [
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-002"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-ai_engineer-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.6,
+          "mrr": 1.0,
+          "ndcg@10": 0.7227265726449519,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-006"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-ai_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 0.5,
+          "ndcg@10": 0.6934264036172708,
+          "returned": [
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-006"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "returned": [],
+          "coverage@5": 0.0
+        },
+        {
+          "id": "syn-dev-data_engineer-002",
+          "group": "4+ requirements",
+          "recall@5": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg@10": 0.5008655546918773,
+          "returned": [
+            "syn-data_engineer-004",
+            "syn-data_engineer-002",
+            "syn-data_engineer-011"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-data_engineer-013",
+          "group": "1-3 requirements",
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@10": 1.0,
+          "returned": [
+            "syn-data_engineer-004",
+            "syn-data_engineer-002",
+            "syn-data_engineer-003",
+            "syn-data_engineer-013"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.5714285714285714,
+          "mrr": 1.0,
+          "ndcg@10": 0.7041249493150388,
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-008",
+            "syn-fullstack-010",
+            "syn-fullstack-009"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-fullstack-002",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 1.0,
+          "ndcg@10": 0.5390031312763821,
+          "returned": [
+            "syn-fullstack-007",
+            "syn-fullstack-002",
+            "syn-fullstack-014"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-fullstack-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.7095272044910244,
+          "returned": [
+            "syn-fullstack-002",
+            "syn-fullstack-007",
+            "syn-fullstack-010",
+            "syn-fullstack-003",
+            "syn-fullstack-004"
+          ],
+          "coverage@5": 0.5
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.625,
+          "mrr": 1.0,
+          "ndcg@10": 0.7457912185292984,
+          "returned": [
+            "syn-mobile-002",
+            "syn-mobile-004",
+            "syn-mobile-003",
+            "syn-mobile-007",
+            "syn-mobile-014"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-mobile-002",
+          "group": "1-3 requirements",
+          "recall@5": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "returned": [],
+          "coverage@5": 0.0
+        },
+        {
+          "id": "syn-dev-mobile-013",
+          "group": "1-3 requirements",
+          "recall@5": 0.25,
+          "mrr": 1.0,
+          "ndcg@10": 0.3903800499921017,
+          "returned": [
+            "syn-mobile-014"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": [
+        {
+          "id": "syn-dev-ai_engineer-019",
+          "returned": [
+            "syn-ai_engineer-014"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "syn-dev-data_engineer-019",
+          "returned": [],
+          "abstained": true
+        },
+        {
+          "id": "syn-dev-fullstack-019",
+          "returned": [],
+          "abstained": true
+        },
+        {
+          "id": "syn-dev-mobile-019",
+          "returned": [],
+          "abstained": true
+        }
+      ]
+    }
+  }
+}

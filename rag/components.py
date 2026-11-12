@@ -15,7 +15,7 @@ from __future__ import annotations
 import os
 
 from rag.index.store import HashEmbedder, OllamaEmbedder
-from rag.stages import LexicalReranker, LLMReranker, LLMSupportGrader
+from rag.stages import LexicalReranker, LLMReranker, LLMSupportGrader, SemanticSupportGrader
 
 
 def load_env() -> None:
@@ -60,12 +60,19 @@ def make_reranker(spec: str | None, llm=None):
     raise SystemExit(f"unknown reranker spec: {spec!r} (use 'lexical' or 'llm')")
 
 
-def make_grader(spec: str | None, llm=None):
-    """V8 support grader. -> (grader_or_None, name). None = V8's built-in strict lexical check."""
+def make_grader(spec: str | None, llm=None, embedder=None, threshold: float = 0.60):
+    """V8 support grader. -> (grader_or_None, name). None = V8's built-in strict lexical check.
+
+    semantic: embedding-cosine grader (the signature extension). Pass the retriever's embedder so it reuses the
+    same model; with the hash stand-in it stays lexical (named as a stand-in), with Ollama it is a real
+    semantic grader."""
     if not spec or spec == "lexical":
         return None, "V8 grader (lexical)"
     if spec == "llm":
         if llm is None:
             return None, "V8 grader (lexical; no key)"
         return LLMSupportGrader(llm=llm), "LLMSupportGrader"
-    raise SystemExit(f"unknown grader spec: {spec!r} (use 'lexical' or 'llm')")
+    if spec == "semantic":
+        tag = "hash stand-in" if (embedder is None or type(embedder).__name__ == "HashEmbedder") else "ollama"
+        return SemanticSupportGrader(embedder=embedder, threshold=threshold), f"SemanticSupportGrader({tag}, thr={threshold})"
+    raise SystemExit(f"unknown grader spec: {spec!r} (use 'lexical' | 'llm' | 'semantic')")

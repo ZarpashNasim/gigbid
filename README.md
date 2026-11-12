@@ -62,6 +62,9 @@ Set `MARKETPLACE_MODE=synthetic` to run fully offline with no LLM key or GigSim.
   jobs than V0 (holds on holdout).
 - **A/B — single vs multi-agent:** the multi-agent graph blocks 100% of scam/injection jobs and strips every
   unsupported claim; the single-agent writer is 6× cheaper but unsafe on every flagged job.
+- **Extension — semantic support grader:** replacing V8's lexical grader with an embedding-cosine grader
+  (`rag/stages.SemanticSupportGrader`) triples V8 recall (0.156→0.490) at unchanged abstention
+  (`docs/EXTENSION.md`).
 - **Real-data audit:** the rule detector looks strong on synthetic data but is **weak on 60 real Upwork
   posts** (precision 0.43, near-zero recall) — the only non-circular check. Full detail in `docs/RESULTS.md`.
 
@@ -74,5 +77,5 @@ client data stay out of Git.
 ## Status / not done
 
 Worker tasks are stubs; the compose file is an untested skeleton; public deployment is the operator's step
-(`docs/RUNBOOK.md` §5). The signature extension (`docs/REPORT.md`) and any live-Upwork adapter are future
-work.
+(`docs/RUNBOOK.md` §5). A live-Upwork adapter is future work. The signature extension (semantic support
+grader) is done — see `docs/EXTENSION.md`.
