@@ -1,0 +1,34 @@
+{
+  "metric_source": "human audit on real posts",
+  "detector": "agent/rules.py (keyword signal rules)",
+  "data_source": "upwork_50k_2024 (asaniczka/upwork-job-postings-dataset-2024-50k-records); sample git-ignored, licence UNVERIFIED",
+  "n_labelled": 60,
+  "labels": {
+    "legit": 38,
+    "scam": 22
+  },
+  "injection_found": 0,
+  "flag_precision": 0.433,
+  "n_flagged_sampled": 30,
+  "true_positives_flagged": 13,
+  "miss_rate_among_unflagged": 0.3,
+  "n_unflagged_sampled": 30,
+  "bad_in_unflagged": 9,
+  "estimated_recall_full_set": 0.024,
+  "flagged_population": 871,
+  "unflagged_population": 52083,
+  "false_positive_flags": {
+    "off_platform_contact": 13,
+    "unpaid_work": 4
+  },
+  "single_auditor": true,
+  "auditor": "project owner",
+  "caveats": [
+    "n=60 stratified (30 flagged + 30 unflagged); precision 95% CI ~ +/-0.18",
+    "single auditor, one source, one time window (Feb 2024 scrape)",
+    "recall extrapolates the 30-sample miss rate across 52,083 unflagged posts: order-of-magnitude only",
+    "bad = scam OR injection; some labels are subjective",
+    "contact_details_in_post flag excluded from scoring (it is informational, not a bid/skip signal)"
+  ],
+  "dated": "2026-11-12"
+}

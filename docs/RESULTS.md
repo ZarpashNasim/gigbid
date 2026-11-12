@@ -1,4 +1,8 @@
-# Results (synthetic data only)
+# Results
+
+**Sections 1–2 are synthetic** (machinery and variant ranking only); the **Real-data audit** section at the end is the one measurement on real posts. Every number is copied from a file in `evals/results/`.
+
+## Retrieval and variant comparison (synthetic data only)
 
 Every number below is copied from a file in `evals/results/`. All are **synthetic** dev/holdout results from a placeholder hashed embedder, a lexical reranker stand-in and a lexical V8 grader. They show the machinery works and how variants rank, not real-world accuracy. Holdout was run once, after the last code change. Rule recall and intent accuracy are inflated by shared template vocabulary (see `docs/AI_USAGE.md` #8).
 
@@ -29,3 +33,17 @@ Every number below is copied from a file in `evals/results/`. All are **syntheti
 Observations: hybrid, reranking and outcome-aware ranking each help over naive dense retrieval; decomposition with a naive sentence splitter does not (oracle requirements recover most of the gap); V8 abstains on most jobs because its lexical grader is too strict (needs an LLM/semantic grader).
 
 Ablation: `ablation_synth_{dev,holdout}.json`. Decision baseline: `decision_rules_*`. Intent baseline: `intent_rules_*`.
+
+## Real-data audit of the rule detector (NOT synthetic)
+
+The only non-circular check in this repo. A human (the project owner) labelled **60 real Upwork posts** (`upwork_50k_2024`: 30 rule-flagged + 30 unflagged, shown blind to the rule flags) as scam / injection / legit, then scored them against `agent/rules.py`.
+
+| Metric | Value | detail |
+|---|---|---|
+| Flag precision | **0.43** | 13/30 flagged posts were bad (scam/injection) by human judgment |
+| Miss rate among unflagged | **0.30** | 9/30 posts the rules left clean were bad |
+| Estimated recall (stratified, full set) | **~0.02** | over 871 flagged + 52,083 unflagged real posts |
+
+Source: `evals/results/audit_real_upwork_50k_2024.json`. The labelled sample (`data/processed/audit_sample.csv`) stays git-ignored; the Kaggle licence is unverified.
+
+**Takeaway:** the rules look strong on synthetic data (shared template vocabulary — see `docs/AI_USAGE.md` #8) but are **weak on real posts**: low precision and near-zero recall. Most false positives are `off_platform_contact` (13) and `unpaid_work` (4) firing on legitimate posts — including posts whose text says "no contact outside Upwork" or offers a "free trial". **Caveats:** single auditor, one source and time window (Feb 2024 scrape), n=60 (precision 95% CI ≈ ±0.18), and the recall figure extrapolates a 30-sample miss rate across 52k posts, so it is order-of-magnitude only.

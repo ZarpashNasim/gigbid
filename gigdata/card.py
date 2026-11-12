@@ -27,6 +27,8 @@ def build() -> str:
     man = json.loads((ROOT / "data/synthetic/MANIFEST.json").read_text())
     real_man_path = ROOT / "data/processed/jobs_real.manifest.json"
     real_man = json.loads(real_man_path.read_text()) if real_man_path.exists() else None
+    audit_path = ROOT / "evals/results/audit_real_upwork_50k_2024.json"
+    audit = json.loads(audit_path.read_text()) if audit_path.exists() else None
     d = inspect.signature(real.normalise_row).parameters
     min_desc, min_ascii = d["min_desc"].default, d["min_ascii"].default
     dev = man["summary"]["dev"]
@@ -44,6 +46,21 @@ def build() -> str:
                       "(`python -m gigdata.card`). Counts will appear here automatically.")
     class_rows = [[k, v] for k, v in dev["by_class"].items()]
     sig_rows = [[k, len(v)] for k, v in SIGNALS.items()]
+    if audit:
+        fp = audit.get("false_positive_flags", {})
+        audit_block = (
+            f"- **Rule audit on real posts (done {audit['dated']}, n={audit['n_labelled']}, source `{audit['data_source'].split(' ')[0]}`)** "
+            f"— the only non-circular check of `agent/rules.py`. Flag precision **{audit['flag_precision']:.2f}** "
+            f"({audit['true_positives_flagged']}/{audit['n_flagged_sampled']}); miss rate among unflagged **{audit['miss_rate_among_unflagged']:.2f}** "
+            f"({audit['bad_in_unflagged']}/{audit['n_unflagged_sampled']}); stratified recall estimate **~{audit['estimated_recall_full_set']:.2f}** "
+            f"over {audit['flagged_population']} flagged + {audit['unflagged_population']} unflagged posts. "
+            f"Most false positives are `off_platform_contact` ({fp.get('off_platform_contact', 0)}) and `unpaid_work` ({fp.get('unpaid_work', 0)}) "
+            f"firing on legit posts. The rules look strong on synthetic data but are weak on real posts (low precision, near-zero recall). "
+            f"Traces to `evals/results/{audit_path.name}`. Caveats: {'; '.join(audit['caveats'])}.")
+    else:
+        audit_block = (
+            "- The only non-circular check of the rule detector is a **human audit on real posts**: `python -m gigdata.audit sample` then "
+            "label then `score` (see `gigdata/audit.py`). Until that is done, state that rule quality on real posts is unmeasured.")
 
     return f"""# Data Card
 
@@ -153,8 +170,7 @@ Deterministic and seeded: the same seed gives byte-identical files (checked in `
 
 ## 7. Evaluation protocol
 - Tune and debug on `dev` only. Run `holdout` once per final system and report it separately; never tune on it.
-- The only non-circular check of the rule detector is a **human audit on real posts**: `python -m gigdata.audit sample` then
-  label then `score` (see `gigdata/audit.py`). Until that is done, state that rule quality on real posts is unmeasured.
+{audit_block}
 - Every reported number must trace to a file in `evals/results/`.
 
 ## 8. Reproduce
@@ -169,5 +185,5 @@ make eval-synth                              # variant comparison, ablation, dec
 
 if __name__ == "__main__":
     out = ROOT / "docs" / "DATA_CARD.md"
-    out.write_text(build())
+    out.write_text(build(), encoding="utf-8")   # explicit UTF-8: Windows default is cp1252 and mangles non-ASCII (em dashes etc.)
     print("wrote", out)

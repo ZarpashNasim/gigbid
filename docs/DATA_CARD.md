@@ -127,8 +127,7 @@ Deterministic and seeded: the same seed gives byte-identical files (checked in `
 
 ## 7. Evaluation protocol
 - Tune and debug on `dev` only. Run `holdout` once per final system and report it separately; never tune on it.
-- The only non-circular check of the rule detector is a **human audit on real posts**: `python -m gigdata.audit sample` then
-  label then `score` (see `gigdata/audit.py`). Until that is done, state that rule quality on real posts is unmeasured.
+- **Rule audit on real posts (done 2026-11-12, n=60, source `upwork_50k_2024`)** — the only non-circular check of `agent/rules.py`. Flag precision **0.43** (13/30); miss rate among unflagged **0.30** (9/30); stratified recall estimate **~0.02** over 871 flagged + 52083 unflagged posts. Most false positives are `off_platform_contact` (13) and `unpaid_work` (4) firing on legit posts. The rules look strong on synthetic data but are weak on real posts (low precision, near-zero recall). Traces to `evals/results/audit_real_upwork_50k_2024.json`. Caveats: n=60 stratified (30 flagged + 30 unflagged); precision 95% CI ~ +/-0.18; single auditor, one source, one time window (Feb 2024 scrape); recall extrapolates the 30-sample miss rate across 52,083 unflagged posts: order-of-magnitude only; bad = scam OR injection; some labels are subjective; contact_details_in_post flag excluded from scoring (it is informational, not a bid/skip signal).
 - Every reported number must trace to a file in `evals/results/`.
 
 ## 8. Reproduce
