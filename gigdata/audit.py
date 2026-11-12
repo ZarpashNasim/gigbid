@@ -27,7 +27,7 @@ def sample(n: int, seed: int = 11, jobs_path: Path = PROCESSED / "jobs_real.json
     k_c = min(n - k_f, len(clean))
     pick = rng.sample(flagged, k_f) + rng.sample(clean, k_c)
     rng.shuffle(pick)
-    with out.open("w", newline="") as f:
+    with out.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["job_id", "title", "description_excerpt", "rule_flags", "human_label"])
         for j in pick:
@@ -36,7 +36,7 @@ def sample(n: int, seed: int = 11, jobs_path: Path = PROCESSED / "jobs_real.json
 
 
 def score(path: Path = PROCESSED / "audit_sample.csv", pops: dict | None = None) -> dict:
-    rows = [r for r in csv.DictReader(path.open()) if r["human_label"].strip()]
+    rows = [r for r in csv.DictReader(path.open(encoding="utf-8")) if r["human_label"].strip()]
     if not rows:
         return {"error": "no labelled rows: fill human_label with scam|injection|legit"}
     is_flag = lambda r: bool(set(filter(None, r["rule_flags"].split("|"))) - {"contact_details_in_post"})
