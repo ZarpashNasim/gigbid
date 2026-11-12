@@ -68,14 +68,14 @@ file is a working skeleton — it needs your `.env` and the pull above; the work
 
 **Fastest path:** a `render.yaml` Blueprint at the repo root wires the API + web UI + Postgres for a
 near one-click deploy on Render (New → Blueprint → pick the repo). It deploys in `MARKETPLACE_MODE=synthetic`
-for reliability; set the `GROQ_API_KEY` secret and, after the API gets its URL, set `NEXT_PUBLIC_API_URL` on
-the web service. See the comments in `render.yaml`.
+for reliability; set the `GROQ_API_KEY` secret and, after the API gets its URL, set `API_URL` on the web
+service (the Next server proxies `/api/*` to it). See the comments in `render.yaml`.
 
 Manual path, any host (needs your hosting account — Claude does not deploy on your behalf):
 1. Build and push the `api` and `web` images to your host (Render/Fly/Railway/a VPS with the compose file).
 2. Provision managed Postgres + Redis, set `CHECKPOINT_URL` / `REDIS_URL`, and the LLM key.
 3. Run GigSim (or point `GIGSIM_BASE_URL` at the instructor's service if provided).
-4. Set `NEXT_PUBLIC_API_URL` on the web service to the public API URL.
+4. Set `API_URL` on the web service to the public API URL (the Next server proxies `/api/*` to it).
 5. Open the web URL, sign in with a token from `API_TOKENS`, run one job end-to-end to the approval screen,
    and confirm the reviewer can reach it. Record the URL in the README.
 

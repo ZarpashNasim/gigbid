@@ -4,8 +4,9 @@
 #   1. Push this repo to GitHub (public).
 #   2. render.com -> New -> Blueprint -> pick your repo. Render reads this file.
 #   3. Set the secret GROQ_API_KEY when prompted (keep agent/config.yaml active_profile: groq).
-#   4. After the API gets its URL (https://gigbid-api-XXXX.onrender.com), set NEXT_PUBLIC_API_URL on the
-#      gigbid-web service to that URL, then redeploy gigbid-web (NEXT_PUBLIC_* is baked at build time).
+#   4. After the API gets its URL (https://gigbid-api-XXXX.onrender.com), set API_URL on the gigbid-web
+#      service to that URL, then restart gigbid-web. (next.config.mjs proxies /api/* to API_URL at server
+#      start, so a restart is enough — no rebuild needed.)
 #   5. Open the web URL (or the API's /docs), run one job, and paste the URL into your README.
 #
 # Deploys in MARKETPLACE_MODE=synthetic (in-process backend) for a reliable public demo. GigSim and the
@@ -51,5 +52,5 @@ services:
     plan: free
     healthCheckPath: /
     envVars:
-      - key: NEXT_PUBLIC_API_URL
-        sync: false            # set to the gigbid-api URL after its first deploy, then redeploy this service
+      - key: API_URL
+        sync: false            # set to the gigbid-api public URL (https://gigbid-api-xxxx.onrender.com); next.config proxies /api/* here

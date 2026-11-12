@@ -55,7 +55,7 @@ services:
   web:
     build: {context: ../apps/web, dockerfile: ../../infra/docker/Dockerfile.web}
     environment:
-      NEXT_PUBLIC_API_URL: http://localhost:8000     # browser-visible; the API is published on the host
+      API_URL: http://api:8000       # Next server proxies /api/* to the API service (server-side, internal network)
     depends_on: [api]
     ports: ["3000:3000"]
 
