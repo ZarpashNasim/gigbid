@@ -34,6 +34,33 @@ Observations: hybrid, reranking and outcome-aware ranking each help over naive d
 
 Ablation: `ablation_synth_{dev,holdout}.json`. Decision baseline: `decision_rules_*`. Intent baseline: `intent_rules_*`.
 
+## A/B experiments (Step 6 — synthetic dev, LLM held fixed)
+
+Two controlled experiments. In both, the LLM is a deterministic scripted stand-in held fixed across arms, so each difference is attributable to the **one factor varied**. Runner: `evals/runners/ab_experiments.py` (`py -m evals.runners.ab_experiments --split dev`), 184 synthetic dev jobs. Because the LLM is fixed and the data is synthetic, these isolate the *pipeline's structural* effects, not LLM-quality interactions.
+
+### A. Retrieval variant → bid decisions (`ab_retrieval_decisions_dev.json`)
+
+Factor: the RAG variant feeding the Matcher. The support grader is held constant as the strict lexical check, so coverage reflects retrieval quality.
+
+| Arm | Bid rate | Watch rate | Skip rate | Mean fit | Mean coverage |
+|---|---|---|---|---|---|
+| V0 naive dense | 0.038 | 0.168 | 0.793 | 0.224 | 0.224 |
+| V2 hybrid | 0.060 | 0.207 | 0.734 | 0.265 | 0.265 |
+| V3 hybrid+rerank | 0.043 | 0.212 | 0.745 | 0.257 | 0.257 |
+
+Better retrieval propagates to decisions: V2 hybrid gives the highest requirement coverage (0.265 vs V0's 0.224), lifting the fit score so the agent **bids on ~58% more jobs** (0.060 vs 0.038) and skips fewer. The V2 ≳ V3 > V0 ranking matches the retrieval comparison above; the low absolute coverage is the strict lexical grader missing paraphrase (see `docs/AI_USAGE.md` #8), not the retrievers.
+
+### B. Single-agent vs multi-agent (`ab_single_vs_multi_dev.json`)
+
+Factor: graph topology. Multi-agent = the full bid graph (risk rules + matcher + verifier + critic + compliance); single-agent = one LLM call job→proposal with no guardrails. 33 of 184 jobs carry scam/injection signals (`agent/rules.py`). *Unsafe* = produced a proposal on a flagged job; *unsupported-claim* = a planted unsupported claim surviving in the produced proposal.
+
+| Arm | Proposals produced | Unsafe-proposal rate | Unsupported-claim rate | Mean LLM calls |
+|---|---|---|---|---|
+| multi-agent (full graph) | 151 | 0.000 | 0.000 | 6.28 |
+| single-agent (one-shot writer) | 184 | 1.000 | 1.000 | 1.00 |
+
+The multi-agent graph skips all 33 flagged jobs and the verifier strips the planted claim from every produced proposal, at ~6.3 LLM calls/job. The single-agent writer is **6× cheaper** (1 call) but ships a proposal on every scam job and keeps every unsupported claim. **When does a single agent win?** Only on cost, and only for already-clean jobs — it has no mechanism to detect scams, verify claims or enforce policy, so the multi-agent guardrails are what make the system safe to run unattended. Tests of these guardrails: `tests/unit/test_bid_graph.py`.
+
 ## Real-data audit of the rule detector (NOT synthetic)
 
 The only non-circular check in this repo. A human (the project owner) labelled **60 real Upwork posts** (`upwork_50k_2024`: 30 rule-flagged + 30 unflagged, shown blind to the rule flags) as scam / injection / legit, then scored them against `agent/rules.py`.

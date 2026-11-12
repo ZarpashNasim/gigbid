@@ -1,0 +1,37 @@
+{
+  "experiment": "A: retrieval variant -> bid decisions",
+  "factor": "RAG retrieval variant (LLM held fixed)",
+  "meta": {
+    "split": "dev",
+    "synthetic": true,
+    "llm": "ScriptedLLM(fixed)",
+    "grader": "strict lexical (held constant)",
+    "note": "Grader held constant as the strict lexical check; coverage/fit reflect retrieval quality."
+  },
+  "arms": {
+    "V0 naive dense": {
+      "n_jobs": 184,
+      "bid_rate": 0.03804347826086957,
+      "watch_rate": 0.16847826086956522,
+      "skip_rate": 0.7934782608695652,
+      "mean_fit_score": 0.22382246376811593,
+      "mean_coverage": 0.22382246376811593
+    },
+    "V2 hybrid": {
+      "n_jobs": 184,
+      "bid_rate": 0.059782608695652176,
+      "watch_rate": 0.20652173913043478,
+      "skip_rate": 0.7336956521739131,
+      "mean_fit_score": 0.2648550724637681,
+      "mean_coverage": 0.2648550724637681
+    },
+    "V3 hybrid+rerank": {
+      "n_jobs": 184,
+      "bid_rate": 0.043478260869565216,
+      "watch_rate": 0.21195652173913043,
+      "skip_rate": 0.7445652173913043,
+      "mean_fit_score": 0.2566123188405797,
+      "mean_coverage": 0.2566123188405797
+    }
+  }
+}
