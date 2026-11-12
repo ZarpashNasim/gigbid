@@ -1,0 +1,29 @@
+{
+  "availability_hours_per_week": 30,
+  "display_name": "Sofia R. (synthetic)",
+  "freelancer_id": "syn-fullstack",
+  "headline": "Full-stack web developer: Next.js, Node and Postgres",
+  "hourly_rate_usd": 40,
+  "minimum_project_budget_usd": 300,
+  "origin": "synthetic",
+  "skills": [
+    "CI",
+    "Next.js",
+    "Node.js",
+    "OAuth",
+    "Playwright",
+    "PostgreSQL",
+    "REST",
+    "React",
+    "SEO",
+    "Stripe",
+    "Tailwind",
+    "TypeScript",
+    "authentication",
+    "performance",
+    "security",
+    "testing",
+    "webhooks"
+  ],
+  "years_experience": 5
+}

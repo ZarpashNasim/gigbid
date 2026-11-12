@@ -1,0 +1,31 @@
+# Results (synthetic data only)
+
+Every number below is copied from a file in `evals/results/`. All are **synthetic** dev/holdout results from a placeholder hashed embedder, a lexical reranker stand-in and a lexical V8 grader. They show the machinery works and how variants rank, not real-world accuracy. Holdout was run once, after the last code change. Rule recall and intent accuracy are inflated by shared template vocabulary (see `docs/AI_USAGE.md` #8).
+
+## Retrieval, dev (`rag_synth_dev.json`)
+
+| Variant | Recall@5 | Coverage@5 | MRR | nDCG@10 | Abstain rate | p95 ms |
+|---|---|---|---|---|---|---|
+| V0 naive dense | 0.432 | 0.696 | 0.701 | 0.616 | 0.00 | 0.2 |
+| V1 decompose (naive reqs) | 0.363 | 0.621 | 0.630 | 0.582 | 0.00 | 0.2 |
+| V1 decompose (oracle reqs) | 0.411 | 0.661 | 0.725 | 0.615 | 0.00 | 0.1 |
+| V2 hybrid | 0.473 | 0.776 | 0.804 | 0.679 | 0.00 | 0.3 |
+| V3 hybrid+rerank | 0.529 | 0.796 | 0.804 | 0.712 | 0.00 | 3.2 |
+| V4 outcome-aware | 0.494 | 0.737 | 0.797 | 0.695 | 0.00 | 2.5 |
+| V8 corrective | 0.139 | 0.221 | 0.415 | 0.194 | 0.75 | 5.3 |
+
+## Retrieval, holdout (`rag_synth_holdout.json`)
+
+| Variant | Recall@5 | Coverage@5 | MRR | nDCG@10 | Abstain rate | p95 ms |
+|---|---|---|---|---|---|---|
+| V0 naive dense | 0.390 | 0.644 | 0.669 | 0.610 | 0.00 | 0.1 |
+| V1 decompose (naive reqs) | 0.361 | 0.628 | 0.661 | 0.586 | 0.00 | 0.2 |
+| V1 decompose (oracle reqs) | 0.407 | 0.691 | 0.663 | 0.605 | 0.00 | 0.1 |
+| V2 hybrid | 0.438 | 0.739 | 0.835 | 0.680 | 0.00 | 0.2 |
+| V3 hybrid+rerank | 0.488 | 0.767 | 0.824 | 0.701 | 0.00 | 0.7 |
+| V4 outcome-aware | 0.515 | 0.781 | 0.832 | 0.729 | 0.00 | 1.9 |
+| V8 corrective | 0.160 | 0.262 | 0.534 | 0.228 | 0.67 | 4.0 |
+
+Observations: hybrid, reranking and outcome-aware ranking each help over naive dense retrieval; decomposition with a naive sentence splitter does not (oracle requirements recover most of the gap); V8 abstains on most jobs because its lexical grader is too strict (needs an LLM/semantic grader).
+
+Ablation: `ablation_synth_{dev,holdout}.json`. Decision baseline: `decision_rules_*`. Intent baseline: `intent_rules_*`.

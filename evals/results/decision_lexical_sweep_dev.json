@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "split": "dev",
+    "synthetic": true,
+    "note": "no threshold of a keyword judge achieves both"
+  },
+  "rows": [
+    {
+      "lexical_threshold": 0.0,
+      "bid_recall": 0.9027777777777778,
+      "bid_precision": 0.5416666666666666,
+      "bid_f1": 0.6770833333333333,
+      "out_of_scope_acc": 0.041666666666666664,
+      "good_fit_acc": 0.8958333333333334
+    },
+    {
+      "lexical_threshold": 0.1,
+      "bid_recall": 0.6527777777777778,
+      "bid_precision": 0.6266666666666667,
+      "bid_f1": 0.6394557823129251,
+      "out_of_scope_acc": 0.5,
+      "good_fit_acc": 0.6666666666666666
+    },
+    {
+      "lexical_threshold": 0.15,
+      "bid_recall": 0.4444444444444444,
+      "bid_precision": 0.6530612244897959,
+      "bid_f1": 0.5289256198347106,
+      "out_of_scope_acc": 0.5833333333333334,
+      "good_fit_acc": 0.5
+    },
+    {
+      "lexical_threshold": 0.2,
+      "bid_recall": 0.2222222222222222,
+      "bid_precision": 0.7272727272727273,
+      "bid_f1": 0.3404255319148936,
+      "out_of_scope_acc": 0.875,
+      "good_fit_acc": 0.2708333333333333
+    },
+    {
+      "lexical_threshold": 0.25,
+      "bid_recall": 0.08333333333333333,
+      "bid_precision": 0.75,
+      "bid_f1": 0.15,
+      "out_of_scope_acc": 0.9166666666666666,
+      "good_fit_acc": 0.125
+    },
+    {
+      "lexical_threshold": 0.34,
+      "bid_recall": 0.027777777777777776,
+      "bid_precision": 0.6666666666666666,
+      "bid_f1": 0.05333333333333333,
+      "out_of_scope_acc": 1.0,
+      "good_fit_acc": 0.041666666666666664
+    },
+    {
+      "lexical_threshold": 0.5,
+      "bid_recall": 0.0,
+      "bid_precision": 0.0,
+      "bid_f1": 0.0,
+      "out_of_scope_acc": 1.0,
+      "good_fit_acc": 0.0
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "n": 64,
+  "accuracy": 0.953125,
+  "per_intent": {
+    "question": {
+      "precision": 0.8695652173913043,
+      "recall": 1.0,
+      "f1": 0.9302325581395349,
+      "tp": 20,
+      "fp": 3,
+      "fn": 0
+    },
+    "negotiation": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 12,
+      "fp": 0,
+      "fn": 0
+    },
+    "interview_request": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 12,
+      "fp": 0,
+      "fn": 0
+    },
+    "scam_signal": {
+      "precision": 1.0,
+      "recall": 0.85,
+      "f1": 0.9189189189189189,
+      "tp": 17,
+      "fp": 0,
+      "fn": 3
+    }
+  },
+  "scam_recall_plain": 1.0,
+  "scam_recall_evasive": 0.25,
+  "meta": {
+    "system": "keyword/rules baseline (no LLM)",
+    "split": "dev",
+    "synthetic": true,
+    "dataset": "evals/datasets/synth_messages_dev.json"
+  }
+}

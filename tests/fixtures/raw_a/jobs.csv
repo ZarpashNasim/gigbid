@@ -1,0 +1,8 @@
+Job Title,Job Description,Skills,Budget,Posted,Country
+Build a RAG chatbot,We need a retrieval augmented chatbot over our support tickets using Python and pgvector. Must document the API clearly and write tests for the retrieval step.,"Python, RAG, pgvector",$500 - $900,2024-03-01,US
+Build a RAG chatbot,We need a retrieval augmented chatbot over our support tickets using Python and pgvector. Must document the API clearly and write tests for the retrieval step.,"Python, RAG, pgvector",$500 - $900,2024-03-01,US
+Unpaid trial dashboard,Create a full dashboard for free as a test. Contact me on WhatsApp +1 202 555 0143 or mail boss@example.com to receive access details and credentials.,Python|dashboards,$0,2024-03-02,US
+Short,too short,Python,$10,2024-03-02,US
+,"A description that is long enough to pass the length filter but has no title at all, so it must drop.",Python,$10,2024-03-02,US
+日本語のプロジェクト,これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。これは日本語の長い説明文です。,Python,$10,2024-03-02,JP
+dbt pipeline on Snowflake,Design a dbt and Airflow pipeline on Snowflake for retail analytics. Replace manual spreadsheets and document the models and tests in the repo for handover.,"['dbt', 'Airflow', 'Snowflake']",$1.5k,2024-03-03,UK

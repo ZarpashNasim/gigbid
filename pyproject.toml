@@ -1,0 +1,11 @@
+[project]
+name = "gigbid"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["langgraph>=1.2", "pydantic>=2.7", "pyyaml", "openai", "mcp<2", "numpy", "fastapi", "uvicorn", "httpx", "langgraph-checkpoint-sqlite", "pandas"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["agent*", "rag*", "gigdata*", "mcp_servers*", "worker*", "apps*", "evals*"]

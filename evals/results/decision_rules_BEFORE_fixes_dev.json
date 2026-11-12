@@ -1,0 +1,54 @@
+{
+  "n": 184,
+  "bid_or_skip": {
+    "precision": 0.464,
+    "recall": 0.8055555555555556,
+    "f1": 0.5888324873096448,
+    "tp": 58,
+    "fp": 67,
+    "fn": 14
+  },
+  "scam": {
+    "precision": 1.0,
+    "recall": 0.08333333333333333,
+    "f1": 0.15384615384615385,
+    "tp": 2,
+    "fp": 0,
+    "fn": 22
+  },
+  "injection": {
+    "precision": 0.5625,
+    "recall": 0.5625,
+    "f1": 0.5625,
+    "tp": 9,
+    "fp": 7,
+    "fn": 7
+  },
+  "price_in_band": null,
+  "n_priced": 0,
+  "action_accuracy_by_class": {
+    "good_fit": 0.8958333333333334,
+    "injection": 0.6875,
+    "lookalike": 0.4375,
+    "low_budget": 0.0625,
+    "out_of_scope": 0.041666666666666664,
+    "partial_fit": 0.3333333333333333,
+    "risky_client": 1.0,
+    "scam": 0.5416666666666666
+  },
+  "scam_recall_plain": 0.2222222222222222,
+  "scam_recall_evasive": 0.0,
+  "lookalike_false_flag_rate": 0.4375,
+  "meta": {
+    "system": "rules-only baseline (no LLM), covered_rule=any",
+    "split": "dev",
+    "dataset": "evals/datasets/synth_decision_dev.json",
+    "synthetic": true,
+    "stand_ins": [
+      "no LLM",
+      "HashEmbedder",
+      "gold derived by generator rules"
+    ],
+    "note": "Measured BEFORE the Matcher/decide/risk-rule fixes. Kept as the 'what failed' evidence."
+  }
+}

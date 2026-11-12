@@ -1,0 +1,57 @@
+# Model profiles, budgets and thresholds. Nothing here is hard-coded in nodes.
+active_profile: open
+
+profiles:
+  open:                      # required: open-weight only (hosted provider or local)
+    provider: openrouter     # openrouter | groq | ollama
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    nodes:
+      small: openai/gpt-oss-20b          # cheap, frequent nodes
+      strong: openai/gpt-oss-120b        # writer / critic
+    fallback_small: qwen/qwen3-8b
+  paid:                      # optional
+    provider: anthropic
+    api_key_env: ANTHROPIC_API_KEY
+    nodes:
+      small: claude-haiku-5-5
+      strong: claude-sonnet-5-5
+    fallback_small: claude-haiku-5-5
+
+# node -> model tier (small|strong)
+routing:
+  analyst: small
+  risk: small
+  matcher: small
+  pricing: small
+  writer: strong
+  verifier: small
+  critic: strong
+  compliance: small
+  liaison: strong
+  intent: small
+
+budgets:
+  max_steps_per_thread: 40
+  max_tokens_per_thread: 60000
+  max_critic_loops: 2
+  p95_latency_s: 90
+  cost_per_proposal_usd: 0.05
+
+thresholds:
+  min_fit_to_bid: 0.55
+  watch_fit_floor: 0.35
+  min_client_score: 0.4
+
+# Policy-pack rules the Compliance Guard enforces (change request lands here)
+policy:
+  max_cover_letter_words: 300
+  forbid_off_platform: true
+  forbid_guarantees: true
+  extra_rules: []          # e.g. add a new GigSim policy-update rule as one line
+  connects_cap_per_bid: null   # e.g. 16 once the policy update caps cost
+
+# Memory promotion
+memory:
+  style_min_occurrences: 2        # an edit pattern must recur before it is promoted
+  outcome_min_samples: 3

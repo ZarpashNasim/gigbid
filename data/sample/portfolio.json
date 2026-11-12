@@ -1,0 +1,20 @@
+[
+  {"id": "cs1", "type": "case_study", "source": "case_studies/rag_support_bot.md", "date": "2025-03",
+   "skills": ["rag", "pgvector", "fastapi", "python"], "outcome": null,
+   "text": "Built a customer-support RAG chatbot on pgvector with hybrid BM25 and dense retrieval, served via FastAPI. Cut ticket handling time by 35 percent."},
+  {"id": "cs2", "type": "case_study", "source": "case_studies/etl_dbt.md", "date": "2024-09",
+   "skills": ["dbt", "airflow", "snowflake", "sql"], "outcome": null,
+   "text": "Designed a dbt and Airflow pipeline on Snowflake for a retail analytics team, replacing 40 manual spreadsheets."},
+  {"id": "cs3", "type": "repo", "source": "github:me/celery-scraper-queue", "date": "2025-06",
+   "skills": ["celery", "redis", "python"], "outcome": null,
+   "text": "Open-source Celery and Redis job queue with idempotent task handling and retry with backoff."},
+  {"id": "p1", "type": "proposal", "source": "proposals/p1.md", "date": "2025-05",
+   "skills": ["rag", "chatbot"], "outcome": "won",
+   "text": "Your support backlog is the problem, so I would start by indexing your tickets. I built a similar RAG assistant last spring that cut handling time by a third."},
+  {"id": "p2", "type": "proposal", "source": "proposals/p2.md", "date": "2025-04",
+   "skills": ["react"], "outcome": "ignored",
+   "text": "Dear Sir, I am passionate about React and would love to work with you."},
+  {"id": "r1", "type": "review", "source": "reviews/r1.md", "date": "2025-07",
+   "skills": ["python", "fastapi"], "outcome": null,
+   "text": "Delivered the API two days early and documented everything clearly. Would hire again."}
+]

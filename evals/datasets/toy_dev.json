@@ -1,0 +1,18 @@
+{
+  "is_toy": true,
+  "note": "Hand-labelled against data/sample/portfolio.json. Validates the eval machinery ONLY. Never cite these numbers; the real dev set comes from the starter kit.",
+  "items": [
+    {"id": "t1", "text": "Need a RAG chatbot with pgvector, a FastAPI backend, and background job processing with Celery and Redis",
+     "requirements": ["RAG chatbot pgvector", "FastAPI backend", "Celery background jobs", "Redis queue"], "gold": ["cs1", "cs3"]},
+    {"id": "t2", "text": "Build a dbt and Airflow pipeline on Snowflake for our analytics team",
+     "requirements": ["dbt", "Airflow", "Snowflake"], "gold": ["cs2"]},
+    {"id": "t3", "text": "Python API developer who delivers early and documents clearly",
+     "requirements": ["Python API", "clear documentation"], "gold": ["r1", "cs1"]},
+    {"id": "t4", "text": "We want a support chatbot that cuts how long tickets take to handle",
+     "requirements": ["support chatbot", "reduce ticket handling time"], "gold": ["cs1", "p1"]},
+    {"id": "t5", "text": "Idempotent task queue with retries and exponential backoff",
+     "requirements": ["idempotent task queue", "retry backoff"], "gold": ["cs3"]},
+    {"id": "t6", "text": "Unity game developer with C# gameplay programming experience",
+     "requirements": ["Unity", "C# gameplay programming"], "gold": []}
+  ]
+}

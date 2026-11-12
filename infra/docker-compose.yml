@@ -1,0 +1,25 @@
+# docker compose -f infra/docker-compose.yml up   (UNTESTED skeleton; web, gigsim, ollama services still to add)
+services:
+  postgres:
+    image: postgres:16
+    environment: {POSTGRES_PASSWORD: gigbid, POSTGRES_DB: gigbid}
+    volumes: [pgdata:/var/lib/postgresql/data]
+  redis:
+    image: redis:7
+  api:
+    build: {context: .., dockerfile: infra/docker/Dockerfile.api}
+    env_file: ../.env
+    environment:
+      CHECKPOINT_URL: postgresql://postgres:gigbid@postgres:5432/gigbid
+      REDIS_URL: redis://redis:6379/0
+    depends_on: [postgres, redis]
+    ports: ["8000:8000"]
+  worker:
+    build: {context: .., dockerfile: infra/docker/Dockerfile.api}
+    command: celery -A worker.tasks worker -l info
+    env_file: ../.env
+    environment:
+      CHECKPOINT_URL: postgresql://postgres:gigbid@postgres:5432/gigbid
+      REDIS_URL: redis://redis:6379/0
+    depends_on: [postgres, redis]
+volumes: {pgdata: {}}

@@ -1,0 +1,32 @@
+name: ci
+on: [pull_request, push]
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install . pytest anyio
+      - run: python -m pytest tests mcp_servers -q
+      - name: gigsim untouched
+        run: git diff --exit-code origin/main -- gigsim/ || (echo "gigsim/ must not change" && exit 1)
+      - name: no secrets committed
+        run: "! git ls-files | grep -E '(^|/)\\.env$'"
+      - name: every prompt lives in agent/prompts
+        run: "! grep -rEn 'You are (a|an) ' agent --include=*.py"
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - run: pip install . && python -m apps.api.export_openapi
+      - run: cd apps/web && npm ci && npx openapi-typescript openapi.json -o src/lib/api/schema.d.ts && git diff --exit-code src/lib/api/schema.d.ts && npx tsc --noEmit
+      - run: cd apps/web && npx playwright install --with-deps chromium && npx playwright test
+      - name: synthetic data regenerates identically
+        run: |
+          python -m gigdata.synth
+          git diff --exit-code data/synthetic evals/datasets || (echo "synthetic data drifted from generator" && exit 1)

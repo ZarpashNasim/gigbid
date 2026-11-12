@@ -1,0 +1,27 @@
+{
+  "availability_hours_per_week": 25,
+  "display_name": "Marcus L. (synthetic)",
+  "freelancer_id": "syn-data_engineer",
+  "headline": "Data engineer: dbt, Airflow, Spark and streaming",
+  "hourly_rate_usd": 60,
+  "minimum_project_budget_usd": 600,
+  "origin": "synthetic",
+  "skills": [
+    "Airflow",
+    "ETL",
+    "Great Expectations",
+    "Kafka",
+    "Parquet",
+    "PySpark",
+    "Python",
+    "REST APIs",
+    "SQL",
+    "Snowflake",
+    "Spark",
+    "data quality",
+    "dbt",
+    "orchestration",
+    "streaming"
+  ],
+  "years_experience": 6
+}

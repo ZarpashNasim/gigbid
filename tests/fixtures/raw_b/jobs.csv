@@ -1,0 +1,3 @@
+uid,title,description,hourly_low,hourly_high,duration,contractor_tier
+u1,Flutter mobile app,"Build a cross platform mobile app in Flutter with login, a feed and push notifications. We provide designs and an API specification for you.",25,45,1 to 3 months,Intermediate
+u2,build a rag chatbot!,we need a retrieval augmented chatbot over our support tickets using python and pgvector. must document the api clearly and write tests for the retrieval step.,,,less than a month,Expert

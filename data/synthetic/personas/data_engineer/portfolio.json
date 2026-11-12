@@ -1,0 +1,416 @@
+[
+  {
+    "capability": null,
+    "date": "2025-09",
+    "evidence_id": "syn-data_engineer-001",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Airflow",
+      "ETL",
+      "Great Expectations",
+      "Kafka",
+      "Parquet",
+      "PySpark",
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Snowflake",
+      "Spark",
+      "data quality",
+      "dbt",
+      "orchestration",
+      "streaming"
+    ],
+    "source": "synthetic:cv/cv.pdf",
+    "summary": "Data engineer: dbt, Airflow, Spark and streaming. 6 years of experience. MSc Data Systems (fictional university). Core skills: Airflow, ETL, Great Expectations, Kafka, Parquet, PySpark, Python, REST APIs, SQL, Snowflake.",
+    "title": "CV: Marcus L. (synthetic)",
+    "type": "cv"
+  },
+  {
+    "capability": "dbt_snowflake",
+    "date": "2023-10",
+    "evidence_id": "syn-data_engineer-002",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "Daily reporting refresh dropped from six hours to twenty minutes.",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "SQL"
+    ],
+    "source": "synthetic:case_studies/dbt_snowflake.md",
+    "summary": "Rebuilt a retail analytics layer in dbt on Snowflake with tests and documentation, replacing forty manual spreadsheets. Daily reporting refresh dropped from six hours to twenty minutes.",
+    "title": "Retail analytics layer in dbt",
+    "type": "case_study"
+  },
+  {
+    "capability": "dbt_snowflake",
+    "date": "2023-08",
+    "evidence_id": "syn-data_engineer-003",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "SQL"
+    ],
+    "source": "synthetic:repos/dbt_snowflake/README.md",
+    "summary": "README. Retail analytics layer in dbt. Setup instructions, architecture notes and tests. Stack: dbt, Snowflake, SQL.",
+    "title": "dbt-snowflake (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "dbt_snowflake",
+    "date": "2024-02",
+    "evidence_id": "syn-data_engineer-004",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "SQL"
+    ],
+    "source": "synthetic:reviews/dbt_snowflake.txt",
+    "summary": "Solid result on retail analytics layer in dbt. A couple of small revisions were needed but they were handled quickly.",
+    "title": "Client review: Retail analytics layer in dbt",
+    "type": "review"
+  },
+  {
+    "capability": "airflow_orch",
+    "date": "2023-03",
+    "evidence_id": "syn-data_engineer-005",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "On-time delivery rose from 82 to 99 percent.",
+    "skills": [
+      "Airflow",
+      "Python",
+      "orchestration"
+    ],
+    "source": "synthetic:case_studies/airflow_orch.md",
+    "summary": "Orchestrated 60 daily pipelines in Airflow with retries, alerting and backfills. On-time delivery rose from 82 to 99 percent.",
+    "title": "Airflow orchestration for 60 pipelines",
+    "type": "case_study"
+  },
+  {
+    "capability": "airflow_orch",
+    "date": "2025-04",
+    "evidence_id": "syn-data_engineer-006",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "Airflow",
+      "Python",
+      "orchestration"
+    ],
+    "source": "synthetic:reviews/airflow_orch.txt",
+    "summary": "Delivered airflow orchestration for 60 pipelines on time and communicated clearly throughout. Would hire again.",
+    "title": "Client review: Airflow orchestration for 60 pipelines",
+    "type": "review"
+  },
+  {
+    "capability": "spark_batch",
+    "date": "2025-06",
+    "evidence_id": "syn-data_engineer-007",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "Runtime fell from nine hours to forty minutes.",
+    "skills": [
+      "Spark",
+      "PySpark",
+      "Parquet"
+    ],
+    "source": "synthetic:case_studies/spark_batch.md",
+    "summary": "Migrated a 2 TB batch job from a single server to PySpark on a managed cluster using partitioned Parquet. Runtime fell from nine hours to forty minutes.",
+    "title": "PySpark migration of a 2 TB batch job",
+    "type": "case_study"
+  },
+  {
+    "capability": "spark_batch",
+    "date": "2023-11",
+    "evidence_id": "syn-data_engineer-008",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Spark",
+      "PySpark",
+      "Parquet"
+    ],
+    "source": "synthetic:repos/spark_batch/README.md",
+    "summary": "README. PySpark migration of a 2 TB batch job. Setup instructions, architecture notes and tests. Stack: Spark, PySpark, Parquet.",
+    "title": "spark-batch (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "kafka_stream",
+    "date": "2024-10",
+    "evidence_id": "syn-data_engineer-009",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "Handled 8,000 events per second with sub-second latency to the warehouse.",
+    "skills": [
+      "Kafka",
+      "streaming",
+      "Python"
+    ],
+    "source": "synthetic:case_studies/kafka_stream.md",
+    "summary": "Built a Kafka-based clickstream ingestion with schema registry and exactly-once downstream writes. Handled 8,000 events per second with sub-second latency to the warehouse.",
+    "title": "Kafka clickstream ingestion",
+    "type": "case_study"
+  },
+  {
+    "capability": "kafka_stream",
+    "date": "2024-03",
+    "evidence_id": "syn-data_engineer-010",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "Kafka",
+      "streaming",
+      "Python"
+    ],
+    "source": "synthetic:reviews/kafka_stream.txt",
+    "summary": "Solid result on kafka clickstream ingestion. A couple of small revisions were needed but they were handled quickly.",
+    "title": "Client review: Kafka clickstream ingestion",
+    "type": "review"
+  },
+  {
+    "capability": "data_quality",
+    "date": "2024-01",
+    "evidence_id": "syn-data_engineer-011",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "Cut bad-data incidents reaching dashboards by 70 percent.",
+    "skills": [
+      "Great Expectations",
+      "SQL",
+      "data quality"
+    ],
+    "source": "synthetic:case_studies/data_quality.md",
+    "summary": "Added automated data-quality checks and anomaly alerts across ten source systems. Cut bad-data incidents reaching dashboards by 70 percent.",
+    "title": "Data-quality checks across ten sources",
+    "type": "case_study"
+  },
+  {
+    "capability": "data_quality",
+    "date": "2024-07",
+    "evidence_id": "syn-data_engineer-012",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Great Expectations",
+      "SQL",
+      "data quality"
+    ],
+    "source": "synthetic:repos/data_quality/README.md",
+    "summary": "README. Data-quality checks across ten sources. Setup instructions, architecture notes and tests. Stack: Great Expectations, SQL, data quality.",
+    "title": "data-quality (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "data_quality",
+    "date": "2025-06",
+    "evidence_id": "syn-data_engineer-013",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "Great Expectations",
+      "SQL",
+      "data quality"
+    ],
+    "source": "synthetic:reviews/data_quality.txt",
+    "summary": "Great work on data-quality checks across ten sources. Documentation was thorough and handover was smooth.",
+    "title": "Client review: Data-quality checks across ten sources",
+    "type": "review"
+  },
+  {
+    "capability": "api_ingest",
+    "date": "2024-11",
+    "evidence_id": "syn-data_engineer-014",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": "Replaced three brittle scripts with one maintained package.",
+    "skills": [
+      "Python",
+      "REST APIs",
+      "ETL"
+    ],
+    "source": "synthetic:case_studies/api_ingest.md",
+    "summary": "Wrote resilient connectors that pull from rate-limited SaaS APIs with pagination, backoff and idempotent loads. Replaced three brittle scripts with one maintained package.",
+    "title": "Resilient SaaS API connectors",
+    "type": "case_study"
+  },
+  {
+    "capability": null,
+    "date": "2024-01",
+    "evidence_id": "syn-data_engineer-015",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p1.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 1",
+    "type": "proposal"
+  },
+  {
+    "capability": "dbt_snowflake",
+    "date": "2024-03",
+    "evidence_id": "syn-data_engineer-016",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "SQL"
+    ],
+    "source": "synthetic:proposals/p2.md",
+    "summary": "Your need for a modern analytics warehouse with tested transformations is something I have handled directly. I rebuilt a retail analytics layer in dbt on Snowflake with tests and documentation, replacing forty manual spreadsheets. Daily reporting refresh dropped from six hours to twenty minutes. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 2",
+    "type": "proposal"
+  },
+  {
+    "capability": "data_quality",
+    "date": "2025-12",
+    "evidence_id": "syn-data_engineer-017",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [
+      "Great Expectations",
+      "SQL",
+      "data quality"
+    ],
+    "source": "synthetic:proposals/p3.md",
+    "summary": "Your need for data validation and monitoring is something I have handled directly. I added automated data-quality checks and anomaly alerts across ten source systems. Cut bad-data incidents reaching dashboards by 70 percent. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 3",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2024-07",
+    "evidence_id": "syn-data_engineer-018",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p4.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 4",
+    "type": "proposal"
+  },
+  {
+    "capability": "api_ingest",
+    "date": "2024-09",
+    "evidence_id": "syn-data_engineer-019",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [
+      "Python",
+      "REST APIs",
+      "ETL"
+    ],
+    "source": "synthetic:proposals/p5.md",
+    "summary": "Your need for scheduled sync from our CRM to a warehouse is something I have handled directly. I wrote resilient connectors that pull from rate-limited SaaS APIs with pagination, backoff and idempotent loads. Replaced three brittle scripts with one maintained package. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 5",
+    "type": "proposal"
+  },
+  {
+    "capability": "kafka_stream",
+    "date": "2023-01",
+    "evidence_id": "syn-data_engineer-020",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Kafka",
+      "streaming",
+      "Python"
+    ],
+    "source": "synthetic:proposals/p6.md",
+    "summary": "Your need for capture clickstream data reliably is something I have handled directly. I built a Kafka-based clickstream ingestion with schema registry and exactly-once downstream writes. Handled 8,000 events per second with sub-second latency to the warehouse. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 6",
+    "type": "proposal"
+  },
+  {
+    "capability": "data_quality",
+    "date": "2023-01",
+    "evidence_id": "syn-data_engineer-021",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "replied",
+    "skills": [
+      "Great Expectations",
+      "SQL",
+      "data quality"
+    ],
+    "source": "synthetic:proposals/p7.md",
+    "summary": "Your need for data validation and monitoring is something I have handled directly. I added automated data-quality checks and anomaly alerts across ten source systems. Cut bad-data incidents reaching dashboards by 70 percent. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 7",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2024-02",
+    "evidence_id": "syn-data_engineer-022",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "replied",
+    "skills": [],
+    "source": "synthetic:proposals/p8.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 8",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2025-10",
+    "evidence_id": "syn-data_engineer-023",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p9.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 9",
+    "type": "proposal"
+  },
+  {
+    "capability": "api_ingest",
+    "date": "2023-12",
+    "evidence_id": "syn-data_engineer-024",
+    "freelancer_id": "syn-data_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [
+      "Python",
+      "REST APIs",
+      "ETL"
+    ],
+    "source": "synthetic:proposals/p10.md",
+    "summary": "Your need for pull data from third party APIs into our database is something I have handled directly. I wrote resilient connectors that pull from rate-limited SaaS APIs with pagination, backoff and idempotent loads. Replaced three brittle scripts with one maintained package. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 10",
+    "type": "proposal"
+  }
+]

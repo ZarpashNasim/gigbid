@@ -1,0 +1,14 @@
+node_modules
+.next
+test-results
+playwright-report
+__pycache__
+build
+*.egg-info
+.pytest_cache
+*.db
+.env
+data/processed
+data/raw
+*.sqlite
+.venv

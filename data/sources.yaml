@@ -1,0 +1,62 @@
+# Registry of external datasets. Rules for this file:
+#  * Only record what was actually verified. Anything not verified says UNVERIFIED.
+#  * Licence must be confirmed on the dataset's Kaggle page BEFORE redistribution. Until then raw and processed
+#    real data are git-ignored (see .gitignore) and only synthetic data is committed.
+#  * Downloaded on: fill in when you download (provenance for the report).
+sources:
+  upwork_50k_2024:
+    kaggle: asaniczka/upwork-job-postings-dataset-2024-50k-records
+    url: https://www.kaggle.com/datasets/asaniczka/upwork-job-postings-dataset-2024-50k-records
+    role: real job posts (primary real job source)
+    claimed_size: "~50K records (from dataset title)"
+    claimed_collection: "Real-time data collected over 2 weeks (from Kaggle page meta description)"
+    licence: UNVERIFIED   # still to confirm on the Kaggle page before committing/redistributing raw or processed data
+    verified_rows: 53058  # counted from the downloaded upwork-jobs.csv
+    columns: [title, link, description, published_date, is_hourly, hourly_low, hourly_high, budget, country]  # verified by `schema` 2026-11-12
+    downloaded_on: 2026-11-12
+  upwork_200k:
+    kaggle: asaniczka/all-jobs-on-upwork-200k-plus
+    url: https://www.kaggle.com/datasets/asaniczka/all-jobs-on-upwork-200k-plus
+    role: real job posts (volume / skill & budget statistics)
+    claimed_size: "200K+ (from dataset title)"
+    licence: UNVERIFIED
+    columns: UNVERIFIED
+    downloaded_on: null
+  upwork_60k:
+    kaggle: ahmedmyalo/upwork-freelance-jobs-60k
+    url: https://www.kaggle.com/datasets/ahmedmyalo/upwork-freelance-jobs-60k
+    role: real job posts (second source; cross-source dedupe check)
+    claimed_size: "~60K (from dataset title)"
+    licence: UNVERIFIED
+    columns: UNVERIFIED
+    downloaded_on: null
+  contracts_1_3m:
+    kaggle: asaniczka/freelance-contracts-dataset-1-3-million-entries
+    url: https://www.kaggle.com/datasets/asaniczka/freelance-contracts-dataset-1-3-million-entries
+    role: market statistics only (budgets / rates per skill) for the Pricing agent
+    claimed_size: "1.3M entries (from dataset title)"
+    licence: UNVERIFIED
+    columns: UNVERIFIED
+    downloaded_on: null
+  freelancer_success:
+    kaggle: sarveshchhetri/freelancer-success-earnings-and-churn-prediction
+    url: https://www.kaggle.com/datasets/sarveshchhetri/freelancer-success-earnings-and-churn-prediction
+    role: optional; calibrate distributions of synthetic personas (rate, experience, success rate)
+    claimed_size: UNVERIFIED
+    licence: UNVERIFIED
+    columns: UNVERIFIED
+    caveat: "Cannot confirm whether this dataset is itself synthetic. Treat as unverified realism."
+    downloaded_on: null
+  trial_1:
+    kaggle: adityammantri/trial-1
+    url: https://www.kaggle.com/datasets/adityammantri/trial-1
+    role: NOT USED until inspected. Name and contents are unknown to us.
+    licence: UNVERIFIED
+    columns: UNVERIFIED
+    downloaded_on: null
+
+limitations_common:
+  - "Third-party scrapes of a marketplace; the assignment forbids us scraping Upwork ourselves, so we only reuse data others published. Platform terms may restrict redistribution; check each licence."
+  - "Job posts only. No real freelancer portfolios, proposals, outcomes or client conversations exist in these sources, so those are synthetic."
+  - "Public posts can contain contact details and names. The loader redacts emails, phone numbers and URLs before anything is stored."
+  - "Scraped data is a biased sample (time window, language, which jobs were visible)."

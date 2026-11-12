@@ -1,0 +1,29 @@
+{
+  "availability_hours_per_week": 20,
+  "display_name": "Priya N. (synthetic)",
+  "freelancer_id": "syn-ai_engineer",
+  "headline": "AI/LLM engineer: RAG, evaluation and agent workflows",
+  "hourly_rate_usd": 45,
+  "minimum_project_budget_usd": 400,
+  "origin": "synthetic",
+  "skills": [
+    "FastAPI",
+    "LLM evaluation",
+    "LangGraph",
+    "OCR",
+    "Pydantic",
+    "Python",
+    "RAG",
+    "Whisper",
+    "classification",
+    "human-in-the-loop",
+    "pandas",
+    "pgvector",
+    "prompt engineering",
+    "scikit-learn",
+    "speech-to-text",
+    "structured extraction",
+    "tool use"
+  ],
+  "years_experience": 4
+}

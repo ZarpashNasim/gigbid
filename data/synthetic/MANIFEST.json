@@ -1,0 +1,79 @@
+{
+  "generator_version": "1.0",
+  "personas": [
+    "ai_engineer",
+    "data_engineer",
+    "fullstack",
+    "mobile"
+  ],
+  "seed": 7,
+  "sha256": {
+    "data/synthetic/_ground_truth/client_quality.json": "5cd794f3fb9d6765f12f387bd2b963e594caade2888d7b2d504f6f18f79330c5",
+    "data/synthetic/_ground_truth/proposal_style.json": "dbc6b4d6fc7965451c0768f4044dde73a22d3e6351155900682e743b68d093dd",
+    "data/synthetic/clients.json": "89123d2ddab9d0f65c9f1cbf6eaaf982007fa9932c6b8b761785b97d04d94f2e",
+    "data/synthetic/jobs_dev.jsonl": "e49568bd37b364692d7df4e33a02f715d986ec91f19b0d578bba60c32a06f8c0",
+    "data/synthetic/jobs_holdout.jsonl": "970219dec0140c379da3df586d2c2cca8a896853830af53187b4599ab4eefda8",
+    "data/synthetic/personas/ai_engineer/freelancer.json": "611e63ce0e2c424afafabfeb255f716c68d3b76408b4cf6e619bc28308ec970a",
+    "data/synthetic/personas/ai_engineer/portfolio.json": "4a3973f5b4bcbe857b252e23cfe5000ada539985c0b06ebff27d36f08a8eae4b",
+    "data/synthetic/personas/data_engineer/freelancer.json": "b3b81b8ae7634eeb9690809a3e6d3f5666f52726ef305dd4acb6b7370fe47940",
+    "data/synthetic/personas/data_engineer/portfolio.json": "3a74522307a729bfaa07a43c3e6d4dc025cf43b79a5c1afbfd755f7ef77c87b6",
+    "data/synthetic/personas/fullstack/freelancer.json": "ed87c6bb1bac25198b0581facd03f32102ad58ebc33cf3c4a160ff074085f1d7",
+    "data/synthetic/personas/fullstack/portfolio.json": "8e1a76e639cadd6682ee8f70f74b3225e855a5a6cd14e17786210e26e7cc077f",
+    "data/synthetic/personas/mobile/freelancer.json": "9270623fdecae56dc391bea8ca560d425f1331f310c287268f1107ae5e2594fa",
+    "data/synthetic/personas/mobile/portfolio.json": "cd6804b363c5e206c4a3f9bfa4336492b5217248f8312b1f6b55720aead4088d",
+    "data/synthetic/threads_dev.json": "f6519d786bc9aea2da29857fabffa4a442ae1a6d35b80b1155bb1a57a5b8a3f9",
+    "data/synthetic/threads_holdout.json": "fd2bf2795e8f0582c6b34ff39d58f41a0f0e39e6da3a25bec7186143e93f7ef0",
+    "evals/datasets/synth_decision_dev.json": "0711619c86570627232da3a2abc256760d80cb62a1b7133279c4111d852f359c",
+    "evals/datasets/synth_decision_holdout.json": "725db90c71a96000060effb6d696a19f869517ff80d26210448dd7deeee07d77",
+    "evals/datasets/synth_messages_dev.json": "e95ca900bf8fa11a77357938d7b43536be18ab41c096324824c52591365ccc30",
+    "evals/datasets/synth_messages_holdout.json": "b362e22c2e00fbe9f1f9722a6016d60105ee03920be9f8d5abf5aff01e55d470",
+    "evals/datasets/synth_retrieval_dev.json": "a478ebc328aef36435d7cece72fa281eecb66e526778cde68f0e8b29ccf32e45",
+    "evals/datasets/synth_retrieval_holdout.json": "b6924ca1e3220aeeac2b0ae33cb5e1d9d04a277c0db67bf608945fceae394cce"
+  },
+  "splits": [
+    "dev",
+    "holdout"
+  ],
+  "summary": {
+    "dev": {
+      "actions": {
+        "bid": 72,
+        "skip": 96,
+        "watch": 16
+      },
+      "by_class": {
+        "good_fit": 48,
+        "injection": 16,
+        "lookalike": 16,
+        "low_budget": 16,
+        "out_of_scope": 24,
+        "partial_fit": 24,
+        "risky_client": 16,
+        "scam": 24
+      },
+      "jobs": 184,
+      "retrieval_items": 112,
+      "threads": 64
+    },
+    "holdout": {
+      "actions": {
+        "bid": 70,
+        "skip": 96,
+        "watch": 18
+      },
+      "by_class": {
+        "good_fit": 48,
+        "injection": 16,
+        "lookalike": 16,
+        "low_budget": 16,
+        "out_of_scope": 24,
+        "partial_fit": 24,
+        "risky_client": 16,
+        "scam": 24
+      },
+      "jobs": 184,
+      "retrieval_items": 112,
+      "threads": 64
+    }
+  }
+}

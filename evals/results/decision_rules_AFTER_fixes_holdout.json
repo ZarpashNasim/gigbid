@@ -1,0 +1,53 @@
+{
+  "n": 184,
+  "bid_or_skip": {
+    "precision": 0.6153846153846154,
+    "recall": 0.11428571428571428,
+    "f1": 0.19277108433734938,
+    "tp": 8,
+    "fp": 5,
+    "fn": 62
+  },
+  "scam": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571428571428571,
+    "tp": 18,
+    "fp": 0,
+    "fn": 6
+  },
+  "injection": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 16,
+    "fp": 0,
+    "fn": 0
+  },
+  "price_in_band": null,
+  "n_priced": 0,
+  "action_accuracy_by_class": {
+    "good_fit": 0.16666666666666666,
+    "injection": 1.0,
+    "lookalike": 0.0,
+    "low_budget": 0.625,
+    "out_of_scope": 0.8333333333333334,
+    "partial_fit": 0.16666666666666666,
+    "risky_client": 1.0,
+    "scam": 1.0
+  },
+  "scam_recall_plain": 1.0,
+  "scam_recall_evasive": 0.5384615384615384,
+  "lookalike_false_flag_rate": 0.0,
+  "meta": {
+    "system": "rules-only baseline (no LLM; Matcher on lexical fallback)",
+    "split": "holdout",
+    "dataset": "evals/datasets/synth_decision_holdout.json",
+    "synthetic": true,
+    "stand_ins": [
+      "no LLM",
+      "HashEmbedder",
+      "gold derived by generator rules"
+    ]
+  }
+}

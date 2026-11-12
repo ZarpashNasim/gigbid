@@ -1,0 +1,21 @@
+{
+  "name": "gigbid-web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "gen:api": "openapi-typescript openapi.json -o src/lib/api/schema.d.ts",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "next": "^16.4.6",
+    "openapi-typescript": "^7.13.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^5.9.3"
+  }
+}

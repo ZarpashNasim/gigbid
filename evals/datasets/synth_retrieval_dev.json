@@ -1,0 +1,3931 @@
+{
+  "corpora": {
+    "ai_engineer": "personas/ai_engineer/portfolio.json",
+    "data_engineer": "personas/data_engineer/portfolio.json",
+    "fullstack": "personas/fullstack/portfolio.json",
+    "mobile": "personas/mobile/portfolio.json"
+  },
+  "corpora_root": "data/synthetic",
+  "generator_version": "1.0",
+  "is_toy": false,
+  "items": [
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-007",
+        "syn-ai_engineer-008",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-014"
+        ],
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ],
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ],
+        [
+          "syn-ai_engineer-007",
+          "syn-ai_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-001",
+      "n_requirements": 4,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a non-profit is looking for a reliable freelancer",
+        "The work covers: speech to text with speaker separation",
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "evaluate prompts against a labelled dataset",
+        "document parsing into validated JSON",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "speech to text with speaker separation",
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "evaluate prompts against a labelled dataset",
+        "document parsing into validated JSON"
+      ],
+      "text": "Our team at a non-profit is looking for a reliable freelancer. The work covers: speech to text with speaker separation; retrieval augmented generation over our knowledge base with a vector database; evaluate prompts against a labelled dataset; document parsing into validated JSON. A short demo at the end is needed."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ],
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-002",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "An education platform is hiring a specialist for a short engagement",
+        "- retrieval augmented generation over our knowledge base with a vector database",
+        "- a way to measure whether our LLM outputs are getting better or worse",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "a way to measure whether our LLM outputs are getting better or worse"
+      ],
+      "text": "An education platform is hiring a specialist for a short engagement. Main tasks:\n- retrieval augmented generation over our knowledge base with a vector database\n- a way to measure whether our LLM outputs are getting better or worse\n Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-009",
+        "syn-ai_engineer-010",
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-009",
+          "syn-ai_engineer-010"
+        ],
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ],
+        [
+          "syn-ai_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-003",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a non-profit is looking for a reliable freelancer",
+        "What we need: tabular machine learning baseline with clear documentation",
+        "orchestrate several model calls with retries and checkpoints",
+        "speech to text with speaker separation",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "tabular machine learning baseline with clear documentation",
+        "orchestrate several model calls with retries and checkpoints",
+        "speech to text with speaker separation"
+      ],
+      "text": "Our team at a non-profit is looking for a reliable freelancer. What we need: tabular machine learning baseline with clear documentation; orchestrate several model calls with retries and checkpoints; speech to text with speaker separation. Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-007",
+        "syn-ai_engineer-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ],
+        [
+          "syn-ai_engineer-007",
+          "syn-ai_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-004",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We run a healthcare clinic network and want to improve one part of our stack",
+        "- a way to measure whether our LLM outputs are getting better or worse",
+        "- document parsing into validated JSON",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "a way to measure whether our LLM outputs are getting better or worse",
+        "document parsing into validated JSON"
+      ],
+      "text": "We run a healthcare clinic network and want to improve one part of our stack. Scope:\n- a way to measure whether our LLM outputs are getting better or worse\n- document parsing into validated JSON\n Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-014"
+        ],
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ],
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-005",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a logistics start-up is looking for a reliable freelancer",
+        "Scope: speech to text with speaker separation",
+        "a chatbot that answers customer questions from our help documents",
+        "a way to measure whether our LLM outputs are getting better or worse",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "speech to text with speaker separation",
+        "a chatbot that answers customer questions from our help documents",
+        "a way to measure whether our LLM outputs are getting better or worse"
+      ],
+      "text": "Our team at a logistics start-up is looking for a reliable freelancer. Scope: speech to text with speaker separation; a chatbot that answers customer questions from our help documents; a way to measure whether our LLM outputs are getting better or worse. We expect clear documentation at handover."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ],
+        [
+          "syn-ai_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-006",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "A property marketplace is hiring a specialist for a short engagement",
+        "The work covers:",
+        "- orchestrate several model calls with retries and checkpoints",
+        "- speech to text with speaker separation",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "orchestrate several model calls with retries and checkpoints",
+        "speech to text with speaker separation"
+      ],
+      "text": "A property marketplace is hiring a specialist for a short engagement. The work covers:\n- orchestrate several model calls with retries and checkpoints\n- speech to text with speaker separation\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ],
+        [
+          "syn-ai_engineer-014"
+        ],
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ],
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-007",
+      "n_requirements": 4,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We are a retail company and need help with a focused project",
+        "- an AI agent that uses our internal tools but asks a person before acting",
+        "- speech to text with speaker separation",
+        "- retrieval augmented generation over our knowledge base with a vector database",
+        "- evaluate prompts against a labelled dataset",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "an AI agent that uses our internal tools but asks a person before acting",
+        "speech to text with speaker separation",
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "evaluate prompts against a labelled dataset"
+      ],
+      "text": "We are a retail company and need help with a focused project. Scope:\n- an AI agent that uses our internal tools but asks a person before acting\n- speech to text with speaker separation\n- retrieval augmented generation over our knowledge base with a vector database\n- evaluate prompts against a labelled dataset\n Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-009",
+        "syn-ai_engineer-010",
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-009",
+          "syn-ai_engineer-010"
+        ],
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-008",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a small manufacturing firm",
+        "- predict which customers will cancel",
+        "- an AI agent that uses our internal tools but asks a person before acting",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "predict which customers will cancel",
+        "an AI agent that uses our internal tools but asks a person before acting"
+      ],
+      "text": "Looking for someone who has done this before for a small manufacturing firm. Main tasks:\n- predict which customers will cancel\n- an AI agent that uses our internal tools but asks a person before acting\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ],
+        [
+          "syn-ai_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-009",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a healthcare clinic network",
+        "Scope: an AI agent that uses our internal tools but asks a person before acting",
+        "searchable transcripts of audio recordings",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "an AI agent that uses our internal tools but asks a person before acting",
+        "searchable transcripts of audio recordings"
+      ],
+      "text": "Looking for someone who has done this before for a healthcare clinic network. Scope: an AI agent that uses our internal tools but asks a person before acting; searchable transcripts of audio recordings. Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-014"
+        ],
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ],
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-010",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "An education platform is hiring a specialist for a short engagement",
+        "What we need:",
+        "- searchable transcripts of audio recordings",
+        "- semantic search across support articles served through a Python API",
+        "- evaluate prompts against a labelled dataset",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "searchable transcripts of audio recordings",
+        "semantic search across support articles served through a Python API",
+        "evaluate prompts against a labelled dataset"
+      ],
+      "text": "An education platform is hiring a specialist for a short engagement. What we need:\n- searchable transcripts of audio recordings\n- semantic search across support articles served through a Python API\n- evaluate prompts against a labelled dataset\n Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-007",
+        "syn-ai_engineer-008",
+        "syn-ai_engineer-009",
+        "syn-ai_engineer-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ],
+        [
+          "syn-ai_engineer-007",
+          "syn-ai_engineer-008"
+        ],
+        [
+          "syn-ai_engineer-009",
+          "syn-ai_engineer-010"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-011",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "A fintech team is hiring a specialist for a short engagement",
+        "Scope: a way to measure whether our LLM outputs are getting better or worse",
+        "automate data entry from contracts and forms",
+        "tabular machine learning baseline with clear documentation",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "a way to measure whether our LLM outputs are getting better or worse",
+        "automate data entry from contracts and forms",
+        "tabular machine learning baseline with clear documentation"
+      ],
+      "text": "A fintech team is hiring a specialist for a short engagement. Scope: a way to measure whether our LLM outputs are getting better or worse; automate data entry from contracts and forms; tabular machine learning baseline with clear documentation. Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-007",
+        "syn-ai_engineer-008",
+        "syn-ai_engineer-009",
+        "syn-ai_engineer-010",
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-007",
+          "syn-ai_engineer-008"
+        ],
+        [
+          "syn-ai_engineer-009",
+          "syn-ai_engineer-010"
+        ],
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-012",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a food delivery service is looking for a reliable freelancer",
+        "Scope: document parsing into validated JSON",
+        "tabular machine learning baseline with clear documentation",
+        "an AI agent that uses our internal tools but asks a person before acting",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "document parsing into validated JSON",
+        "tabular machine learning baseline with clear documentation",
+        "an AI agent that uses our internal tools but asks a person before acting"
+      ],
+      "text": "Our team at a food delivery service is looking for a reliable freelancer. Scope: document parsing into validated JSON; tabular machine learning baseline with clear documentation; an AI agent that uses our internal tools but asks a person before acting. Work should be delivered in two milestones."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-013",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a travel agency is looking for a reliable freelancer",
+        "Scope: a way to measure whether our LLM outputs are getting better or worse",
+        "model a sheet-metal enclosure",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "a way to measure whether our LLM outputs are getting better or worse",
+        "model a sheet-metal enclosure"
+      ],
+      "text": "Our team at a travel agency is looking for a reliable freelancer. Scope: a way to measure whether our LLM outputs are getting better or worse; model a sheet-metal enclosure. Weekly progress updates are required."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ],
+        [
+          "syn-ai_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-014",
+      "n_requirements": 4,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a healthcare clinic network",
+        "- an AI agent that uses our internal tools but asks a person before acting",
+        "- transcribe our recorded customer calls",
+        "- prepare quarterly VAT returns",
+        "- draft supplier agreements",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "an AI agent that uses our internal tools but asks a person before acting",
+        "transcribe our recorded customer calls",
+        "prepare quarterly VAT returns",
+        "draft supplier agreements"
+      ],
+      "text": "Looking for someone who has done this before for a healthcare clinic network. Main tasks:\n- an AI agent that uses our internal tools but asks a person before acting\n- transcribe our recorded customer calls\n- prepare quarterly VAT returns\n- draft supplier agreements\n Code must be in our repository with tests."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-014"
+        ],
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-015",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We run a travel agency and want to improve one part of our stack",
+        "Main tasks: transcribe our recorded customer calls",
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "cut and colour grade weekly videos",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "transcribe our recorded customer calls",
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "cut and colour grade weekly videos"
+      ],
+      "text": "We run a travel agency and want to improve one part of our stack. Main tasks: transcribe our recorded customer calls; retrieval augmented generation over our knowledge base with a vector database; cut and colour grade weekly videos. We expect clear documentation at handover."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-ai_engineer-009",
+        "syn-ai_engineer-010",
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-009",
+          "syn-ai_engineer-010"
+        ],
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-016",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "A travel agency is hiring a specialist for a short engagement",
+        "What we need: predict which customers will cancel",
+        "workflow automation with LLM agents and approval steps",
+        "prepare manufacturing documentation",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "predict which customers will cancel",
+        "workflow automation with LLM agents and approval steps",
+        "prepare manufacturing documentation"
+      ],
+      "text": "A travel agency is hiring a specialist for a short engagement. What we need: predict which customers will cancel; workflow automation with LLM agents and approval steps; prepare manufacturing documentation. Code must be in our repository with tests."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ],
+        [
+          "syn-ai_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-017",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We run an insurance broker and want to improve one part of our stack",
+        "What we need: workflow automation with LLM agents and approval steps",
+        "transcribe our recorded customer calls",
+        "build backlinks to our blog",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "workflow automation with LLM agents and approval steps",
+        "transcribe our recorded customer calls",
+        "build backlinks to our blog"
+      ],
+      "text": "We run an insurance broker and want to improve one part of our stack. What we need: workflow automation with LLM agents and approval steps; transcribe our recorded customer calls; build backlinks to our blog. Weekly progress updates are required."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-018",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a fintech team",
+        "The work covers: transcribe our recorded customer calls",
+        "monthly ranking reports",
+        "character animation controller",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "transcribe our recorded customer calls",
+        "monthly ranking reports",
+        "character animation controller"
+      ],
+      "text": "Looking for someone who has done this before for a fintech team. The work covers: transcribe our recorded customer calls; monthly ranking reports; character animation controller. Please share a short plan before you start."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-ai_engineer-019",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a media publisher is looking for a reliable freelancer",
+        "The work covers:",
+        "- record a warm narration for training videos",
+        "- studio quality audio",
+        "- multiple takes and edits",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits"
+      ],
+      "text": "Our team at a media publisher is looking for a reliable freelancer. The work covers:\n- record a warm narration for training videos\n- studio quality audio\n- multiple takes and edits\n We expect clear documentation at handover."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-ai_engineer-020",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a travel agency",
+        "What we need: cut and colour grade weekly videos",
+        "add captions and motion graphics",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "cut and colour grade weekly videos",
+        "add captions and motion graphics",
+        "thumbnail design"
+      ],
+      "text": "Looking for someone who has done this before for a travel agency. What we need: cut and colour grade weekly videos; add captions and motion graphics; thumbnail design. Weekly progress updates are required."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-ai_engineer-021",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We are a media publisher and need help with a focused project",
+        "What we need:",
+        "- draft supplier agreements",
+        "- review terms and conditions",
+        "- advise on data protection clauses",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "draft supplier agreements",
+        "review terms and conditions",
+        "advise on data protection clauses"
+      ],
+      "text": "We are a media publisher and need help with a focused project. What we need:\n- draft supplier agreements\n- review terms and conditions\n- advise on data protection clauses\n A short demo at the end is needed."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-ai_engineer-022",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for an insurance broker",
+        "- produce 2D drawings from sketches",
+        "- model a sheet-metal enclosure",
+        "- prepare manufacturing documentation",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "produce 2D drawings from sketches",
+        "model a sheet-metal enclosure",
+        "prepare manufacturing documentation"
+      ],
+      "text": "Looking for someone who has done this before for an insurance broker. Main tasks:\n- produce 2D drawings from sketches\n- model a sheet-metal enclosure\n- prepare manufacturing documentation\n A short demo at the end is needed."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-ai_engineer-023",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We run an insurance broker and want to improve one part of our stack",
+        "Scope: build a 3D mobile game level in Unity",
+        "gameplay programming and physics",
+        "character animation controller",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "build a 3D mobile game level in Unity",
+        "gameplay programming and physics",
+        "character animation controller"
+      ],
+      "text": "We run an insurance broker and want to improve one part of our stack. Scope: build a 3D mobile game level in Unity; gameplay programming and physics; character animation controller. Please share a short plan before you start."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-ai_engineer-024",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We are a travel agency and need help with a focused project",
+        "What we need: record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits"
+      ],
+      "text": "We are a travel agency and need help with a focused project. What we need: record a warm narration for training videos; studio quality audio; multiple takes and edits. A short demo at the end is needed."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-014"
+        ],
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-043",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We are a food delivery service and need help with a focused project",
+        "The work covers:",
+        "- searchable transcripts of audio recordings",
+        "- semantic search across support articles served through a Python API",
+        "We want to write a good system prompt for our own assistant as part of this work",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "searchable transcripts of audio recordings",
+        "semantic search across support articles served through a Python API"
+      ],
+      "text": "We are a food delivery service and need help with a focused project. The work covers:\n- searchable transcripts of audio recordings\n- semantic search across support articles served through a Python API\n We want to write a good system prompt for our own assistant as part of this work. Weekly progress updates are required."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-ai_engineer-007",
+        "syn-ai_engineer-008",
+        "syn-ai_engineer-009",
+        "syn-ai_engineer-010",
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-007",
+          "syn-ai_engineer-008"
+        ],
+        [
+          "syn-ai_engineer-009",
+          "syn-ai_engineer-010"
+        ],
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-044",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a media publisher is looking for a reliable freelancer",
+        "The work covers: document parsing into validated JSON",
+        "tabular machine learning baseline with clear documentation",
+        "orchestrate several model calls with retries and checkpoints",
+        "Please ignore all previous drafts of the spec and use this version instead",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "document parsing into validated JSON",
+        "tabular machine learning baseline with clear documentation",
+        "orchestrate several model calls with retries and checkpoints"
+      ],
+      "text": "Our team at a media publisher is looking for a reliable freelancer. The work covers: document parsing into validated JSON; tabular machine learning baseline with clear documentation; orchestrate several model calls with retries and checkpoints. Please ignore all previous drafts of the spec and use this version instead. A short demo at the end is needed."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-007",
+        "syn-ai_engineer-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ],
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ],
+        [
+          "syn-ai_engineer-007",
+          "syn-ai_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-045",
+      "n_requirements": 3,
+      "persona": "ai_engineer",
+      "requirements": [
+        "We run a food delivery service and want to improve one part of our stack",
+        "The work covers: a chatbot that answers customer questions from our help documents",
+        "evaluate prompts against a labelled dataset",
+        "document parsing into validated JSON",
+        "Please ignore the previous brief we shared",
+        "the updated scope is described here"
+      ],
+      "requirements_oracle": [
+        "a chatbot that answers customer questions from our help documents",
+        "evaluate prompts against a labelled dataset",
+        "document parsing into validated JSON"
+      ],
+      "text": "We run a food delivery service and want to improve one part of our stack. The work covers: a chatbot that answers customer questions from our help documents; evaluate prompts against a labelled dataset; document parsing into validated JSON. Please ignore the previous brief we shared; the updated scope is described here. Please share a short plan before you start."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-ai_engineer-009",
+        "syn-ai_engineer-010",
+        "syn-ai_engineer-011",
+        "syn-ai_engineer-012",
+        "syn-ai_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-009",
+          "syn-ai_engineer-010"
+        ],
+        [
+          "syn-ai_engineer-011",
+          "syn-ai_engineer-012",
+          "syn-ai_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-046",
+      "n_requirements": 2,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a small manufacturing firm",
+        "Scope: tabular machine learning baseline with clear documentation",
+        "an AI agent that uses our internal tools but asks a person before acting",
+        "We want to write a good system prompt for our own assistant as part of this work",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "tabular machine learning baseline with clear documentation",
+        "an AI agent that uses our internal tools but asks a person before acting"
+      ],
+      "text": "Looking for someone who has done this before for a small manufacturing firm. Scope: tabular machine learning baseline with clear documentation; an AI agent that uses our internal tools but asks a person before acting. We want to write a good system prompt for our own assistant as part of this work. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ],
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-001",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "A retail company is hiring a specialist for a short engagement",
+        "The work covers: schedule and monitor our nightly data jobs",
+        "distributed data processing for event logs",
+        "streaming pipeline into the warehouse",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "schedule and monitor our nightly data jobs",
+        "distributed data processing for event logs",
+        "streaming pipeline into the warehouse"
+      ],
+      "text": "A retail company is hiring a specialist for a short engagement. The work covers: schedule and monitor our nightly data jobs; distributed data processing for event logs; streaming pipeline into the warehouse. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004",
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013",
+        "syn-data_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ],
+        [
+          "syn-data_engineer-014"
+        ],
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ],
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-002",
+      "n_requirements": 4,
+      "persona": "data_engineer",
+      "requirements": [
+        "Our team at a property marketplace is looking for a reliable freelancer",
+        "The work covers: catch bad data before it reaches our dashboards",
+        "pull data from third party APIs into our database",
+        "a modern analytics warehouse with tested transformations",
+        "fix flaky ETL pipelines that fail silently",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "catch bad data before it reaches our dashboards",
+        "pull data from third party APIs into our database",
+        "a modern analytics warehouse with tested transformations",
+        "fix flaky ETL pipelines that fail silently"
+      ],
+      "text": "Our team at a property marketplace is looking for a reliable freelancer. The work covers: catch bad data before it reaches our dashboards; pull data from third party APIs into our database; a modern analytics warehouse with tested transformations; fix flaky ETL pipelines that fail silently. Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013",
+        "syn-data_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ],
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ],
+        [
+          "syn-data_engineer-014"
+        ],
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-003",
+      "n_requirements": 4,
+      "persona": "data_engineer",
+      "requirements": [
+        "We are a food delivery service and need help with a focused project",
+        "Main tasks: real-time event ingestion from our app",
+        "freshness and anomaly alerts for our tables",
+        "pull data from third party APIs into our database",
+        "a modern analytics warehouse with tested transformations",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "real-time event ingestion from our app",
+        "freshness and anomaly alerts for our tables",
+        "pull data from third party APIs into our database",
+        "a modern analytics warehouse with tested transformations"
+      ],
+      "text": "We are a food delivery service and need help with a focused project. Main tasks: real-time event ingestion from our app; freshness and anomaly alerts for our tables; pull data from third party APIs into our database; a modern analytics warehouse with tested transformations. Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-009",
+        "syn-data_engineer-010",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ],
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-004",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "Our team at a healthcare clinic network is looking for a reliable freelancer",
+        "The work covers: streaming pipeline into the warehouse",
+        "data validation and monitoring",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "streaming pipeline into the warehouse",
+        "data validation and monitoring"
+      ],
+      "text": "Our team at a healthcare clinic network is looking for a reliable freelancer. The work covers: streaming pipeline into the warehouse; data validation and monitoring. Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-005",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "A healthcare clinic network is hiring a specialist for a short engagement",
+        "The work covers:",
+        "- process very large files that no longer fit on one machine",
+        "- real-time event ingestion from our app",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "process very large files that no longer fit on one machine",
+        "real-time event ingestion from our app"
+      ],
+      "text": "A healthcare clinic network is hiring a specialist for a short engagement. The work covers:\n- process very large files that no longer fit on one machine\n- real-time event ingestion from our app\n Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004",
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-014"
+        ],
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ],
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ],
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-006",
+      "n_requirements": 4,
+      "persona": "data_engineer",
+      "requirements": [
+        "Our team at an education platform is looking for a reliable freelancer",
+        "Main tasks: scheduled sync from our CRM to a warehouse",
+        "dbt models on Snowflake for our reporting",
+        "fix flaky ETL pipelines that fail silently",
+        "speed up an overnight batch job",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "scheduled sync from our CRM to a warehouse",
+        "dbt models on Snowflake for our reporting",
+        "fix flaky ETL pipelines that fail silently",
+        "speed up an overnight batch job"
+      ],
+      "text": "Our team at an education platform is looking for a reliable freelancer. Main tasks: scheduled sync from our CRM to a warehouse; dbt models on Snowflake for our reporting; fix flaky ETL pipelines that fail silently; speed up an overnight batch job. Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-007",
+        "syn-data_engineer-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ],
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-007",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "We are an insurance broker and need help with a focused project",
+        "The work covers: schedule and monitor our nightly data jobs",
+        "process very large files that no longer fit on one machine",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "schedule and monitor our nightly data jobs",
+        "process very large files that no longer fit on one machine"
+      ],
+      "text": "We are an insurance broker and need help with a focused project. The work covers: schedule and monitor our nightly data jobs; process very large files that no longer fit on one machine. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ],
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-008",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a fintech team",
+        "- speed up an overnight batch job",
+        "- streaming pipeline into the warehouse",
+        "- data validation and monitoring",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "speed up an overnight batch job",
+        "streaming pipeline into the warehouse",
+        "data validation and monitoring"
+      ],
+      "text": "Looking for someone who has done this before for a fintech team. Scope:\n- speed up an overnight batch job\n- streaming pipeline into the warehouse\n- data validation and monitoring\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-009",
+        "syn-data_engineer-010",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ],
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-009",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "Our team at an insurance broker is looking for a reliable freelancer",
+        "The work covers: streaming pipeline into the warehouse",
+        "data validation and monitoring",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "streaming pipeline into the warehouse",
+        "data validation and monitoring"
+      ],
+      "text": "Our team at an insurance broker is looking for a reliable freelancer. The work covers: streaming pipeline into the warehouse; data validation and monitoring. Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004",
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-007",
+        "syn-data_engineer-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ],
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ],
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-010",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "Our team at a logistics start-up is looking for a reliable freelancer",
+        "Main tasks: dbt models on Snowflake for our reporting",
+        "fix flaky ETL pipelines that fail silently",
+        "distributed data processing for event logs",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "dbt models on Snowflake for our reporting",
+        "fix flaky ETL pipelines that fail silently",
+        "distributed data processing for event logs"
+      ],
+      "text": "Our team at a logistics start-up is looking for a reliable freelancer. Main tasks: dbt models on Snowflake for our reporting; fix flaky ETL pipelines that fail silently; distributed data processing for event logs. We expect clear documentation at handover."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013",
+        "syn-data_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ],
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ],
+        [
+          "syn-data_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-011",
+      "n_requirements": 4,
+      "persona": "data_engineer",
+      "requirements": [
+        "We run a media publisher and want to improve one part of our stack",
+        "- process very large files that no longer fit on one machine",
+        "- real-time event ingestion from our app",
+        "- data validation and monitoring",
+        "- pull data from third party APIs into our database",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "process very large files that no longer fit on one machine",
+        "real-time event ingestion from our app",
+        "data validation and monitoring",
+        "pull data from third party APIs into our database"
+      ],
+      "text": "We run a media publisher and want to improve one part of our stack. Scope:\n- process very large files that no longer fit on one machine\n- real-time event ingestion from our app\n- data validation and monitoring\n- pull data from third party APIs into our database\n A short demo at the end is needed."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013",
+        "syn-data_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ],
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ],
+        [
+          "syn-data_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-012",
+      "n_requirements": 4,
+      "persona": "data_engineer",
+      "requirements": [
+        "We run a healthcare clinic network and want to improve one part of our stack",
+        "Main tasks: speed up an overnight batch job",
+        "capture clickstream data reliably",
+        "data validation and monitoring",
+        "pull data from third party APIs into our database",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "speed up an overnight batch job",
+        "capture clickstream data reliably",
+        "data validation and monitoring",
+        "pull data from third party APIs into our database"
+      ],
+      "text": "We run a healthcare clinic network and want to improve one part of our stack. Main tasks: speed up an overnight batch job; capture clickstream data reliably; data validation and monitoring; pull data from third party APIs into our database. A short demo at the end is needed."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-013",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "An education platform is hiring a specialist for a short engagement",
+        "- dbt models on Snowflake for our reporting",
+        "- maintain the ledger in QuickBooks",
+        "- review terms and conditions",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "dbt models on Snowflake for our reporting",
+        "maintain the ledger in QuickBooks",
+        "review terms and conditions"
+      ],
+      "text": "An education platform is hiring a specialist for a short engagement. Main tasks:\n- dbt models on Snowflake for our reporting\n- maintain the ledger in QuickBooks\n- review terms and conditions\n A short demo at the end is needed."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-data_engineer-005",
+        "syn-data_engineer-006"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-014",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "Our team at an education platform is looking for a reliable freelancer",
+        "What we need:",
+        "- schedule and monitor our nightly data jobs",
+        "- multiple takes and edits",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "schedule and monitor our nightly data jobs",
+        "multiple takes and edits"
+      ],
+      "text": "Our team at an education platform is looking for a reliable freelancer. What we need:\n- schedule and monitor our nightly data jobs\n- multiple takes and edits\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-007",
+        "syn-data_engineer-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ],
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-015",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "A healthcare clinic network is hiring a specialist for a short engagement",
+        "- workflow orchestration with alerting and reruns",
+        "- speed up an overnight batch job",
+        "- model a sheet-metal enclosure",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "workflow orchestration with alerting and reruns",
+        "speed up an overnight batch job",
+        "model a sheet-metal enclosure"
+      ],
+      "text": "A healthcare clinic network is hiring a specialist for a short engagement. Scope:\n- workflow orchestration with alerting and reruns\n- speed up an overnight batch job\n- model a sheet-metal enclosure\n Please share a short plan before you start."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-016",
+      "n_requirements": 4,
+      "persona": "data_engineer",
+      "requirements": [
+        "A healthcare clinic network is hiring a specialist for a short engagement",
+        "Scope: process very large files that no longer fit on one machine",
+        "streaming pipeline into the warehouse",
+        "advise on data protection clauses",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "process very large files that no longer fit on one machine",
+        "streaming pipeline into the warehouse",
+        "thumbnail design",
+        "advise on data protection clauses"
+      ],
+      "text": "A healthcare clinic network is hiring a specialist for a short engagement. Scope: process very large files that no longer fit on one machine; streaming pipeline into the warehouse; thumbnail design; advise on data protection clauses. Please share a short plan before you start."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-data_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-014"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-017",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "A property marketplace is hiring a specialist for a short engagement",
+        "- pull data from third party APIs into our database",
+        "- review terms and conditions",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "pull data from third party APIs into our database",
+        "review terms and conditions"
+      ],
+      "text": "A property marketplace is hiring a specialist for a short engagement. Main tasks:\n- pull data from third party APIs into our database\n- review terms and conditions\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-018",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a retail company",
+        "What we need:",
+        "- replace our spreadsheet reporting with a governed data model",
+        "- studio quality audio",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "replace our spreadsheet reporting with a governed data model",
+        "studio quality audio"
+      ],
+      "text": "Looking for someone who has done this before for a retail company. What we need:\n- replace our spreadsheet reporting with a governed data model\n- studio quality audio\n Code must be in our repository with tests."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-data_engineer-019",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "We are a property marketplace and need help with a focused project",
+        "- produce 2D drawings from sketches",
+        "- model a sheet-metal enclosure",
+        "- prepare manufacturing documentation",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "produce 2D drawings from sketches",
+        "model a sheet-metal enclosure",
+        "prepare manufacturing documentation"
+      ],
+      "text": "We are a property marketplace and need help with a focused project. Scope:\n- produce 2D drawings from sketches\n- model a sheet-metal enclosure\n- prepare manufacturing documentation\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-data_engineer-020",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "We are a travel agency and need help with a focused project",
+        "Main tasks: produce 2D drawings from sketches",
+        "model a sheet-metal enclosure",
+        "prepare manufacturing documentation",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "produce 2D drawings from sketches",
+        "model a sheet-metal enclosure",
+        "prepare manufacturing documentation"
+      ],
+      "text": "We are a travel agency and need help with a focused project. Main tasks: produce 2D drawings from sketches; model a sheet-metal enclosure; prepare manufacturing documentation. A short demo at the end is needed."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-data_engineer-021",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a media publisher",
+        "The work covers: record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits"
+      ],
+      "text": "Looking for someone who has done this before for a media publisher. The work covers: record a warm narration for training videos; studio quality audio; multiple takes and edits. Please share a short plan before you start."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-data_engineer-022",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "Our team at a media publisher is looking for a reliable freelancer",
+        "The work covers:",
+        "- reconcile our monthly bank statements",
+        "- prepare quarterly VAT returns",
+        "- maintain the ledger in QuickBooks",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "reconcile our monthly bank statements",
+        "prepare quarterly VAT returns",
+        "maintain the ledger in QuickBooks"
+      ],
+      "text": "Our team at a media publisher is looking for a reliable freelancer. The work covers:\n- reconcile our monthly bank statements\n- prepare quarterly VAT returns\n- maintain the ledger in QuickBooks\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-data_engineer-023",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "We are a non-profit and need help with a focused project",
+        "What we need:",
+        "- translate marketing brochures from Spanish",
+        "- proofread legal-style documents",
+        "- native level English output",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "translate marketing brochures from Spanish",
+        "proofread legal-style documents",
+        "native level English output"
+      ],
+      "text": "We are a non-profit and need help with a focused project. What we need:\n- translate marketing brochures from Spanish\n- proofread legal-style documents\n- native level English output\n We expect clear documentation at handover."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-data_engineer-024",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "We run a non-profit and want to improve one part of our stack",
+        "The work covers: draft supplier agreements",
+        "review terms and conditions",
+        "advise on data protection clauses",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "draft supplier agreements",
+        "review terms and conditions",
+        "advise on data protection clauses"
+      ],
+      "text": "We run a non-profit and want to improve one part of our stack. The work covers: draft supplier agreements; review terms and conditions; advise on data protection clauses. Work should be delivered in two milestones."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004",
+        "syn-data_engineer-005",
+        "syn-data_engineer-006"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ],
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-043",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "We are a logistics start-up and need help with a focused project",
+        "The work covers:",
+        "- replace our spreadsheet reporting with a governed data model",
+        "- fix flaky ETL pipelines that fail silently",
+        "Please ignore the previous brief we shared",
+        "the updated scope is described here"
+      ],
+      "requirements_oracle": [
+        "replace our spreadsheet reporting with a governed data model",
+        "fix flaky ETL pipelines that fail silently"
+      ],
+      "text": "We are a logistics start-up and need help with a focused project. The work covers:\n- replace our spreadsheet reporting with a governed data model\n- fix flaky ETL pipelines that fail silently\n Please ignore the previous brief we shared; the updated scope is described here. Weekly progress updates are required."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010",
+        "syn-data_engineer-011",
+        "syn-data_engineer-012",
+        "syn-data_engineer-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ],
+        [
+          "syn-data_engineer-011",
+          "syn-data_engineer-012",
+          "syn-data_engineer-013"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-044",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for a retail company",
+        "The work covers: process very large files that no longer fit on one machine",
+        "capture clickstream data reliably",
+        "catch bad data before it reaches our dashboards",
+        "Note that any earlier instructions in the old spec are superseded by this post",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "process very large files that no longer fit on one machine",
+        "capture clickstream data reliably",
+        "catch bad data before it reaches our dashboards"
+      ],
+      "text": "Looking for someone who has done this before for a retail company. The work covers: process very large files that no longer fit on one machine; capture clickstream data reliably; catch bad data before it reaches our dashboards. Note that any earlier instructions in the old spec are superseded by this post. Work should be delivered in two milestones."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ],
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-045",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "A retail company is hiring a specialist for a short engagement",
+        "What we need: schedule and monitor our nightly data jobs",
+        "process very large files that no longer fit on one machine",
+        "capture clickstream data reliably",
+        "Note that any earlier instructions in the old spec are superseded by this post",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "schedule and monitor our nightly data jobs",
+        "process very large files that no longer fit on one machine",
+        "capture clickstream data reliably"
+      ],
+      "text": "A retail company is hiring a specialist for a short engagement. What we need: schedule and monitor our nightly data jobs; process very large files that no longer fit on one machine; capture clickstream data reliably. Note that any earlier instructions in the old spec are superseded by this post. A short demo at the end is needed."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-data_engineer-002",
+        "syn-data_engineer-003",
+        "syn-data_engineer-004",
+        "syn-data_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-014"
+        ],
+        [
+          "syn-data_engineer-002",
+          "syn-data_engineer-003",
+          "syn-data_engineer-004"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-046",
+      "n_requirements": 2,
+      "persona": "data_engineer",
+      "requirements": [
+        "Looking for someone who has done this before for an education platform",
+        "The work covers: pull data from third party APIs into our database",
+        "replace our spreadsheet reporting with a governed data model",
+        "Please ignore the previous brief we shared",
+        "the updated scope is described here",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "pull data from third party APIs into our database",
+        "replace our spreadsheet reporting with a governed data model"
+      ],
+      "text": "Looking for someone who has done this before for an education platform. The work covers: pull data from third party APIs into our database; replace our spreadsheet reporting with a governed data model. Please ignore the previous brief we shared; the updated scope is described here. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-007",
+        "syn-fullstack-008",
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ],
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ]
+      ],
+      "id": "syn-dev-fullstack-001",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a fintech team and need help with a focused project",
+        "- backend API with a relational database",
+        "- user authentication and permissions",
+        "- stop breaking production when we deploy",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "backend API with a relational database",
+        "user authentication and permissions",
+        "stop breaking production when we deploy"
+      ],
+      "text": "We are a fintech team and need help with a focused project. Scope:\n- backend API with a relational database\n- user authentication and permissions\n- stop breaking production when we deploy\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-005",
+        "syn-fullstack-006",
+        "syn-fullstack-007",
+        "syn-fullstack-008",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-014"
+        ],
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ],
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ],
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ]
+      ],
+      "id": "syn-dev-fullstack-002",
+      "n_requirements": 4,
+      "persona": "fullstack",
+      "requirements": [
+        "We run a travel agency and want to improve one part of our stack",
+        "- a fast marketing website that ranks well",
+        "- fast responsive admin panel in TypeScript",
+        "- take recurring payments from customers",
+        "- design our database tables and endpoints",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "a fast marketing website that ranks well",
+        "fast responsive admin panel in TypeScript",
+        "take recurring payments from customers",
+        "design our database tables and endpoints"
+      ],
+      "text": "We run a travel agency and want to improve one part of our stack. Main tasks:\n- a fast marketing website that ranks well\n- fast responsive admin panel in TypeScript\n- take recurring payments from customers\n- design our database tables and endpoints\n A short demo at the end is needed."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ],
+        [
+          "syn-fullstack-014"
+        ]
+      ],
+      "id": "syn-dev-fullstack-003",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at a logistics start-up is looking for a reliable freelancer",
+        "- user authentication and permissions",
+        "- set up continuous integration for our web app",
+        "- a fast marketing website that ranks well",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "user authentication and permissions",
+        "set up continuous integration for our web app",
+        "a fast marketing website that ranks well"
+      ],
+      "text": "Our team at a logistics start-up is looking for a reliable freelancer. Scope:\n- user authentication and permissions\n- set up continuous integration for our web app\n- a fast marketing website that ranks well\n Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-005",
+        "syn-fullstack-006",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-014"
+        ],
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ],
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ]
+      ],
+      "id": "syn-dev-fullstack-004",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a logistics start-up and need help with a focused project",
+        "- improve our Core Web Vitals and SEO",
+        "- React front end for our internal reporting",
+        "- subscription billing integration",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "improve our Core Web Vitals and SEO",
+        "React front end for our internal reporting",
+        "subscription billing integration"
+      ],
+      "text": "We are a logistics start-up and need help with a focused project. Scope:\n- improve our Core Web Vitals and SEO\n- React front end for our internal reporting\n- subscription billing integration\n Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ],
+        [
+          "syn-fullstack-014"
+        ]
+      ],
+      "id": "syn-dev-fullstack-005",
+      "n_requirements": 2,
+      "persona": "fullstack",
+      "requirements": [
+        "A media publisher is hiring a specialist for a short engagement",
+        "- set up continuous integration for our web app",
+        "- responsive landing pages",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "set up continuous integration for our web app",
+        "responsive landing pages"
+      ],
+      "text": "A media publisher is hiring a specialist for a short engagement. Scope:\n- set up continuous integration for our web app\n- responsive landing pages\n Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-005",
+        "syn-fullstack-006",
+        "syn-fullstack-007",
+        "syn-fullstack-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ],
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ]
+      ],
+      "id": "syn-dev-fullstack-006",
+      "n_requirements": 2,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at a non-profit is looking for a reliable freelancer",
+        "The work covers:",
+        "- handle failed payments and upgrades automatically",
+        "- backend API with a relational database",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "handle failed payments and upgrades automatically",
+        "backend API with a relational database"
+      ],
+      "text": "Our team at a non-profit is looking for a reliable freelancer. The work covers:\n- handle failed payments and upgrades automatically\n- backend API with a relational database\n Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-007",
+        "syn-fullstack-008",
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ],
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ],
+        [
+          "syn-fullstack-014"
+        ]
+      ],
+      "id": "syn-dev-fullstack-007",
+      "n_requirements": 4,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a logistics start-up and need help with a focused project",
+        "- design our database tables and endpoints",
+        "- user authentication and permissions",
+        "- automated browser tests for our site",
+        "- responsive landing pages",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "design our database tables and endpoints",
+        "user authentication and permissions",
+        "automated browser tests for our site",
+        "responsive landing pages"
+      ],
+      "text": "We are a logistics start-up and need help with a focused project. Scope:\n- design our database tables and endpoints\n- user authentication and permissions\n- automated browser tests for our site\n- responsive landing pages\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-005",
+        "syn-fullstack-006",
+        "syn-fullstack-007",
+        "syn-fullstack-008",
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ],
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ],
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ]
+      ],
+      "id": "syn-dev-fullstack-008",
+      "n_requirements": 4,
+      "persona": "fullstack",
+      "requirements": [
+        "A property marketplace is hiring a specialist for a short engagement",
+        "- handle failed payments and upgrades automatically",
+        "- design our database tables and endpoints",
+        "- user authentication and permissions",
+        "- set up continuous integration for our web app",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "handle failed payments and upgrades automatically",
+        "design our database tables and endpoints",
+        "user authentication and permissions",
+        "set up continuous integration for our web app"
+      ],
+      "text": "A property marketplace is hiring a specialist for a short engagement. Scope:\n- handle failed payments and upgrades automatically\n- design our database tables and endpoints\n- user authentication and permissions\n- set up continuous integration for our web app\n Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-005",
+        "syn-fullstack-006",
+        "syn-fullstack-007",
+        "syn-fullstack-008",
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ],
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ],
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ]
+      ],
+      "id": "syn-dev-fullstack-009",
+      "n_requirements": 4,
+      "persona": "fullstack",
+      "requirements": [
+        "Looking for someone who has done this before for a non-profit",
+        "Main tasks: take recurring payments from customers",
+        "design our database tables and endpoints",
+        "secure sign in with Google and company accounts",
+        "stop breaking production when we deploy",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "take recurring payments from customers",
+        "design our database tables and endpoints",
+        "secure sign in with Google and company accounts",
+        "stop breaking production when we deploy"
+      ],
+      "text": "Looking for someone who has done this before for a non-profit. Main tasks: take recurring payments from customers; design our database tables and endpoints; secure sign in with Google and company accounts; stop breaking production when we deploy. Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-005",
+        "syn-fullstack-006",
+        "syn-fullstack-007",
+        "syn-fullstack-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ],
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ],
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ]
+      ],
+      "id": "syn-dev-fullstack-010",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a healthcare clinic network and need help with a focused project",
+        "What we need:",
+        "- a web dashboard with login and different user roles",
+        "- take recurring payments from customers",
+        "- backend API with a relational database",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "a web dashboard with login and different user roles",
+        "take recurring payments from customers",
+        "backend API with a relational database"
+      ],
+      "text": "We are a healthcare clinic network and need help with a focused project. What we need:\n- a web dashboard with login and different user roles\n- take recurring payments from customers\n- backend API with a relational database\n A short demo at the end is needed."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-007",
+        "syn-fullstack-008",
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ],
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ]
+      ],
+      "id": "syn-dev-fullstack-011",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We run an education platform and want to improve one part of our stack",
+        "The work covers:",
+        "- design our database tables and endpoints",
+        "- user authentication and permissions",
+        "- stop breaking production when we deploy",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "design our database tables and endpoints",
+        "user authentication and permissions",
+        "stop breaking production when we deploy"
+      ],
+      "text": "We run an education platform and want to improve one part of our stack. The work covers:\n- design our database tables and endpoints\n- user authentication and permissions\n- stop breaking production when we deploy\n We expect clear documentation at handover."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-014"
+        ],
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ]
+      ],
+      "id": "syn-dev-fullstack-012",
+      "n_requirements": 2,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a property marketplace and need help with a focused project",
+        "Scope: responsive landing pages",
+        "a web dashboard with login and different user roles",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "responsive landing pages",
+        "a web dashboard with login and different user roles"
+      ],
+      "text": "We are a property marketplace and need help with a focused project. Scope: responsive landing pages; a web dashboard with login and different user roles. Weekly progress updates are required."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-014"
+        ],
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ]
+      ],
+      "id": "syn-dev-fullstack-013",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at a retail company is looking for a reliable freelancer",
+        "What we need:",
+        "- responsive landing pages",
+        "- a web dashboard with login and different user roles",
+        "- add captions and motion graphics",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "responsive landing pages",
+        "a web dashboard with login and different user roles",
+        "add captions and motion graphics"
+      ],
+      "text": "Our team at a retail company is looking for a reliable freelancer. What we need:\n- responsive landing pages\n- a web dashboard with login and different user roles\n- add captions and motion graphics\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-005",
+        "syn-fullstack-006"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ],
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ]
+      ],
+      "id": "syn-dev-fullstack-014",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at a media publisher is looking for a reliable freelancer",
+        "What we need:",
+        "- a web dashboard with login and different user roles",
+        "- subscription billing integration",
+        "- add captions and motion graphics",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "a web dashboard with login and different user roles",
+        "subscription billing integration",
+        "add captions and motion graphics"
+      ],
+      "text": "Our team at a media publisher is looking for a reliable freelancer. What we need:\n- a web dashboard with login and different user roles\n- subscription billing integration\n- add captions and motion graphics\n A short demo at the end is needed."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ]
+      ],
+      "id": "syn-dev-fullstack-015",
+      "n_requirements": 2,
+      "persona": "fullstack",
+      "requirements": [
+        "Looking for someone who has done this before for an insurance broker",
+        "- set up continuous integration for our web app",
+        "- review terms and conditions",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "set up continuous integration for our web app",
+        "review terms and conditions"
+      ],
+      "text": "Looking for someone who has done this before for an insurance broker. Main tasks:\n- set up continuous integration for our web app\n- review terms and conditions\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ],
+        [
+          "syn-fullstack-014"
+        ]
+      ],
+      "id": "syn-dev-fullstack-016",
+      "n_requirements": 4,
+      "persona": "fullstack",
+      "requirements": [
+        "An education platform is hiring a specialist for a short engagement",
+        "The work covers: automated browser tests for our site",
+        "improve our Core Web Vitals and SEO",
+        "maintain the ledger in QuickBooks",
+        "character animation controller",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "automated browser tests for our site",
+        "improve our Core Web Vitals and SEO",
+        "maintain the ledger in QuickBooks",
+        "character animation controller"
+      ],
+      "text": "An education platform is hiring a specialist for a short engagement. The work covers: automated browser tests for our site; improve our Core Web Vitals and SEO; maintain the ledger in QuickBooks; character animation controller. We expect clear documentation at handover."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-fullstack-009",
+        "syn-fullstack-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ]
+      ],
+      "id": "syn-dev-fullstack-017",
+      "n_requirements": 2,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at a media publisher is looking for a reliable freelancer",
+        "The work covers: user authentication and permissions",
+        "prepare quarterly VAT returns",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "user authentication and permissions",
+        "prepare quarterly VAT returns"
+      ],
+      "text": "Our team at a media publisher is looking for a reliable freelancer. The work covers: user authentication and permissions; prepare quarterly VAT returns. Code must be in our repository with tests."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ],
+        [
+          "syn-fullstack-014"
+        ]
+      ],
+      "id": "syn-dev-fullstack-018",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "A non-profit is hiring a specialist for a short engagement",
+        "Main tasks: automated browser tests for our site",
+        "improve our Core Web Vitals and SEO",
+        "review terms and conditions",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "automated browser tests for our site",
+        "improve our Core Web Vitals and SEO",
+        "review terms and conditions"
+      ],
+      "text": "A non-profit is hiring a specialist for a short engagement. Main tasks: automated browser tests for our site; improve our Core Web Vitals and SEO; review terms and conditions. Please share a short plan before you start."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-fullstack-019",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "An insurance broker is hiring a specialist for a short engagement",
+        "Main tasks: record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits"
+      ],
+      "text": "An insurance broker is hiring a specialist for a short engagement. Main tasks: record a warm narration for training videos; studio quality audio; multiple takes and edits. Please share a short plan before you start."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-fullstack-020",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a property marketplace and need help with a focused project",
+        "The work covers:",
+        "- record a warm narration for training videos",
+        "- studio quality audio",
+        "- multiple takes and edits",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits"
+      ],
+      "text": "We are a property marketplace and need help with a focused project. The work covers:\n- record a warm narration for training videos\n- studio quality audio\n- multiple takes and edits\n Code must be in our repository with tests."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-fullstack-021",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "An insurance broker is hiring a specialist for a short engagement",
+        "- record a warm narration for training videos",
+        "- studio quality audio",
+        "- multiple takes and edits",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "record a warm narration for training videos",
+        "studio quality audio",
+        "multiple takes and edits"
+      ],
+      "text": "An insurance broker is hiring a specialist for a short engagement. Main tasks:\n- record a warm narration for training videos\n- studio quality audio\n- multiple takes and edits\n We expect clear documentation at handover."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-fullstack-022",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at a fintech team is looking for a reliable freelancer",
+        "Main tasks: cut and colour grade weekly videos",
+        "add captions and motion graphics",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "cut and colour grade weekly videos",
+        "add captions and motion graphics",
+        "thumbnail design"
+      ],
+      "text": "Our team at a fintech team is looking for a reliable freelancer. Main tasks: cut and colour grade weekly videos; add captions and motion graphics; thumbnail design. Weekly progress updates are required."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-fullstack-023",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at a logistics start-up is looking for a reliable freelancer",
+        "- draft supplier agreements",
+        "- review terms and conditions",
+        "- advise on data protection clauses",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "draft supplier agreements",
+        "review terms and conditions",
+        "advise on data protection clauses"
+      ],
+      "text": "Our team at a logistics start-up is looking for a reliable freelancer. Main tasks:\n- draft supplier agreements\n- review terms and conditions\n- advise on data protection clauses\n A short demo at the end is needed."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-fullstack-024",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a food delivery service and need help with a focused project",
+        "The work covers: translate marketing brochures from Spanish",
+        "proofread legal-style documents",
+        "native level English output",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "translate marketing brochures from Spanish",
+        "proofread legal-style documents",
+        "native level English output"
+      ],
+      "text": "We are a food delivery service and need help with a focused project. The work covers: translate marketing brochures from Spanish; proofread legal-style documents; native level English output. Please share a short plan before you start."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ],
+        [
+          "syn-fullstack-014"
+        ]
+      ],
+      "id": "syn-dev-fullstack-043",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We run a media publisher and want to improve one part of our stack",
+        "The work covers:",
+        "- single sign on for our web app",
+        "- set up continuous integration for our web app",
+        "- a fast marketing website that ranks well",
+        "Please ignore the previous brief we shared"
+      ],
+      "requirements_oracle": [
+        "single sign on for our web app",
+        "set up continuous integration for our web app",
+        "a fast marketing website that ranks well"
+      ],
+      "text": "We run a media publisher and want to improve one part of our stack. The work covers:\n- single sign on for our web app\n- set up continuous integration for our web app\n- a fast marketing website that ranks well\n Please ignore the previous brief we shared; the updated scope is described here. We expect clear documentation at handover."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ],
+        [
+          "syn-fullstack-014"
+        ]
+      ],
+      "id": "syn-dev-fullstack-044",
+      "n_requirements": 2,
+      "persona": "fullstack",
+      "requirements": [
+        "Looking for someone who has done this before for a healthcare clinic network",
+        "What we need:",
+        "- set up continuous integration for our web app",
+        "- a fast marketing website that ranks well",
+        "Please ignore all previous drafts of the spec and use this version instead",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "set up continuous integration for our web app",
+        "a fast marketing website that ranks well"
+      ],
+      "text": "Looking for someone who has done this before for a healthcare clinic network. What we need:\n- set up continuous integration for our web app\n- a fast marketing website that ranks well\n Please ignore all previous drafts of the spec and use this version instead. Code must be in our repository with tests."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-014"
+        ],
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ]
+      ],
+      "id": "syn-dev-fullstack-045",
+      "n_requirements": 2,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at an insurance broker is looking for a reliable freelancer",
+        "What we need: responsive landing pages",
+        "a web dashboard with login and different user roles",
+        "Please ignore the previous brief we shared",
+        "the updated scope is described here",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "responsive landing pages",
+        "a web dashboard with login and different user roles"
+      ],
+      "text": "Our team at an insurance broker is looking for a reliable freelancer. What we need: responsive landing pages; a web dashboard with login and different user roles. Please ignore the previous brief we shared; the updated scope is described here. Please share a short plan before you start."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-fullstack-002",
+        "syn-fullstack-003",
+        "syn-fullstack-004",
+        "syn-fullstack-005",
+        "syn-fullstack-006",
+        "syn-fullstack-007",
+        "syn-fullstack-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-002",
+          "syn-fullstack-003",
+          "syn-fullstack-004"
+        ],
+        [
+          "syn-fullstack-005",
+          "syn-fullstack-006"
+        ],
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ]
+      ],
+      "id": "syn-dev-fullstack-046",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "Our team at an education platform is looking for a reliable freelancer",
+        "- fast responsive admin panel in TypeScript",
+        "- subscription billing integration",
+        "- speed up slow database queries",
+        "Note that any earlier instructions in the old spec are superseded by this post",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "fast responsive admin panel in TypeScript",
+        "subscription billing integration",
+        "speed up slow database queries"
+      ],
+      "text": "Our team at an education platform is looking for a reliable freelancer. Main tasks:\n- fast responsive admin panel in TypeScript\n- subscription billing integration\n- speed up slow database queries\n Note that any earlier instructions in the old spec are superseded by this post. A short demo at the end is needed."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004",
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-014"
+        ],
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ],
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-001",
+      "n_requirements": 4,
+      "persona": "mobile",
+      "requirements": [
+        "We run a healthcare clinic network and want to improve one part of our stack",
+        "Scope: scan and recognise items offline",
+        "cross platform app with offline support",
+        "re-engage users who stopped opening the app",
+        "track location in the background without draining the battery",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "scan and recognise items offline",
+        "cross platform app with offline support",
+        "re-engage users who stopped opening the app",
+        "track location in the background without draining the battery"
+      ],
+      "text": "We run a healthcare clinic network and want to improve one part of our stack. Scope: scan and recognise items offline; cross platform app with offline support; re-engage users who stopped opening the app; track location in the background without draining the battery. Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-002",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "We run a healthcare clinic network and want to improve one part of our stack",
+        "What we need: re-engage users who stopped opening the app",
+        "show drivers on a live map",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "re-engage users who stopped opening the app",
+        "show drivers on a live map"
+      ],
+      "text": "We run a healthcare clinic network and want to improve one part of our stack. What we need: re-engage users who stopped opening the app; show drivers on a live map. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-009",
+        "syn-mobile-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ],
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ]
+      ],
+      "id": "syn-dev-mobile-003",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "Looking for someone who has done this before for a retail company",
+        "- delivery tracking screen",
+        "- in app purchases and a paywall",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "delivery tracking screen",
+        "in app purchases and a paywall"
+      ],
+      "text": "Looking for someone who has done this before for a retail company. Scope:\n- delivery tracking screen\n- in app purchases and a paywall\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-009",
+        "syn-mobile-010",
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ],
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ]
+      ],
+      "id": "syn-dev-mobile-004",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "We are a healthcare clinic network and need help with a focused project",
+        "- add paid subscriptions inside the app",
+        "- automate our release process",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "add paid subscriptions inside the app",
+        "automate our release process"
+      ],
+      "text": "We are a healthcare clinic network and need help with a focused project. Scope:\n- add paid subscriptions inside the app\n- automate our release process\n Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004",
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-014"
+        ],
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ],
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-005",
+      "n_requirements": 4,
+      "persona": "mobile",
+      "requirements": [
+        "We are an insurance broker and need help with a focused project",
+        "What we need: identify objects from the camera inside the app",
+        "cross platform app with offline support",
+        "re-engage users who stopped opening the app",
+        "show drivers on a live map",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "identify objects from the camera inside the app",
+        "cross platform app with offline support",
+        "re-engage users who stopped opening the app",
+        "show drivers on a live map"
+      ],
+      "text": "We are an insurance broker and need help with a focused project. What we need: identify objects from the camera inside the app; cross platform app with offline support; re-engage users who stopped opening the app; show drivers on a live map. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004",
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-009",
+        "syn-mobile-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ],
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ],
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ]
+      ],
+      "id": "syn-dev-mobile-006",
+      "n_requirements": 4,
+      "persona": "mobile",
+      "requirements": [
+        "Looking for someone who has done this before for a retail company",
+        "What we need: cross platform app with offline support",
+        "send targeted notifications to app users",
+        "track location in the background without draining the battery",
+        "in app purchases and a paywall",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "cross platform app with offline support",
+        "send targeted notifications to app users",
+        "track location in the background without draining the battery",
+        "in app purchases and a paywall"
+      ],
+      "text": "Looking for someone who has done this before for a retail company. What we need: cross platform app with offline support; send targeted notifications to app users; track location in the background without draining the battery; in app purchases and a paywall. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-009",
+        "syn-mobile-010",
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ],
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ],
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ],
+        [
+          "syn-mobile-014"
+        ]
+      ],
+      "id": "syn-dev-mobile-007",
+      "n_requirements": 4,
+      "persona": "mobile",
+      "requirements": [
+        "Our team at a property marketplace is looking for a reliable freelancer",
+        "- show drivers on a live map",
+        "- in app purchases and a paywall",
+        "- fix our code signing problems",
+        "- run a machine learning model on the phone",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "show drivers on a live map",
+        "in app purchases and a paywall",
+        "fix our code signing problems",
+        "run a machine learning model on the phone"
+      ],
+      "text": "Our team at a property marketplace is looking for a reliable freelancer. Scope:\n- show drivers on a live map\n- in app purchases and a paywall\n- fix our code signing problems\n- run a machine learning model on the phone\n Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004",
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-014"
+        ],
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ],
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-008",
+      "n_requirements": 4,
+      "persona": "mobile",
+      "requirements": [
+        "Our team at an insurance broker is looking for a reliable freelancer",
+        "What we need: identify objects from the camera inside the app",
+        "one mobile app for iPhone and Android",
+        "send targeted notifications to app users",
+        "show drivers on a live map",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "identify objects from the camera inside the app",
+        "one mobile app for iPhone and Android",
+        "send targeted notifications to app users",
+        "show drivers on a live map"
+      ],
+      "text": "Our team at an insurance broker is looking for a reliable freelancer. What we need: identify objects from the camera inside the app; one mobile app for iPhone and Android; send targeted notifications to app users; show drivers on a live map. Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004",
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ],
+        [
+          "syn-mobile-014"
+        ],
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ],
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ]
+      ],
+      "id": "syn-dev-mobile-009",
+      "n_requirements": 4,
+      "persona": "mobile",
+      "requirements": [
+        "We run a property marketplace and want to improve one part of our stack",
+        "Scope: automate our release process",
+        "scan and recognise items offline",
+        "one mobile app for iPhone and Android",
+        "push messages and in app announcements",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "automate our release process",
+        "scan and recognise items offline",
+        "one mobile app for iPhone and Android",
+        "push messages and in app announcements"
+      ],
+      "text": "We run a property marketplace and want to improve one part of our stack. Scope: automate our release process; scan and recognise items offline; one mobile app for iPhone and Android; push messages and in app announcements. Code must be in our repository with tests."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-009",
+        "syn-mobile-010",
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ],
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ]
+      ],
+      "id": "syn-dev-mobile-010",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "A property marketplace is hiring a specialist for a short engagement",
+        "The work covers:",
+        "- validate purchases on the server",
+        "- fix our code signing problems",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "validate purchases on the server",
+        "fix our code signing problems"
+      ],
+      "text": "A property marketplace is hiring a specialist for a short engagement. The work covers:\n- validate purchases on the server\n- fix our code signing problems\n Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-009",
+        "syn-mobile-010",
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ],
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ],
+        [
+          "syn-mobile-014"
+        ]
+      ],
+      "id": "syn-dev-mobile-011",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "Our team at a media publisher is looking for a reliable freelancer",
+        "The work covers: in app purchases and a paywall",
+        "fix our code signing problems",
+        "identify objects from the camera inside the app",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "in app purchases and a paywall",
+        "fix our code signing problems",
+        "identify objects from the camera inside the app"
+      ],
+      "text": "Our team at a media publisher is looking for a reliable freelancer. The work covers: in app purchases and a paywall; fix our code signing problems; identify objects from the camera inside the app. Weekly progress updates are required."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-009",
+        "syn-mobile-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ],
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ]
+      ],
+      "id": "syn-dev-mobile-012",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "We are a travel agency and need help with a focused project",
+        "The work covers: send targeted notifications to app users",
+        "show drivers on a live map",
+        "add paid subscriptions inside the app",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "send targeted notifications to app users",
+        "show drivers on a live map",
+        "add paid subscriptions inside the app"
+      ],
+      "text": "We are a travel agency and need help with a focused project. The work covers: send targeted notifications to app users; show drivers on a live map; add paid subscriptions inside the app. A short demo at the end is needed."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ],
+        [
+          "syn-mobile-014"
+        ]
+      ],
+      "id": "syn-dev-mobile-013",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "We are a food delivery service and need help with a focused project",
+        "The work covers:",
+        "- fix our code signing problems",
+        "- identify objects from the camera inside the app",
+        "- multiple takes and edits",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "fix our code signing problems",
+        "identify objects from the camera inside the app",
+        "multiple takes and edits"
+      ],
+      "text": "We are a food delivery service and need help with a focused project. The work covers:\n- fix our code signing problems\n- identify objects from the camera inside the app\n- multiple takes and edits\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ]
+      ],
+      "id": "syn-dev-mobile-014",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "Our team at a logistics start-up is looking for a reliable freelancer",
+        "- get our app published to the App Store and Google Play",
+        "- character animation controller",
+        "- translate marketing brochures from Spanish",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "get our app published to the App Store and Google Play",
+        "character animation controller",
+        "translate marketing brochures from Spanish"
+      ],
+      "text": "Our team at a logistics start-up is looking for a reliable freelancer. Scope:\n- get our app published to the App Store and Google Play\n- character animation controller\n- translate marketing brochures from Spanish\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-mobile-007",
+        "syn-mobile-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-015",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "We run an education platform and want to improve one part of our stack",
+        "- track location in the background without draining the battery",
+        "- monthly ranking reports",
+        "Code must be in our repository with tests"
+      ],
+      "requirements_oracle": [
+        "track location in the background without draining the battery",
+        "monthly ranking reports"
+      ],
+      "text": "We run an education platform and want to improve one part of our stack. Scope:\n- track location in the background without draining the battery\n- monthly ranking reports\n Code must be in our repository with tests."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ]
+      ],
+      "id": "syn-dev-mobile-016",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "Our team at a retail company is looking for a reliable freelancer",
+        "Main tasks: automate our release process",
+        "native level English output",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "automate our release process",
+        "native level English output"
+      ],
+      "text": "Our team at a retail company is looking for a reliable freelancer. Main tasks: automate our release process; native level English output. Weekly progress updates are required."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-mobile-009",
+        "syn-mobile-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ]
+      ],
+      "id": "syn-dev-mobile-017",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "A travel agency is hiring a specialist for a short engagement",
+        "Main tasks: in app purchases and a paywall",
+        "build a 3D mobile game level in Unity",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "in app purchases and a paywall",
+        "build a 3D mobile game level in Unity"
+      ],
+      "text": "A travel agency is hiring a specialist for a short engagement. Main tasks: in app purchases and a paywall; build a 3D mobile game level in Unity. Weekly progress updates are required."
+    },
+    {
+      "class": "partial_fit",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ]
+      ],
+      "id": "syn-dev-mobile-018",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "We are a healthcare clinic network and need help with a focused project",
+        "Main tasks: mobile client for our existing API",
+        "add captions and motion graphics",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "mobile client for our existing API",
+        "add captions and motion graphics"
+      ],
+      "text": "We are a healthcare clinic network and need help with a focused project. Main tasks: mobile client for our existing API; add captions and motion graphics. A short demo at the end is needed."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-mobile-019",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "We run a fintech team and want to improve one part of our stack",
+        "- translate marketing brochures from Spanish",
+        "- proofread legal-style documents",
+        "- native level English output",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "translate marketing brochures from Spanish",
+        "proofread legal-style documents",
+        "native level English output"
+      ],
+      "text": "We run a fintech team and want to improve one part of our stack. Scope:\n- translate marketing brochures from Spanish\n- proofread legal-style documents\n- native level English output\n A short demo at the end is needed."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-mobile-020",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "Our team at a small manufacturing firm is looking for a reliable freelancer",
+        "The work covers: translate marketing brochures from Spanish",
+        "proofread legal-style documents",
+        "native level English output",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "translate marketing brochures from Spanish",
+        "proofread legal-style documents",
+        "native level English output"
+      ],
+      "text": "Our team at a small manufacturing firm is looking for a reliable freelancer. The work covers: translate marketing brochures from Spanish; proofread legal-style documents; native level English output. Please share a short plan before you start."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-mobile-021",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "We are a healthcare clinic network and need help with a focused project",
+        "- draft supplier agreements",
+        "- review terms and conditions",
+        "- advise on data protection clauses",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "draft supplier agreements",
+        "review terms and conditions",
+        "advise on data protection clauses"
+      ],
+      "text": "We are a healthcare clinic network and need help with a focused project. Scope:\n- draft supplier agreements\n- review terms and conditions\n- advise on data protection clauses\n We expect clear documentation at handover."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-mobile-022",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "Looking for someone who has done this before for a media publisher",
+        "Scope: draft supplier agreements",
+        "review terms and conditions",
+        "advise on data protection clauses",
+        "Weekly progress updates are required"
+      ],
+      "requirements_oracle": [
+        "draft supplier agreements",
+        "review terms and conditions",
+        "advise on data protection clauses"
+      ],
+      "text": "Looking for someone who has done this before for a media publisher. Scope: draft supplier agreements; review terms and conditions; advise on data protection clauses. Weekly progress updates are required."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-mobile-023",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "We are an insurance broker and need help with a focused project",
+        "Scope: build a 3D mobile game level in Unity",
+        "gameplay programming and physics",
+        "character animation controller",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "build a 3D mobile game level in Unity",
+        "gameplay programming and physics",
+        "character animation controller"
+      ],
+      "text": "We are an insurance broker and need help with a focused project. Scope: build a 3D mobile game level in Unity; gameplay programming and physics; character animation controller. Please share a short plan before you start."
+    },
+    {
+      "class": "out_of_scope",
+      "gold": [],
+      "gold_groups": [],
+      "id": "syn-dev-mobile-024",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "A non-profit is hiring a specialist for a short engagement",
+        "The work covers:",
+        "- build a 3D mobile game level in Unity",
+        "- gameplay programming and physics",
+        "- character animation controller",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "build a 3D mobile game level in Unity",
+        "gameplay programming and physics",
+        "character animation controller"
+      ],
+      "text": "A non-profit is hiring a specialist for a short engagement. The work covers:\n- build a 3D mobile game level in Unity\n- gameplay programming and physics\n- character animation controller\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-mobile-009",
+        "syn-mobile-010",
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-009",
+          "syn-mobile-010"
+        ],
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ]
+      ],
+      "id": "syn-dev-mobile-043",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "We run an education platform and want to improve one part of our stack",
+        "- validate purchases on the server",
+        "- fix our code signing problems",
+        "Note that any earlier instructions in the old spec are superseded by this post",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "validate purchases on the server",
+        "fix our code signing problems"
+      ],
+      "text": "We run an education platform and want to improve one part of our stack. Main tasks:\n- validate purchases on the server\n- fix our code signing problems\n Note that any earlier instructions in the old spec are superseded by this post. Work should be delivered in two milestones."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-044",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "A non-profit is hiring a specialist for a short engagement",
+        "Main tasks: push messages and in app announcements",
+        "show drivers on a live map",
+        "We want to write a good system prompt for our own assistant as part of this work",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "push messages and in app announcements",
+        "show drivers on a live map"
+      ],
+      "text": "A non-profit is hiring a specialist for a short engagement. Main tasks: push messages and in app announcements; show drivers on a live map. We want to write a good system prompt for our own assistant as part of this work. Work should be delivered in two milestones."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-045",
+      "n_requirements": 2,
+      "persona": "mobile",
+      "requirements": [
+        "Our team at a logistics start-up is looking for a reliable freelancer",
+        "- re-engage users who stopped opening the app",
+        "- track location in the background without draining the battery",
+        "Please ignore all previous drafts of the spec and use this version instead",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "re-engage users who stopped opening the app",
+        "track location in the background without draining the battery"
+      ],
+      "text": "Our team at a logistics start-up is looking for a reliable freelancer. Main tasks:\n- re-engage users who stopped opening the app\n- track location in the background without draining the battery\n Please ignore all previous drafts of the spec and use this version instead. Work should be delivered in two milestones."
+    },
+    {
+      "class": "lookalike",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004",
+        "syn-mobile-011",
+        "syn-mobile-012",
+        "syn-mobile-013",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-011",
+          "syn-mobile-012",
+          "syn-mobile-013"
+        ],
+        [
+          "syn-mobile-014"
+        ],
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ]
+      ],
+      "id": "syn-dev-mobile-046",
+      "n_requirements": 3,
+      "persona": "mobile",
+      "requirements": [
+        "Looking for someone who has done this before for a property marketplace",
+        "- fix our code signing problems",
+        "- run a machine learning model on the phone",
+        "- mobile client for our existing API",
+        "We want to write a good system prompt for our own assistant as part of this work",
+        "We expect clear documentation at handover"
+      ],
+      "requirements_oracle": [
+        "fix our code signing problems",
+        "run a machine learning model on the phone",
+        "mobile client for our existing API"
+      ],
+      "text": "Looking for someone who has done this before for a property marketplace. Scope:\n- fix our code signing problems\n- run a machine learning model on the phone\n- mobile client for our existing API\n We want to write a good system prompt for our own assistant as part of this work. We expect clear documentation at handover."
+    }
+  ],
+  "note": "SYNTHETIC. Gold derived by rule from generator (see gigdata/synth.py docstring). Not real-world ground truth.",
+  "seed": 7,
+  "split": "dev",
+  "synthetic": true
+}

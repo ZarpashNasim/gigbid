@@ -1,0 +1,28 @@
+{
+  "availability_hours_per_week": 25,
+  "display_name": "Daniel K. (synthetic)",
+  "freelancer_id": "syn-mobile",
+  "headline": "Mobile developer: Flutter, Firebase and store releases",
+  "hourly_rate_usd": 38,
+  "minimum_project_budget_usd": 350,
+  "origin": "synthetic",
+  "skills": [
+    "App Store",
+    "CI/CD",
+    "Dart",
+    "FCM",
+    "Fastlane",
+    "Firebase",
+    "Flutter",
+    "Google Maps",
+    "In-app purchases",
+    "REST",
+    "StoreKit",
+    "TensorFlow Lite",
+    "geolocation",
+    "on-device ML",
+    "push notifications",
+    "subscriptions"
+  ],
+  "years_experience": 4
+}

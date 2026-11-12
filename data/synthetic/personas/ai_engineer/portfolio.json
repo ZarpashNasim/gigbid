@@ -1,0 +1,434 @@
+[
+  {
+    "capability": null,
+    "date": "2025-09",
+    "evidence_id": "syn-ai_engineer-001",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "FastAPI",
+      "LLM evaluation",
+      "LangGraph",
+      "OCR",
+      "Pydantic",
+      "Python",
+      "RAG",
+      "Whisper",
+      "classification",
+      "human-in-the-loop",
+      "pandas",
+      "pgvector",
+      "prompt engineering",
+      "scikit-learn",
+      "speech-to-text",
+      "structured extraction",
+      "tool use"
+    ],
+    "source": "synthetic:cv/cv.pdf",
+    "summary": "AI/LLM engineer: RAG, evaluation and agent workflows. 4 years of experience. BSc Computer Science (fictional university). Core skills: FastAPI, LLM evaluation, LangGraph, OCR, Pydantic, Python, RAG, Whisper, classification, human-in-the-loop.",
+    "title": "CV: Priya N. (synthetic)",
+    "type": "cv"
+  },
+  {
+    "capability": "rag_support",
+    "date": "2023-09",
+    "evidence_id": "syn-ai_engineer-002",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "Cut first-response time by 35 percent in a four-week pilot.",
+    "skills": [
+      "Python",
+      "RAG",
+      "pgvector",
+      "FastAPI"
+    ],
+    "source": "synthetic:case_studies/rag_support.md",
+    "summary": "Built a retrieval-augmented support assistant over 40k help-centre articles using pgvector and a FastAPI service, with hybrid keyword and vector search. Cut first-response time by 35 percent in a four-week pilot.",
+    "title": "Customer-support RAG assistant",
+    "type": "case_study"
+  },
+  {
+    "capability": "rag_support",
+    "date": "2025-01",
+    "evidence_id": "syn-ai_engineer-003",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Python",
+      "RAG",
+      "pgvector",
+      "FastAPI"
+    ],
+    "source": "synthetic:repos/rag_support/README.md",
+    "summary": "README. Customer-support RAG assistant. Setup instructions, architecture notes and tests. Stack: Python, RAG, pgvector, FastAPI.",
+    "title": "rag-support (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "rag_support",
+    "date": "2025-02",
+    "evidence_id": "syn-ai_engineer-004",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "Python",
+      "RAG",
+      "pgvector",
+      "FastAPI"
+    ],
+    "source": "synthetic:reviews/rag_support.txt",
+    "summary": "Great work on customer-support RAG assistant. Documentation was thorough and handover was smooth.",
+    "title": "Client review: Customer-support RAG assistant",
+    "type": "review"
+  },
+  {
+    "capability": "llm_eval",
+    "date": "2025-05",
+    "evidence_id": "syn-ai_engineer-005",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "Caught two prompt regressions before release.",
+    "skills": [
+      "Python",
+      "LLM evaluation",
+      "prompt engineering"
+    ],
+    "source": "synthetic:case_studies/llm_eval.md",
+    "summary": "Designed an evaluation harness for an LLM summarisation feature with a 300-example labelled set, regression tests and an LLM judge calibrated against human labels. Caught two prompt regressions before release.",
+    "title": "Evaluation harness for an LLM summariser",
+    "type": "case_study"
+  },
+  {
+    "capability": "llm_eval",
+    "date": "2023-11",
+    "evidence_id": "syn-ai_engineer-006",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "Python",
+      "LLM evaluation",
+      "prompt engineering"
+    ],
+    "source": "synthetic:reviews/llm_eval.txt",
+    "summary": "Professional and responsive. evaluation harness for an LLM summariser worked as described.",
+    "title": "Client review: Evaluation harness for an LLM summariser",
+    "type": "review"
+  },
+  {
+    "capability": "doc_extraction",
+    "date": "2025-02",
+    "evidence_id": "syn-ai_engineer-007",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "Reached 94 percent field-level accuracy on a held-out set of 500 documents.",
+    "skills": [
+      "Python",
+      "OCR",
+      "Pydantic",
+      "structured extraction"
+    ],
+    "source": "synthetic:case_studies/doc_extraction.md",
+    "summary": "Built an invoice and contract field-extraction pipeline combining OCR and an LLM with schema-validated JSON output. Reached 94 percent field-level accuracy on a held-out set of 500 documents.",
+    "title": "Invoice and contract field extraction",
+    "type": "case_study"
+  },
+  {
+    "capability": "doc_extraction",
+    "date": "2023-10",
+    "evidence_id": "syn-ai_engineer-008",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Python",
+      "OCR",
+      "Pydantic",
+      "structured extraction"
+    ],
+    "source": "synthetic:repos/doc_extraction/README.md",
+    "summary": "README. Invoice and contract field extraction. Setup instructions, architecture notes and tests. Stack: Python, OCR, Pydantic, structured extraction.",
+    "title": "doc-extraction (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "churn_model",
+    "date": "2024-09",
+    "evidence_id": "syn-ai_engineer-009",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "Delivered a reproducible notebook and a monitoring checklist.",
+    "skills": [
+      "Python",
+      "scikit-learn",
+      "pandas",
+      "classification"
+    ],
+    "source": "synthetic:case_studies/churn_model.md",
+    "summary": "Trained and compared logistic regression and gradient boosting churn models on subscription data, documenting precision, recall and limitations. Delivered a reproducible notebook and a monitoring checklist.",
+    "title": "Subscription churn models",
+    "type": "case_study"
+  },
+  {
+    "capability": "churn_model",
+    "date": "2025-01",
+    "evidence_id": "syn-ai_engineer-010",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "Python",
+      "scikit-learn",
+      "pandas",
+      "classification"
+    ],
+    "source": "synthetic:reviews/churn_model.txt",
+    "summary": "Professional and responsive. subscription churn models worked as described.",
+    "title": "Client review: Subscription churn models",
+    "type": "review"
+  },
+  {
+    "capability": "agent_workflow",
+    "date": "2023-06",
+    "evidence_id": "syn-ai_engineer-011",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "Reduced manual triage time by half for a three-person ops team.",
+    "skills": [
+      "Python",
+      "LangGraph",
+      "tool use",
+      "human-in-the-loop"
+    ],
+    "source": "synthetic:case_studies/agent_workflow.md",
+    "summary": "Implemented a multi-step LLM agent with tool calls, bounded retries and a human approval step before any external action. Reduced manual triage time by half for a three-person ops team.",
+    "title": "Approval-gated operations agent",
+    "type": "case_study"
+  },
+  {
+    "capability": "agent_workflow",
+    "date": "2025-08",
+    "evidence_id": "syn-ai_engineer-012",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Python",
+      "LangGraph",
+      "tool use",
+      "human-in-the-loop"
+    ],
+    "source": "synthetic:repos/agent_workflow/README.md",
+    "summary": "README. Approval-gated operations agent. Setup instructions, architecture notes and tests. Stack: Python, LangGraph, tool use, human-in-the-loop.",
+    "title": "agent-workflow (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "agent_workflow",
+    "date": "2024-01",
+    "evidence_id": "syn-ai_engineer-013",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "Python",
+      "LangGraph",
+      "tool use",
+      "human-in-the-loop"
+    ],
+    "source": "synthetic:reviews/agent_workflow.txt",
+    "summary": "Delivered approval-gated operations agent on time and communicated clearly throughout. Would hire again.",
+    "title": "Client review: Approval-gated operations agent",
+    "type": "review"
+  },
+  {
+    "capability": "voice_transcribe",
+    "date": "2024-01",
+    "evidence_id": "syn-ai_engineer-014",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": "Processed 1,200 hours of calls at roughly twice real-time speed.",
+    "skills": [
+      "Python",
+      "Whisper",
+      "speech-to-text"
+    ],
+    "source": "synthetic:case_studies/voice_transcribe.md",
+    "summary": "Set up a speech-to-text pipeline with Whisper for call recordings, speaker labels and keyword search. Processed 1,200 hours of calls at roughly twice real-time speed.",
+    "title": "Call-recording transcription pipeline",
+    "type": "case_study"
+  },
+  {
+    "capability": "doc_extraction",
+    "date": "2023-07",
+    "evidence_id": "syn-ai_engineer-015",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Python",
+      "OCR",
+      "Pydantic",
+      "structured extraction"
+    ],
+    "source": "synthetic:proposals/p1.md",
+    "summary": "Your need for pull structured fields out of scanned PDF invoices is something I have handled directly. I built an invoice and contract field-extraction pipeline combining OCR and an LLM with schema-validated JSON output. Reached 94 percent field-level accuracy on a held-out set of 500 documents. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 1",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2025-03",
+    "evidence_id": "syn-ai_engineer-016",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p2.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 2",
+    "type": "proposal"
+  },
+  {
+    "capability": "rag_support",
+    "date": "2023-12",
+    "evidence_id": "syn-ai_engineer-017",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "replied",
+    "skills": [
+      "Python",
+      "RAG",
+      "pgvector",
+      "FastAPI"
+    ],
+    "source": "synthetic:proposals/p3.md",
+    "summary": "Your need for retrieval augmented generation over our knowledge base with a vector database is something I have handled directly. I built a retrieval-augmented support assistant over 40k help-centre articles using pgvector and a FastAPI service, with hybrid keyword and vector search. Cut first-response time by 35 percent in a four-week pilot. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 3",
+    "type": "proposal"
+  },
+  {
+    "capability": "rag_support",
+    "date": "2025-11",
+    "evidence_id": "syn-ai_engineer-018",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Python",
+      "RAG",
+      "pgvector",
+      "FastAPI"
+    ],
+    "source": "synthetic:proposals/p4.md",
+    "summary": "Your need for retrieval augmented generation over our knowledge base with a vector database is something I have handled directly. I built a retrieval-augmented support assistant over 40k help-centre articles using pgvector and a FastAPI service, with hybrid keyword and vector search. Cut first-response time by 35 percent in a four-week pilot. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 4",
+    "type": "proposal"
+  },
+  {
+    "capability": "rag_support",
+    "date": "2023-09",
+    "evidence_id": "syn-ai_engineer-019",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Python",
+      "RAG",
+      "pgvector",
+      "FastAPI"
+    ],
+    "source": "synthetic:proposals/p5.md",
+    "summary": "Your need for retrieval augmented generation over our knowledge base with a vector database is something I have handled directly. I built a retrieval-augmented support assistant over 40k help-centre articles using pgvector and a FastAPI service, with hybrid keyword and vector search. Cut first-response time by 35 percent in a four-week pilot. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 5",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2023-05",
+    "evidence_id": "syn-ai_engineer-020",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p6.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 6",
+    "type": "proposal"
+  },
+  {
+    "capability": "doc_extraction",
+    "date": "2025-05",
+    "evidence_id": "syn-ai_engineer-021",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Python",
+      "OCR",
+      "Pydantic",
+      "structured extraction"
+    ],
+    "source": "synthetic:proposals/p7.md",
+    "summary": "Your need for document parsing into validated JSON is something I have handled directly. I built an invoice and contract field-extraction pipeline combining OCR and an LLM with schema-validated JSON output. Reached 94 percent field-level accuracy on a held-out set of 500 documents. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 7",
+    "type": "proposal"
+  },
+  {
+    "capability": "agent_workflow",
+    "date": "2023-01",
+    "evidence_id": "syn-ai_engineer-022",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Python",
+      "LangGraph",
+      "tool use",
+      "human-in-the-loop"
+    ],
+    "source": "synthetic:proposals/p8.md",
+    "summary": "Your need for workflow automation with LLM agents and approval steps is something I have handled directly. I implemented a multi-step LLM agent with tool calls, bounded retries and a human approval step before any external action. Reduced manual triage time by half for a three-person ops team. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 8",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2025-03",
+    "evidence_id": "syn-ai_engineer-023",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "replied",
+    "skills": [],
+    "source": "synthetic:proposals/p9.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 9",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2024-10",
+    "evidence_id": "syn-ai_engineer-024",
+    "freelancer_id": "syn-ai_engineer",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [],
+    "source": "synthetic:proposals/p10.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 10",
+    "type": "proposal"
+  }
+]

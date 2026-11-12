@@ -1,0 +1,16 @@
+# Normalise line endings to LF on every platform.
+# The synthetic data and eval datasets are SHA-256 hash-checked (data/synthetic/MANIFEST.json,
+# tests/unit/test_synth.py). If Git ever rewrote them as CRLF on checkout the hashes would break,
+# so force text files to LF regardless of the user's core.autocrlf setting.
+* text=auto eol=lf
+
+# Binary assets: never touch.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.db binary
+*.sqlite binary

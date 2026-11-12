@@ -1,0 +1,426 @@
+[
+  {
+    "capability": null,
+    "date": "2025-09",
+    "evidence_id": "syn-fullstack-001",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "CI",
+      "Next.js",
+      "Node.js",
+      "OAuth",
+      "Playwright",
+      "PostgreSQL",
+      "REST",
+      "React",
+      "SEO",
+      "Stripe",
+      "Tailwind",
+      "TypeScript",
+      "authentication",
+      "performance",
+      "security",
+      "testing",
+      "webhooks"
+    ],
+    "source": "synthetic:cv/cv.pdf",
+    "summary": "Full-stack web developer: Next.js, Node and Postgres. 5 years of experience. BEng Software Engineering (fictional university). Core skills: CI, Next.js, Node.js, OAuth, Playwright, PostgreSQL, REST, React, SEO, Stripe.",
+    "title": "CV: Sofia R. (synthetic)",
+    "type": "cv"
+  },
+  {
+    "capability": "nextjs_dashboard",
+    "date": "2025-12",
+    "evidence_id": "syn-fullstack-002",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "Page load stayed under 1.5 seconds on mid-range phones.",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ],
+    "source": "synthetic:case_studies/nextjs_dashboard.md",
+    "summary": "Built a role-based analytics dashboard in Next.js and TypeScript with server-side rendering and accessible charts. Page load stayed under 1.5 seconds on mid-range phones.",
+    "title": "Role-based analytics dashboard",
+    "type": "case_study"
+  },
+  {
+    "capability": "nextjs_dashboard",
+    "date": "2023-10",
+    "evidence_id": "syn-fullstack-003",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ],
+    "source": "synthetic:repos/nextjs_dashboard/README.md",
+    "summary": "README. Role-based analytics dashboard. Setup instructions, architecture notes and tests. Stack: React, Next.js, TypeScript.",
+    "title": "nextjs-dashboard (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "nextjs_dashboard",
+    "date": "2023-09",
+    "evidence_id": "syn-fullstack-004",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ],
+    "source": "synthetic:reviews/nextjs_dashboard.txt",
+    "summary": "Delivered role-based analytics dashboard on time and communicated clearly throughout. Would hire again.",
+    "title": "Client review: Role-based analytics dashboard",
+    "type": "review"
+  },
+  {
+    "capability": "stripe_billing",
+    "date": "2025-10",
+    "evidence_id": "syn-fullstack-005",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "Zero double-charge incidents in the first year.",
+    "skills": [
+      "Stripe",
+      "Node.js",
+      "webhooks"
+    ],
+    "source": "synthetic:case_studies/stripe_billing.md",
+    "summary": "Integrated Stripe subscriptions with webhooks, proration and a customer billing portal. Zero double-charge incidents in the first year.",
+    "title": "Stripe subscription billing",
+    "type": "case_study"
+  },
+  {
+    "capability": "stripe_billing",
+    "date": "2024-11",
+    "evidence_id": "syn-fullstack-006",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "Stripe",
+      "Node.js",
+      "webhooks"
+    ],
+    "source": "synthetic:reviews/stripe_billing.txt",
+    "summary": "Solid result on stripe subscription billing. A couple of small revisions were needed but they were handled quickly.",
+    "title": "Client review: Stripe subscription billing",
+    "type": "review"
+  },
+  {
+    "capability": "postgres_api",
+    "date": "2024-03",
+    "evidence_id": "syn-fullstack-007",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "Search queries went from 900 ms to 60 ms after index tuning.",
+    "skills": [
+      "PostgreSQL",
+      "Node.js",
+      "REST"
+    ],
+    "source": "synthetic:case_studies/postgres_api.md",
+    "summary": "Designed a PostgreSQL schema and REST API for a booking marketplace, including migrations and indexing. Search queries went from 900 ms to 60 ms after index tuning.",
+    "title": "Booking marketplace API and schema",
+    "type": "case_study"
+  },
+  {
+    "capability": "postgres_api",
+    "date": "2025-03",
+    "evidence_id": "syn-fullstack-008",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "PostgreSQL",
+      "Node.js",
+      "REST"
+    ],
+    "source": "synthetic:repos/postgres_api/README.md",
+    "summary": "README. Booking marketplace API and schema. Setup instructions, architecture notes and tests. Stack: PostgreSQL, Node.js, REST.",
+    "title": "postgres-api (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "auth_sso",
+    "date": "2024-10",
+    "evidence_id": "syn-fullstack-009",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "Passed an external security review with no critical findings.",
+    "skills": [
+      "OAuth",
+      "authentication",
+      "security"
+    ],
+    "source": "synthetic:case_studies/auth_sso.md",
+    "summary": "Implemented OAuth login, session handling and role permissions with audit logging. Passed an external security review with no critical findings.",
+    "title": "OAuth login and permissions",
+    "type": "case_study"
+  },
+  {
+    "capability": "auth_sso",
+    "date": "2024-08",
+    "evidence_id": "syn-fullstack-010",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "OAuth",
+      "authentication",
+      "security"
+    ],
+    "source": "synthetic:reviews/auth_sso.txt",
+    "summary": "Professional and responsive. oAuth login and permissions worked as described.",
+    "title": "Client review: OAuth login and permissions",
+    "type": "review"
+  },
+  {
+    "capability": "e2e_tests",
+    "date": "2025-05",
+    "evidence_id": "syn-fullstack-011",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "Release regressions fell from five a month to one.",
+    "skills": [
+      "Playwright",
+      "testing",
+      "CI"
+    ],
+    "source": "synthetic:case_studies/e2e_tests.md",
+    "summary": "Introduced Playwright end-to-end tests and a CI pipeline that blocks broken deploys. Release regressions fell from five a month to one.",
+    "title": "Playwright end-to-end tests and CI gate",
+    "type": "case_study"
+  },
+  {
+    "capability": "e2e_tests",
+    "date": "2023-12",
+    "evidence_id": "syn-fullstack-012",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Playwright",
+      "testing",
+      "CI"
+    ],
+    "source": "synthetic:repos/e2e_tests/README.md",
+    "summary": "README. Playwright end-to-end tests and CI gate. Setup instructions, architecture notes and tests. Stack: Playwright, testing, CI.",
+    "title": "e2e-tests (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "e2e_tests",
+    "date": "2025-04",
+    "evidence_id": "syn-fullstack-013",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "Playwright",
+      "testing",
+      "CI"
+    ],
+    "source": "synthetic:reviews/e2e_tests.txt",
+    "summary": "Delivered playwright end-to-end tests and CI gate on time and communicated clearly throughout. Would hire again.",
+    "title": "Client review: Playwright end-to-end tests and CI gate",
+    "type": "review"
+  },
+  {
+    "capability": "landing_perf",
+    "date": "2024-09",
+    "evidence_id": "syn-fullstack-014",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": "Organic traffic grew 40 percent in three months.",
+    "skills": [
+      "Tailwind",
+      "SEO",
+      "performance"
+    ],
+    "source": "synthetic:case_studies/landing_perf.md",
+    "summary": "Rebuilt a marketing site with Tailwind, optimised images and structured data. Organic traffic grew 40 percent in three months.",
+    "title": "Marketing site rebuild",
+    "type": "case_study"
+  },
+  {
+    "capability": "stripe_billing",
+    "date": "2023-02",
+    "evidence_id": "syn-fullstack-015",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Stripe",
+      "Node.js",
+      "webhooks"
+    ],
+    "source": "synthetic:proposals/p1.md",
+    "summary": "Your need for handle failed payments and upgrades automatically is something I have handled directly. I integrated Stripe subscriptions with webhooks, proration and a customer billing portal. Zero double-charge incidents in the first year. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 1",
+    "type": "proposal"
+  },
+  {
+    "capability": "e2e_tests",
+    "date": "2023-05",
+    "evidence_id": "syn-fullstack-016",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Playwright",
+      "testing",
+      "CI"
+    ],
+    "source": "synthetic:proposals/p2.md",
+    "summary": "Your need for automated browser tests for our site is something I have handled directly. I introduced Playwright end-to-end tests and a CI pipeline that blocks broken deploys. Release regressions fell from five a month to one. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 2",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2023-11",
+    "evidence_id": "syn-fullstack-017",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p3.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 3",
+    "type": "proposal"
+  },
+  {
+    "capability": "nextjs_dashboard",
+    "date": "2023-08",
+    "evidence_id": "syn-fullstack-018",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ],
+    "source": "synthetic:proposals/p4.md",
+    "summary": "Your need for a web dashboard with login and different user roles is something I have handled directly. I built a role-based analytics dashboard in Next.js and TypeScript with server-side rendering and accessible charts. Page load stayed under 1.5 seconds on mid-range phones. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 4",
+    "type": "proposal"
+  },
+  {
+    "capability": "auth_sso",
+    "date": "2025-09",
+    "evidence_id": "syn-fullstack-019",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "OAuth",
+      "authentication",
+      "security"
+    ],
+    "source": "synthetic:proposals/p5.md",
+    "summary": "Your need for secure sign in with Google and company accounts is something I have handled directly. I implemented OAuth login, session handling and role permissions with audit logging. Passed an external security review with no critical findings. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 5",
+    "type": "proposal"
+  },
+  {
+    "capability": "auth_sso",
+    "date": "2023-04",
+    "evidence_id": "syn-fullstack-020",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [
+      "OAuth",
+      "authentication",
+      "security"
+    ],
+    "source": "synthetic:proposals/p6.md",
+    "summary": "Your need for user authentication and permissions is something I have handled directly. I implemented OAuth login, session handling and role permissions with audit logging. Passed an external security review with no critical findings. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 6",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2025-06",
+    "evidence_id": "syn-fullstack-021",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p7.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 7",
+    "type": "proposal"
+  },
+  {
+    "capability": "landing_perf",
+    "date": "2023-10",
+    "evidence_id": "syn-fullstack-022",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [
+      "Tailwind",
+      "SEO",
+      "performance"
+    ],
+    "source": "synthetic:proposals/p8.md",
+    "summary": "Your need for responsive landing pages is something I have handled directly. I rebuilt a marketing site with Tailwind, optimised images and structured data. Organic traffic grew 40 percent in three months. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 8",
+    "type": "proposal"
+  },
+  {
+    "capability": "e2e_tests",
+    "date": "2025-01",
+    "evidence_id": "syn-fullstack-023",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "replied",
+    "skills": [
+      "Playwright",
+      "testing",
+      "CI"
+    ],
+    "source": "synthetic:proposals/p9.md",
+    "summary": "Your need for set up continuous integration for our web app is something I have handled directly. I introduced Playwright end-to-end tests and a CI pipeline that blocks broken deploys. Release regressions fell from five a month to one. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 9",
+    "type": "proposal"
+  },
+  {
+    "capability": "landing_perf",
+    "date": "2023-11",
+    "evidence_id": "syn-fullstack-024",
+    "freelancer_id": "syn-fullstack",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "replied",
+    "skills": [
+      "Tailwind",
+      "SEO",
+      "performance"
+    ],
+    "source": "synthetic:proposals/p10.md",
+    "summary": "Your need for improve our Core Web Vitals and SEO is something I have handled directly. I rebuilt a marketing site with Tailwind, optimised images and structured data. Organic traffic grew 40 percent in three months. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 10",
+    "type": "proposal"
+  }
+]

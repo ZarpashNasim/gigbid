@@ -1,0 +1,417 @@
+[
+  {
+    "capability": null,
+    "date": "2025-09",
+    "evidence_id": "syn-mobile-001",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "App Store",
+      "CI/CD",
+      "Dart",
+      "FCM",
+      "Fastlane",
+      "Firebase",
+      "Flutter",
+      "Google Maps",
+      "In-app purchases",
+      "REST",
+      "StoreKit",
+      "TensorFlow Lite",
+      "geolocation",
+      "on-device ML",
+      "push notifications",
+      "subscriptions"
+    ],
+    "source": "synthetic:cv/cv.pdf",
+    "summary": "Mobile developer: Flutter, Firebase and store releases. 4 years of experience. BSc Information Technology (fictional university). Core skills: App Store, CI/CD, Dart, FCM, Fastlane, Firebase, Flutter, Google Maps, In-app purchases, REST.",
+    "title": "CV: Daniel K. (synthetic)",
+    "type": "cv"
+  },
+  {
+    "capability": "flutter_app",
+    "date": "2023-04",
+    "evidence_id": "syn-mobile-002",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "Reached a 4.7 star store rating across iOS and Android.",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "REST"
+    ],
+    "source": "synthetic:case_studies/flutter_app.md",
+    "summary": "Built a cross-platform Flutter app with offline caching, login and a feed backed by a REST API. Reached a 4.7 star store rating across iOS and Android.",
+    "title": "Cross-platform Flutter app with offline cache",
+    "type": "case_study"
+  },
+  {
+    "capability": "flutter_app",
+    "date": "2023-10",
+    "evidence_id": "syn-mobile-003",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Flutter",
+      "Dart",
+      "REST"
+    ],
+    "source": "synthetic:repos/flutter_app/README.md",
+    "summary": "README. Cross-platform Flutter app with offline cache. Setup instructions, architecture notes and tests. Stack: Flutter, Dart, REST.",
+    "title": "flutter-app (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "flutter_app",
+    "date": "2025-11",
+    "evidence_id": "syn-mobile-004",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "REST"
+    ],
+    "source": "synthetic:reviews/flutter_app.txt",
+    "summary": "Great work on cross-platform Flutter app with offline cache. Documentation was thorough and handover was smooth.",
+    "title": "Client review: Cross-platform Flutter app with offline cache",
+    "type": "review"
+  },
+  {
+    "capability": "push_notif",
+    "date": "2024-09",
+    "evidence_id": "syn-mobile-005",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "Raised day-7 retention by 12 percent.",
+    "skills": [
+      "Firebase",
+      "push notifications",
+      "FCM"
+    ],
+    "source": "synthetic:case_studies/push_notif.md",
+    "summary": "Added segmented push notifications and in-app messaging using Firebase Cloud Messaging. Raised day-7 retention by 12 percent.",
+    "title": "Segmented push notifications",
+    "type": "case_study"
+  },
+  {
+    "capability": "push_notif",
+    "date": "2023-03",
+    "evidence_id": "syn-mobile-006",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "Firebase",
+      "push notifications",
+      "FCM"
+    ],
+    "source": "synthetic:reviews/push_notif.txt",
+    "summary": "Professional and responsive. segmented push notifications worked as described.",
+    "title": "Client review: Segmented push notifications",
+    "type": "review"
+  },
+  {
+    "capability": "maps_location",
+    "date": "2025-01",
+    "evidence_id": "syn-mobile-007",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "Battery use stayed under 4 percent per hour of tracking.",
+    "skills": [
+      "Google Maps",
+      "geolocation",
+      "Flutter"
+    ],
+    "source": "synthetic:case_studies/maps_location.md",
+    "summary": "Implemented live location tracking and route display with battery-aware background updates. Battery use stayed under 4 percent per hour of tracking.",
+    "title": "Live location tracking",
+    "type": "case_study"
+  },
+  {
+    "capability": "maps_location",
+    "date": "2025-08",
+    "evidence_id": "syn-mobile-008",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "Google Maps",
+      "geolocation",
+      "Flutter"
+    ],
+    "source": "synthetic:repos/maps_location/README.md",
+    "summary": "README. Live location tracking. Setup instructions, architecture notes and tests. Stack: Google Maps, geolocation, Flutter.",
+    "title": "maps-location (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "iap_subs",
+    "date": "2024-05",
+    "evidence_id": "syn-mobile-009",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "Paywall conversion improved from 2 to 3.4 percent after A/B testing.",
+    "skills": [
+      "In-app purchases",
+      "StoreKit",
+      "subscriptions"
+    ],
+    "source": "synthetic:case_studies/iap_subs.md",
+    "summary": "Implemented in-app subscriptions with receipt validation on both stores. Paywall conversion improved from 2 to 3.4 percent after A/B testing.",
+    "title": "In-app subscriptions and paywall",
+    "type": "case_study"
+  },
+  {
+    "capability": "iap_subs",
+    "date": "2023-10",
+    "evidence_id": "syn-mobile-010",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "client rating 4/5",
+    "skills": [
+      "In-app purchases",
+      "StoreKit",
+      "subscriptions"
+    ],
+    "source": "synthetic:reviews/iap_subs.txt",
+    "summary": "Great work on in-app subscriptions and paywall. Documentation was thorough and handover was smooth.",
+    "title": "Client review: In-app subscriptions and paywall",
+    "type": "review"
+  },
+  {
+    "capability": "app_release",
+    "date": "2023-11",
+    "evidence_id": "syn-mobile-011",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "Release time dropped from half a day to twenty minutes.",
+    "skills": [
+      "App Store",
+      "CI/CD",
+      "Fastlane"
+    ],
+    "source": "synthetic:case_studies/app_release.md",
+    "summary": "Automated builds, signing and store submissions with Fastlane and GitHub Actions. Release time dropped from half a day to twenty minutes.",
+    "title": "Automated store releases",
+    "type": "case_study"
+  },
+  {
+    "capability": "app_release",
+    "date": "2023-09",
+    "evidence_id": "syn-mobile-012",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "skills": [
+      "App Store",
+      "CI/CD",
+      "Fastlane"
+    ],
+    "source": "synthetic:repos/app_release/README.md",
+    "summary": "README. Automated store releases. Setup instructions, architecture notes and tests. Stack: App Store, CI/CD, Fastlane.",
+    "title": "app-release (repository README)",
+    "type": "repo"
+  },
+  {
+    "capability": "app_release",
+    "date": "2024-11",
+    "evidence_id": "syn-mobile-013",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "client rating 5/5",
+    "skills": [
+      "App Store",
+      "CI/CD",
+      "Fastlane"
+    ],
+    "source": "synthetic:reviews/app_release.txt",
+    "summary": "Delivered automated store releases on time and communicated clearly throughout. Would hire again.",
+    "title": "Client review: Automated store releases",
+    "type": "review"
+  },
+  {
+    "capability": "camera_ml",
+    "date": "2025-03",
+    "evidence_id": "syn-mobile-014",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": "Inference ran under 120 ms on mid-range phones.",
+    "skills": [
+      "Flutter",
+      "on-device ML",
+      "TensorFlow Lite"
+    ],
+    "source": "synthetic:case_studies/camera_ml.md",
+    "summary": "Added on-device image classification with TensorFlow Lite for a plant-identification feature. Inference ran under 120 ms on mid-range phones.",
+    "title": "On-device plant identification",
+    "type": "case_study"
+  },
+  {
+    "capability": "push_notif",
+    "date": "2023-09",
+    "evidence_id": "syn-mobile-015",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "Firebase",
+      "push notifications",
+      "FCM"
+    ],
+    "source": "synthetic:proposals/p1.md",
+    "summary": "Your need for send targeted notifications to app users is something I have handled directly. I added segmented push notifications and in-app messaging using Firebase Cloud Messaging. Raised day-7 retention by 12 percent. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 1",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2023-02",
+    "evidence_id": "syn-mobile-016",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p2.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 2",
+    "type": "proposal"
+  },
+  {
+    "capability": "iap_subs",
+    "date": "2023-07",
+    "evidence_id": "syn-mobile-017",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "In-app purchases",
+      "StoreKit",
+      "subscriptions"
+    ],
+    "source": "synthetic:proposals/p3.md",
+    "summary": "Your need for in app purchases and a paywall is something I have handled directly. I implemented in-app subscriptions with receipt validation on both stores. Paywall conversion improved from 2 to 3.4 percent after A/B testing. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 3",
+    "type": "proposal"
+  },
+  {
+    "capability": "iap_subs",
+    "date": "2023-04",
+    "evidence_id": "syn-mobile-018",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "In-app purchases",
+      "StoreKit",
+      "subscriptions"
+    ],
+    "source": "synthetic:proposals/p4.md",
+    "summary": "Your need for add paid subscriptions inside the app is something I have handled directly. I implemented in-app subscriptions with receipt validation on both stores. Paywall conversion improved from 2 to 3.4 percent after A/B testing. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 4",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2023-03",
+    "evidence_id": "syn-mobile-019",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p5.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 5",
+    "type": "proposal"
+  },
+  {
+    "capability": "app_release",
+    "date": "2024-05",
+    "evidence_id": "syn-mobile-020",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [
+      "App Store",
+      "CI/CD",
+      "Fastlane"
+    ],
+    "source": "synthetic:proposals/p6.md",
+    "summary": "Your need for automate our release process is something I have handled directly. I automated builds, signing and store submissions with Fastlane and GitHub Actions. Release time dropped from half a day to twenty minutes. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 6",
+    "type": "proposal"
+  },
+  {
+    "capability": "iap_subs",
+    "date": "2024-03",
+    "evidence_id": "syn-mobile-021",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [
+      "In-app purchases",
+      "StoreKit",
+      "subscriptions"
+    ],
+    "source": "synthetic:proposals/p7.md",
+    "summary": "Your need for in app purchases and a paywall is something I have handled directly. I implemented in-app subscriptions with receipt validation on both stores. Paywall conversion improved from 2 to 3.4 percent after A/B testing. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 7",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2024-02",
+    "evidence_id": "syn-mobile-022",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p8.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 8",
+    "type": "proposal"
+  },
+  {
+    "capability": "app_release",
+    "date": "2024-05",
+    "evidence_id": "syn-mobile-023",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "won",
+    "skills": [
+      "App Store",
+      "CI/CD",
+      "Fastlane"
+    ],
+    "source": "synthetic:proposals/p9.md",
+    "summary": "Your need for fix our code signing problems is something I have handled directly. I automated builds, signing and store submissions with Fastlane and GitHub Actions. Release time dropped from half a day to twenty minutes. I would start there and share a short plan with two milestones.",
+    "title": "Past proposal 9",
+    "type": "proposal"
+  },
+  {
+    "capability": null,
+    "date": "2023-06",
+    "evidence_id": "syn-mobile-024",
+    "freelancer_id": "syn-mobile",
+    "origin": "synthetic",
+    "outcome": null,
+    "proposal_outcome": "ignored",
+    "skills": [],
+    "source": "synthetic:proposals/p10.md",
+    "summary": "Dear Sir, I am writing to apply for your esteemed job. I am a passionate and hardworking professional with vast experience in all technologies and I can guarantee excellent results. I am very excited to work with you and I will do my best. Please hire me and you will not be disappointed.",
+    "title": "Past proposal 10",
+    "type": "proposal"
+  }
+]
