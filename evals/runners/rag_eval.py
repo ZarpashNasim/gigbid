@@ -102,8 +102,12 @@ def load_groups(ds: dict, corpus_path=None, root=None, embedder=None, eligible_o
 def run(dataset_path: str, out: str, corpus_path: str | None = None, root: str | None = None, embedder=None,
         eligible_only: bool = True, reranker=None, grader=None,
         embedder_name: str | None = None, reranker_name: str | None = None,
-        grader_name: str | None = None, llm_name: str | None = None) -> dict:
+        grader_name: str | None = None, llm_name: str | None = None, limit: int | None = None) -> dict:
+    from rag.stages import LLM_FALLBACKS
+    LLM_FALLBACKS["reranker"] = LLM_FALLBACKS["grader"] = 0          # reset per run so meta counts only this run
     ds = json.loads(Path(dataset_path).read_text())
+    if limit:                                                       # quick validation runs (e.g. rate-limit probing)
+        ds = {**ds, "items": ds["items"][:limit]}
     groups = load_groups(ds, corpus_path, root, embedder, eligible_only)
     acc: dict[str, list] = {}
     for _persona, (corpus, items) in groups.items():
@@ -121,7 +125,7 @@ def run(dataset_path: str, out: str, corpus_path: str | None = None, root: str |
                     "eligible_only": eligible_only, "synthetic": ds.get("synthetic", False), "is_toy": ds.get("is_toy", False),
                     "generator_version": ds.get("generator_version"), "dataset_note": ds.get("note"),
                     "embedder": emb_name, "reranker": rr_name, "v8_grader": gr_name, "llm": llm_name,
-                    "stand_in_components": stand_ins},
+                    "llm_fallbacks": dict(LLM_FALLBACKS), "stand_in_components": stand_ins},
            "variants": {n: summarise(*a) for n, a in acc.items()}}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(json.dumps(res, indent=2))
@@ -142,6 +146,7 @@ if __name__ == "__main__":
     ap.add_argument("--reranker", default="lexical", help="lexical | llm")
     ap.add_argument("--grader", default="lexical", help="lexical | llm  (V8 support grader)")
     ap.add_argument("--profile", default=None, help="override active LLM profile in agent/config.yaml (e.g. groq)")
+    ap.add_argument("--limit", type=int, default=None, help="only score the first N items (quick validation)")
     a = ap.parse_args()
     load_env()
     llm, llm_name = make_llm(a.profile) if (a.reranker == "llm" or a.grader == "llm") else (None, None)
@@ -150,7 +155,7 @@ if __name__ == "__main__":
     grader, gr_name = make_grader(a.grader, llm)
     r = run(a.dataset, a.out, a.corpus, a.root, embedder=embedder, eligible_only=not a.mixed,
             reranker=reranker, grader=grader, embedder_name=emb_name, reranker_name=rr_name,
-            grader_name=gr_name, llm_name=llm_name)
+            grader_name=gr_name, llm_name=llm_name, limit=a.limit)
     print(markdown_table(r))
     m = r["meta"]
     print(f"\ndataset={m['dataset']} synthetic={m['synthetic']} toy={m['is_toy']}")

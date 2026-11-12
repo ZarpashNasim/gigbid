@@ -10,6 +10,14 @@ profiles:
       small: openai/gpt-oss-20b          # cheap, frequent nodes
       strong: openai/gpt-oss-120b        # writer / critic
     fallback_small: qwen/qwen3-8b
+  groq:                      # open-weight, hosted on Groq (fast; free tier). Key in .env: GROQ_API_KEY
+    provider: groq
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY
+    nodes:
+      small: openai/gpt-oss-20b
+      strong: openai/gpt-oss-120b
+    fallback_small: openai/gpt-oss-20b   # llama-3.x not accessible on this key; reuse the cheap gpt-oss
   paid:                      # optional
     provider: anthropic
     api_key_env: ANTHROPIC_API_KEY

@@ -28,6 +28,11 @@ class LexicalReranker:
         return len(q & d) / (len(q) ** 0.5 * len(d) ** 0.5 or 1)
 
 
+# Counts calls that degraded to the lexical stand-in (e.g. LLM rate-limited/errored). The eval runner records this
+# in result meta so a "real component" run is not silently contaminated by lexical fallbacks.
+LLM_FALLBACKS = {"reranker": 0, "grader": 0}
+
+
 class _RerankScores(BaseModel):
     scores: list[float]
 
@@ -58,6 +63,7 @@ class LLMSupportGrader:
                                             f"REQUIREMENT: {requirement}\nCANDIDATES:\n{listing}")
             return {items[i].id for i in res.supported if 0 <= i < len(items)}
         except Exception:                                            # noqa: BLE001  LLM unavailable -> caller falls back
+            LLM_FALLBACKS["grader"] += 1
             return None
 
 
@@ -91,6 +97,7 @@ class LLMReranker:
             sc += [self._lex.score(query, t) for t in texts[len(head):]]  # overflow tail -> lexical
             return sc
         except Exception:                                            # noqa: BLE001  LLM unavailable -> lexical fallback
+            LLM_FALLBACKS["reranker"] += 1
             return [self._lex.score(query, t) for t in texts]
 
     def score(self, query: str, text: str) -> float:                 # Reranker protocol (pointwise) compatibility
