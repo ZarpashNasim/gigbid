@@ -26,8 +26,12 @@ def build_app():
     persona = os.environ.get("PERSONA", "ai_engineer")
     mode = os.environ.get("MARKETPLACE_MODE", "gigsim")          # gigsim | synthetic (offline stand-in; NOT GigSim)
     default_portfolio = f"data/synthetic/personas/{persona}/portfolio.json" if mode == "synthetic" else "data/sample/portfolio.json"
-    # evidence index = verified work only; past proposals are claims and stay out of it
-    corpus = Corpus.from_json(os.environ.get("PORTFOLIO_PATH", default_portfolio), eligible_only=True)
+    # evidence index = verified work only; past proposals are claims and stay out of it.
+    # EMBEDDER (hash default | ollama[:model]) + OLLAMA_HOST are read by make_embedder.
+    from rag.components import make_embedder
+    embedder, _ = make_embedder(os.environ.get("EMBEDDER", "hash"))
+    corpus = Corpus.from_json(os.environ.get("PORTFOLIO_PATH", default_portfolio),
+                              eligible_only=True, **({"embedder": embedder} if embedder else {}))
     gigsim_url = os.environ.get("GIGSIM_BASE_URL") or os.environ.get("GIGSIM_URL", "http://localhost:8081")
     gigsim_token = os.environ.get("GIGSIM_API_TOKEN") or os.environ.get("GIGSIM_API_KEY", "")
     backend = (SyntheticBackend(os.environ.get("SYNTHETIC_DIR", "data/synthetic"), os.environ.get("SYNTHETIC_SPLIT", "dev"))

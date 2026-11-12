@@ -61,6 +61,10 @@ Factor: graph topology. Multi-agent = the full bid graph (risk rules + matcher +
 
 The multi-agent graph skips all 33 flagged jobs and the verifier strips the planted claim from every produced proposal, at ~6.3 LLM calls/job. The single-agent writer is **6× cheaper** (1 call) but ships a proposal on every scam job and keeps every unsupported claim. **When does a single agent win?** Only on cost, and only for already-clean jobs — it has no mechanism to detect scams, verify claims or enforce policy, so the multi-agent guardrails are what make the system safe to run unattended. Tests of these guardrails: `tests/unit/test_bid_graph.py`.
 
+### Holdout confirmation (run once)
+
+The same runner on the holdout split reproduces both effects (`ab_retrieval_decisions_holdout.json`, `ab_single_vs_multi_holdout.json`): Exp A keeps the V2 ≳ V3 > V0 ranking (V2 bid rate 0.087, coverage 0.279 vs V0 0.054 / 0.228); Exp B stays at unsafe 0.000 / unsupported 0.000 (multi-agent) vs 1.000 / 1.000 (single-agent), 34/184 jobs flagged. Holdout was run once for this confirmation and not tuned against.
+
 ## Real-data audit of the rule detector (NOT synthetic)
 
 The only non-circular check in this repo. A human (the project owner) labelled **60 real Upwork posts** (`upwork_50k_2024`: 30 rule-flagged + 30 unflagged, shown blind to the rule flags) as scam / injection / legit, then scored them against `agent/rules.py`.

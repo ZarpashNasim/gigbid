@@ -1,25 +1,64 @@
-# docker compose -f infra/docker-compose.yml up   (UNTESTED skeleton; web, gigsim, ollama services still to add)
+# Local full-stack bring-up:  docker compose -f infra/docker-compose.yml up --build
+# Skeleton for the assignment: services are wired, but it needs your .env (LLM keys) and a one-time
+# `ollama pull nomic-embed-text` (see docs/RUNBOOK.md). The worker tasks are stubs (worker/tasks.py).
+# GigSim here is the self-built simulator (gigsim/), not the instructor's service.
 services:
   postgres:
     image: postgres:16
     environment: {POSTGRES_PASSWORD: gigbid, POSTGRES_DB: gigbid}
     volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U postgres"], interval: 5s, retries: 10}
+
   redis:
     image: redis:7
+    healthcheck: {test: ["CMD", "redis-cli", "ping"], interval: 5s, retries: 10}
+
+  ollama:                                   # local embeddings (nomic-embed-text); torch-free, no API cost
+    image: ollama/ollama:0.12.4
+    volumes: [ollama:/root/.ollama]
+    ports: ["11434:11434"]
+
+  gigsim:                                   # self-built marketplace simulator (gigsim/README.md)
+    build: {context: .., dockerfile: infra/docker/Dockerfile.api}
+    command: python -m gigsim
+    env_file: ../.env
+    environment:
+      GIGSIM_PORT: "8081"
+    ports: ["8081:8081"]
+
   api:
     build: {context: .., dockerfile: infra/docker/Dockerfile.api}
     env_file: ../.env
     environment:
+      MARKETPLACE_MODE: gigsim
+      GIGSIM_BASE_URL: http://gigsim:8081
       CHECKPOINT_URL: postgresql://postgres:gigbid@postgres:5432/gigbid
       REDIS_URL: redis://redis:6379/0
-    depends_on: [postgres, redis]
+      EMBEDDER: ollama:nomic-embed-text
+      OLLAMA_HOST: http://ollama:11434
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+      gigsim: {condition: service_started}
+      ollama: {condition: service_started}
     ports: ["8000:8000"]
-  worker:
+
+  worker:                                   # celery beat+worker; tasks are stubs (NotImplementedError) for now
     build: {context: .., dockerfile: infra/docker/Dockerfile.api}
     command: celery -A worker.tasks worker -l info
     env_file: ../.env
     environment:
       CHECKPOINT_URL: postgresql://postgres:gigbid@postgres:5432/gigbid
       REDIS_URL: redis://redis:6379/0
-    depends_on: [postgres, redis]
-volumes: {pgdata: {}}
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+
+  web:
+    build: {context: ../apps/web, dockerfile: ../../infra/docker/Dockerfile.web}
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000     # browser-visible; the API is published on the host
+    depends_on: [api]
+    ports: ["3000:3000"]
+
+volumes: {pgdata: {}, ollama: {}}
