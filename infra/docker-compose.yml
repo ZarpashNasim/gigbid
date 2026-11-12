@@ -34,13 +34,11 @@ services:
       GIGSIM_BASE_URL: http://gigsim:8081
       CHECKPOINT_URL: postgresql://postgres:gigbid@postgres:5432/gigbid
       REDIS_URL: redis://redis:6379/0
-      EMBEDDER: ollama:nomic-embed-text
-      OLLAMA_HOST: http://ollama:11434
+      EMBEDDER: hash                    # boots offline; set `ollama:nomic-embed-text` AFTER the ollama pull for the real embedder
     depends_on:
       postgres: {condition: service_healthy}
       redis: {condition: service_healthy}
       gigsim: {condition: service_started}
-      ollama: {condition: service_started}
     ports: ["8000:8000"]
 
   worker:                                   # celery beat+worker; tasks are stubs (NotImplementedError) for now

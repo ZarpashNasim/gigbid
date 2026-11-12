@@ -1,0 +1,25 @@
+# Minimal, reliable demo: just GigSim + the API (sqlite checkpointer, hash embedder).
+# No Postgres/Redis/Ollama/web/worker, so it boots fast with the fewest moving parts.
+#   docker compose -f infra/docker-compose.demo.yml up --build
+# Then open http://localhost:8000/docs  (FastAPI). GigSim health: http://localhost:8081/health
+# Needs a .env with GROQ_API_KEY (and agent/config.yaml active_profile: groq) only to actually run a job;
+# the API boots and serves /docs without a key.
+services:
+  gigsim:
+    build: {context: .., dockerfile: infra/docker/Dockerfile.api}
+    command: python -m gigsim
+    env_file: ../.env
+    environment: {GIGSIM_PORT: "8081"}
+    ports: ["8081:8081"]
+
+  api:
+    build: {context: .., dockerfile: infra/docker/Dockerfile.api}
+    env_file: ../.env
+    environment:
+      MARKETPLACE_MODE: gigsim
+      GIGSIM_BASE_URL: http://gigsim:8081
+      CHECKPOINT_URL: sqlite:////app/gigbid_checkpoints.db
+      EMBEDDER: hash
+      API_TOKENS: '{"demo-token":"user1"}'
+    depends_on: [gigsim]
+    ports: ["8000:8000"]

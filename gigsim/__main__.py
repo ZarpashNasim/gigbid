@@ -29,8 +29,9 @@ def main() -> None:
     )
     if token == DEV_TOKEN:
         print("GigSim: using the built-in dev token; set GIGSIM_API_TOKEN for anything shared.")
-    print(f"GigSim (self-built stand-in) on http://localhost:{port}  split={os.environ.get('GIGSIM_SPLIT', 'dev')}")
-    uvicorn.run(app, host="127.0.0.1", port=port, log_level="info")
+    host = os.environ.get("GIGSIM_HOST", "0.0.0.0")   # 0.0.0.0 so Docker port mapping / the API container can reach it
+    print(f"GigSim (self-built stand-in) on http://{host}:{port}  split={os.environ.get('GIGSIM_SPLIT', 'dev')}")
+    uvicorn.run(app, host=host, port=port, log_level="info")
 
 
 if __name__ == "__main__":
