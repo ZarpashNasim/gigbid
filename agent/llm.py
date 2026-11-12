@@ -7,11 +7,15 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import time
 from typing import Protocol, TypeVar
 
 from pydantic import BaseModel
 
 from .config import model_for
+
+_RETRY_AFTER = re.compile(r"try again in ([\d.]+)\s*s", re.I)
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -28,10 +32,27 @@ class OpenAICompatLLM:
         self.cfg = cfg
         p = cfg["profiles"][cfg["active_profile"]]
         self.profile = p
-        self.client = OpenAI(base_url=p["base_url"], api_key=os.environ.get(p["api_key_env"], "none"))
+        # We pace 429s ourselves (see _create) because the SDK's own retry does not reliably wait out Groq's
+        # tokens-per-minute limit on the free tier; max_retries=0 avoids double-handling.
+        self.max_rl_waits = p.get("max_rate_limit_waits", 12)
+        self.client = OpenAI(base_url=p["base_url"], api_key=os.environ.get(p["api_key_env"], "none"),
+                             max_retries=0, timeout=p.get("timeout_s", 90))
+
+    def _create(self, **kw):
+        """chat.completions.create, but on a 429 sleep for the server-suggested interval and retry (free-tier TPM)."""
+        for _ in range(self.max_rl_waits):
+            try:
+                return self.client.chat.completions.create(**kw)
+            except Exception as e:                                   # noqa: BLE001
+                msg = str(e)
+                if "429" not in msg and "rate limit" not in msg.lower():
+                    raise
+                m = _RETRY_AFTER.search(msg)
+                time.sleep(min((float(m.group(1)) + 0.3) if m else 5.0, 65.0))
+        return self.client.chat.completions.create(**kw)            # last try: let the error propagate if still limited
 
     def _call(self, model: str, schema: type[T], system: str, user: str) -> tuple[T, int]:
-        resp = self.client.chat.completions.create(
+        resp = self._create(
             model=model,
             messages=[
                 {"role": "system", "content": system + "\nReply with JSON only matching this schema:\n"

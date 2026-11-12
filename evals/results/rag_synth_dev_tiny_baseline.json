@@ -1,0 +1,649 @@
+{
+  "meta": {
+    "dataset": "evals/datasets/synth_retrieval_tiny.json",
+    "split": "dev",
+    "n_items": 4,
+    "personas": [
+      "ai_engineer",
+      "data_engineer",
+      "fullstack",
+      "mobile"
+    ],
+    "eligible_only": true,
+    "synthetic": true,
+    "is_toy": false,
+    "generator_version": "1.0",
+    "dataset_note": "SYNTHETIC. Gold derived by rule from generator (see gigdata/synth.py docstring). Not real-world ground truth. TINY: 1 good_fit/persona, for a clean free-tier all-real probe.",
+    "embedder": "HashEmbedder(stand-in)",
+    "reranker": "LexicalReranker(stand-in)",
+    "v8_grader": "V8 grader (lexical)",
+    "llm": null,
+    "llm_fallbacks": {
+      "reranker": 0,
+      "grader": 0
+    },
+    "stand_in_components": [
+      "embedder",
+      "reranker",
+      "V8 grader"
+    ]
+  },
+  "variants": {
+    "V0 naive dense": {
+      "recall@5": 0.37797619047619047,
+      "coverage@5": 0.5833333333333333,
+      "mrr": 0.875,
+      "ndcg@10": 0.6535983549399731,
+      "n_scored": 4,
+      "p50_ms": 0.134900095872581,
+      "p95_ms": 2.2003999911248684,
+      "abstain_rate": null,
+      "n_abstain_items": 0,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.38095238095238093,
+          "coverage@5": 0.6666666666666666,
+          "mrr": 0.75,
+          "ndcg@10": 0.5767397788073395,
+          "n": 2
+        },
+        "4+ requirements": {
+          "recall@5": 0.375,
+          "coverage@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.7304569310726066,
+          "n": 2
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 1.0,
+          "ndcg@10": 0.7644796581690353,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-009"
+          ],
+          "coverage@5": 0.75
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg@10": 0.5547710914144913,
+          "returned": [
+            "syn-data_engineer-007",
+            "syn-data_engineer-002",
+            "syn-data_engineer-009",
+            "syn-data_engineer-011",
+            "syn-data_engineer-001"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.42857142857142855,
+          "mrr": 0.5,
+          "ndcg@10": 0.5987084662001877,
+          "returned": [
+            "syn-fullstack-003",
+            "syn-fullstack-009",
+            "syn-fullstack-008",
+            "syn-fullstack-007",
+            "syn-fullstack-004"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.375,
+          "mrr": 1.0,
+          "ndcg@10": 0.6964342039761778,
+          "returned": [
+            "syn-mobile-002",
+            "syn-mobile-004",
+            "syn-mobile-003",
+            "syn-mobile-012",
+            "syn-mobile-009"
+          ],
+          "coverage@5": 0.25
+        }
+      ],
+      "abstain_items": []
+    },
+    "V1 decompose (naive reqs)": {
+      "recall@5": 0.31547619047619047,
+      "coverage@5": 0.6666666666666666,
+      "mrr": 0.6666666666666666,
+      "ndcg@10": 0.5974207163652469,
+      "n_scored": 4,
+      "p50_ms": 0.1602000556886196,
+      "p95_ms": 0.22569997236132622,
+      "abstain_rate": null,
+      "n_abstain_items": 0,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.38095238095238093,
+          "coverage@5": 0.8333333333333333,
+          "mrr": 0.75,
+          "ndcg@10": 0.6340357234675188,
+          "n": 2
+        },
+        "4+ requirements": {
+          "recall@5": 0.25,
+          "coverage@5": 0.5,
+          "mrr": 0.5833333333333334,
+          "ndcg@10": 0.5608057092629748,
+          "n": 2
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.7942857986113382,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-001",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.3333333333333333,
+          "mrr": 0.5,
+          "ndcg@10": 0.5201261898372743,
+          "returned": [
+            "syn-data_engineer-014",
+            "syn-data_engineer-009",
+            "syn-data_engineer-013",
+            "syn-data_engineer-005",
+            "syn-data_engineer-011"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.42857142857142855,
+          "mrr": 1.0,
+          "ndcg@10": 0.7479452570977633,
+          "returned": [
+            "syn-fullstack-008",
+            "syn-fullstack-009",
+            "syn-fullstack-013",
+            "syn-fullstack-004",
+            "syn-fullstack-003"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.0,
+          "mrr": 0.16666666666666666,
+          "ndcg@10": 0.3273256199146115,
+          "returned": [
+            "syn-mobile-012",
+            "syn-mobile-009",
+            "syn-mobile-001",
+            "syn-mobile-010",
+            "syn-mobile-011"
+          ],
+          "coverage@5": 0.0
+        }
+      ],
+      "abstain_items": []
+    },
+    "V1 decompose (oracle reqs)": {
+      "recall@5": 0.3050595238095238,
+      "coverage@5": 0.6458333333333334,
+      "mrr": 0.8,
+      "ndcg@10": 0.6176720511988478,
+      "n_scored": 4,
+      "p50_ms": 0.08519995026290417,
+      "p95_ms": 0.11420005466789007,
+      "abstain_rate": null,
+      "n_abstain_items": 0,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.2976190476190476,
+          "coverage@5": 0.6666666666666666,
+          "mrr": 0.6,
+          "ndcg@10": 0.5521524885201433,
+          "n": 2
+        },
+        "4+ requirements": {
+          "recall@5": 0.3125,
+          "coverage@5": 0.625,
+          "mrr": 1.0,
+          "ndcg@10": 0.6831916138775523,
+          "n": 2
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.7942857986113382,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.16666666666666666,
+          "mrr": 0.2,
+          "ndcg@10": 0.41140458397539986,
+          "returned": [
+            "syn-data_engineer-011",
+            "syn-data_engineer-012",
+            "syn-data_engineer-013",
+            "syn-data_engineer-014",
+            "syn-data_engineer-005"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.42857142857142855,
+          "mrr": 1.0,
+          "ndcg@10": 0.6929003930648867,
+          "returned": [
+            "syn-fullstack-009",
+            "syn-fullstack-004",
+            "syn-fullstack-008",
+            "syn-fullstack-013",
+            "syn-fullstack-002"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.125,
+          "mrr": 1.0,
+          "ndcg@10": 0.5720974291437665,
+          "returned": [
+            "syn-mobile-002",
+            "syn-mobile-001",
+            "syn-mobile-009",
+            "syn-mobile-010",
+            "syn-mobile-012"
+          ],
+          "coverage@5": 0.25
+        }
+      ],
+      "abstain_items": []
+    },
+    "V2 hybrid": {
+      "recall@5": 0.44047619047619047,
+      "coverage@5": 0.7083333333333333,
+      "mrr": 1.0,
+      "ndcg@10": 0.6861224580375516,
+      "n_scored": 4,
+      "p50_ms": 0.1786999637261033,
+      "p95_ms": 0.27459999546408653,
+      "abstain_rate": null,
+      "n_abstain_items": 0,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.38095238095238093,
+          "coverage@5": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg@10": 0.6607601005829139,
+          "n": 2
+        },
+        "4+ requirements": {
+          "recall@5": 0.5,
+          "coverage@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.7114848154921893,
+          "n": 2
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.786114905072836,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg@10": 0.6720873970026144,
+          "returned": [
+            "syn-data_engineer-009",
+            "syn-data_engineer-007",
+            "syn-data_engineer-002",
+            "syn-data_engineer-013",
+            "syn-data_engineer-011"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.42857142857142855,
+          "mrr": 1.0,
+          "ndcg@10": 0.6494328041632134,
+          "returned": [
+            "syn-fullstack-009",
+            "syn-fullstack-007",
+            "syn-fullstack-002",
+            "syn-fullstack-008",
+            "syn-fullstack-014"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.6368547259115426,
+          "returned": [
+            "syn-mobile-004",
+            "syn-mobile-002",
+            "syn-mobile-003",
+            "syn-mobile-009",
+            "syn-mobile-007"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": []
+    },
+    "V3 hybrid+rerank": {
+      "recall@5": 0.40476190476190477,
+      "coverage@5": 0.625,
+      "mrr": 0.875,
+      "ndcg@10": 0.7017198189995525,
+      "n_scored": 4,
+      "p50_ms": 0.5112000508233905,
+      "p95_ms": 0.5815000040456653,
+      "abstain_rate": null,
+      "n_abstain_items": 0,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.30952380952380953,
+          "coverage@5": 0.5,
+          "mrr": 0.75,
+          "ndcg@10": 0.6394805213522117,
+          "n": 2
+        },
+        "4+ requirements": {
+          "recall@5": 0.5,
+          "coverage@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.7639591166468933,
+          "n": 2
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8112689688197959,
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.3333333333333333,
+          "mrr": 1.0,
+          "ndcg@10": 0.6212653646768636,
+          "returned": [
+            "syn-data_engineer-009",
+            "syn-data_engineer-002",
+            "syn-data_engineer-013",
+            "syn-data_engineer-006",
+            "syn-data_engineer-003"
+          ],
+          "coverage@5": 0.6666666666666666
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.2857142857142857,
+          "mrr": 0.5,
+          "ndcg@10": 0.6576956780275599,
+          "returned": [
+            "syn-fullstack-014",
+            "syn-fullstack-010",
+            "syn-fullstack-009",
+            "syn-fullstack-005",
+            "syn-fullstack-002"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.7166492644739907,
+          "returned": [
+            "syn-mobile-004",
+            "syn-mobile-003",
+            "syn-mobile-002",
+            "syn-mobile-009",
+            "syn-mobile-007"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": []
+    },
+    "V4 outcome-aware": {
+      "recall@5": 0.3214285714285714,
+      "coverage@5": 0.4583333333333333,
+      "mrr": 0.7916666666666666,
+      "ndcg@10": 0.6783540924693061,
+      "n_scored": 4,
+      "p50_ms": 1.2537000002339482,
+      "p95_ms": 1.7256999853998423,
+      "abstain_rate": null,
+      "n_abstain_items": 0,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.14285714285714285,
+          "coverage@5": 0.16666666666666666,
+          "mrr": 0.5833333333333334,
+          "ndcg@10": 0.5487452349953913,
+          "n": 2
+        },
+        "4+ requirements": {
+          "recall@5": 0.5,
+          "coverage@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.8079629499432208,
+          "n": 2
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8120483967124719,
+          "returned": [
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-007",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-011"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.0,
+          "mrr": 0.16666666666666666,
+          "ndcg@10": 0.3818137049388446,
+          "returned": [
+            "syn-data_engineer-013",
+            "syn-data_engineer-002",
+            "syn-data_engineer-012",
+            "syn-data_engineer-011",
+            "syn-data_engineer-004"
+          ],
+          "coverage@5": 0.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.2857142857142857,
+          "mrr": 1.0,
+          "ndcg@10": 0.715676765051938,
+          "returned": [
+            "syn-fullstack-010",
+            "syn-fullstack-009",
+            "syn-fullstack-014",
+            "syn-fullstack-005",
+            "syn-fullstack-002"
+          ],
+          "coverage@5": 0.3333333333333333
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.8038775031739698,
+          "returned": [
+            "syn-mobile-004",
+            "syn-mobile-003",
+            "syn-mobile-002",
+            "syn-mobile-007",
+            "syn-mobile-010"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": []
+    },
+    "V8 corrective": {
+      "recall@5": 0.25,
+      "coverage@5": 0.375,
+      "mrr": 0.5,
+      "ndcg@10": 0.323969811947069,
+      "n_scored": 4,
+      "p50_ms": 4.522999981418252,
+      "p95_ms": 10.139400023035705,
+      "abstain_rate": null,
+      "n_abstain_items": 0,
+      "by_group": {
+        "1-3 requirements": {
+          "recall@5": 0.0,
+          "coverage@5": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "n": 2
+        },
+        "4+ requirements": {
+          "recall@5": 0.5,
+          "coverage@5": 0.75,
+          "mrr": 1.0,
+          "ndcg@10": 0.647939623894138,
+          "n": 2
+        }
+      },
+      "per_item": [
+        {
+          "id": "syn-dev-ai_engineer-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.647939623894138,
+          "returned": [
+            "syn-ai_engineer-002",
+            "syn-ai_engineer-014",
+            "syn-ai_engineer-005",
+            "syn-ai_engineer-007"
+          ],
+          "coverage@5": 1.0
+        },
+        {
+          "id": "syn-dev-data_engineer-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "returned": [],
+          "coverage@5": 0.0
+        },
+        {
+          "id": "syn-dev-fullstack-001",
+          "group": "1-3 requirements",
+          "recall@5": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "returned": [],
+          "coverage@5": 0.0
+        },
+        {
+          "id": "syn-dev-mobile-001",
+          "group": "4+ requirements",
+          "recall@5": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.647939623894138,
+          "returned": [
+            "syn-mobile-002",
+            "syn-mobile-004",
+            "syn-mobile-003",
+            "syn-mobile-007"
+          ],
+          "coverage@5": 0.5
+        }
+      ],
+      "abstain_items": []
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "corpora": {
+    "ai_engineer": "personas/ai_engineer/portfolio.json",
+    "data_engineer": "personas/data_engineer/portfolio.json",
+    "fullstack": "personas/fullstack/portfolio.json",
+    "mobile": "personas/mobile/portfolio.json"
+  },
+  "corpora_root": "data/synthetic",
+  "generator_version": "1.0",
+  "is_toy": false,
+  "items": [
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-ai_engineer-002",
+        "syn-ai_engineer-003",
+        "syn-ai_engineer-004",
+        "syn-ai_engineer-005",
+        "syn-ai_engineer-006",
+        "syn-ai_engineer-007",
+        "syn-ai_engineer-008",
+        "syn-ai_engineer-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-ai_engineer-014"
+        ],
+        [
+          "syn-ai_engineer-002",
+          "syn-ai_engineer-003",
+          "syn-ai_engineer-004"
+        ],
+        [
+          "syn-ai_engineer-005",
+          "syn-ai_engineer-006"
+        ],
+        [
+          "syn-ai_engineer-007",
+          "syn-ai_engineer-008"
+        ]
+      ],
+      "id": "syn-dev-ai_engineer-001",
+      "n_requirements": 4,
+      "persona": "ai_engineer",
+      "requirements": [
+        "Our team at a non-profit is looking for a reliable freelancer",
+        "The work covers: speech to text with speaker separation",
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "evaluate prompts against a labelled dataset",
+        "document parsing into validated JSON",
+        "A short demo at the end is needed"
+      ],
+      "requirements_oracle": [
+        "speech to text with speaker separation",
+        "retrieval augmented generation over our knowledge base with a vector database",
+        "evaluate prompts against a labelled dataset",
+        "document parsing into validated JSON"
+      ],
+      "text": "Our team at a non-profit is looking for a reliable freelancer. The work covers: speech to text with speaker separation; retrieval augmented generation over our knowledge base with a vector database; evaluate prompts against a labelled dataset; document parsing into validated JSON. A short demo at the end is needed."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-data_engineer-005",
+        "syn-data_engineer-006",
+        "syn-data_engineer-007",
+        "syn-data_engineer-008",
+        "syn-data_engineer-009",
+        "syn-data_engineer-010"
+      ],
+      "gold_groups": [
+        [
+          "syn-data_engineer-005",
+          "syn-data_engineer-006"
+        ],
+        [
+          "syn-data_engineer-007",
+          "syn-data_engineer-008"
+        ],
+        [
+          "syn-data_engineer-009",
+          "syn-data_engineer-010"
+        ]
+      ],
+      "id": "syn-dev-data_engineer-001",
+      "n_requirements": 3,
+      "persona": "data_engineer",
+      "requirements": [
+        "A retail company is hiring a specialist for a short engagement",
+        "The work covers: schedule and monitor our nightly data jobs",
+        "distributed data processing for event logs",
+        "streaming pipeline into the warehouse",
+        "Please share a short plan before you start"
+      ],
+      "requirements_oracle": [
+        "schedule and monitor our nightly data jobs",
+        "distributed data processing for event logs",
+        "streaming pipeline into the warehouse"
+      ],
+      "text": "A retail company is hiring a specialist for a short engagement. The work covers: schedule and monitor our nightly data jobs; distributed data processing for event logs; streaming pipeline into the warehouse. Please share a short plan before you start."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-fullstack-007",
+        "syn-fullstack-008",
+        "syn-fullstack-009",
+        "syn-fullstack-010",
+        "syn-fullstack-011",
+        "syn-fullstack-012",
+        "syn-fullstack-013"
+      ],
+      "gold_groups": [
+        [
+          "syn-fullstack-007",
+          "syn-fullstack-008"
+        ],
+        [
+          "syn-fullstack-009",
+          "syn-fullstack-010"
+        ],
+        [
+          "syn-fullstack-011",
+          "syn-fullstack-012",
+          "syn-fullstack-013"
+        ]
+      ],
+      "id": "syn-dev-fullstack-001",
+      "n_requirements": 3,
+      "persona": "fullstack",
+      "requirements": [
+        "We are a fintech team and need help with a focused project",
+        "- backend API with a relational database",
+        "- user authentication and permissions",
+        "- stop breaking production when we deploy",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "backend API with a relational database",
+        "user authentication and permissions",
+        "stop breaking production when we deploy"
+      ],
+      "text": "We are a fintech team and need help with a focused project. Scope:\n- backend API with a relational database\n- user authentication and permissions\n- stop breaking production when we deploy\n Work should be delivered in two milestones."
+    },
+    {
+      "class": "good_fit",
+      "gold": [
+        "syn-mobile-002",
+        "syn-mobile-003",
+        "syn-mobile-004",
+        "syn-mobile-005",
+        "syn-mobile-006",
+        "syn-mobile-007",
+        "syn-mobile-008",
+        "syn-mobile-014"
+      ],
+      "gold_groups": [
+        [
+          "syn-mobile-014"
+        ],
+        [
+          "syn-mobile-002",
+          "syn-mobile-003",
+          "syn-mobile-004"
+        ],
+        [
+          "syn-mobile-005",
+          "syn-mobile-006"
+        ],
+        [
+          "syn-mobile-007",
+          "syn-mobile-008"
+        ]
+      ],
+      "id": "syn-dev-mobile-001",
+      "n_requirements": 4,
+      "persona": "mobile",
+      "requirements": [
+        "We run a healthcare clinic network and want to improve one part of our stack",
+        "Scope: scan and recognise items offline",
+        "cross platform app with offline support",
+        "re-engage users who stopped opening the app",
+        "track location in the background without draining the battery",
+        "Work should be delivered in two milestones"
+      ],
+      "requirements_oracle": [
+        "scan and recognise items offline",
+        "cross platform app with offline support",
+        "re-engage users who stopped opening the app",
+        "track location in the background without draining the battery"
+      ],
+      "text": "We run a healthcare clinic network and want to improve one part of our stack. Scope: scan and recognise items offline; cross platform app with offline support; re-engage users who stopped opening the app; track location in the background without draining the battery. Work should be delivered in two milestones."
+    }
+  ],
+  "note": "SYNTHETIC. Gold derived by rule from generator (see gigdata/synth.py docstring). Not real-world ground truth. TINY: 1 good_fit/persona, for a clean free-tier all-real probe.",
+  "seed": 7,
+  "split": "dev",
+  "synthetic": true
+}
