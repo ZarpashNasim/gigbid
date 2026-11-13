@@ -14,12 +14,6 @@
 # Note: the web is Next.js 16 — if its build fails on Render, the API's /docs is still a valid reviewer URL.
 # If Render rejects `runtime: docker`, change each `runtime: docker` line to `env: docker`.
 
-databases:
-  - name: gigbid-db
-    plan: free
-    databaseName: gigbid
-    user: gigbid
-
 services:
   - type: web
     name: gigbid-api
@@ -38,9 +32,8 @@ services:
       - key: API_TOKENS
         value: '{"demo-token":"user1"}'
       - key: CHECKPOINT_URL
-        fromDatabase:
-          name: gigbid-db
-          property: connectionString
+        value: sqlite:////app/gigbid_checkpoints.db   # ephemeral on Render (resets on redeploy) but avoids
+                                                      # Postgres connection issues; fine for a demo
       - key: GROQ_API_KEY
         sync: false            # secret: set in the Render dashboard, do not commit it
 
