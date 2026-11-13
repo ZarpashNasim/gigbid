@@ -1,6 +1,11 @@
 # Next.js web UI (apps/web). Build context is apps/web.
+# IMPORTANT: next.config.mjs bakes the /api/* -> $API_URL rewrite at BUILD time (npm run build), so API_URL
+# must be present during the build, not just at runtime. Render passes the service's env vars to the Docker
+# build as build args when declared with ARG below, so set API_URL on the gigbid-web service and rebuild.
 FROM node:20-slim AS build
 WORKDIR /app
+ARG API_URL=http://localhost:8000
+ENV API_URL=${API_URL}
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
@@ -9,6 +14,8 @@ RUN npm run build
 FROM node:20-slim
 WORKDIR /app
 ENV NODE_ENV=production
+ARG API_URL=http://localhost:8000
+ENV API_URL=${API_URL}
 COPY --from=build /app ./
 EXPOSE 3000
 # Shell form so Render's dynamic $PORT is honored; defaults to 3000 locally (docker-compose).

@@ -53,9 +53,13 @@ services:
       redis: {condition: service_healthy}
 
   web:
-    build: {context: ../apps/web, dockerfile: ../../infra/docker/Dockerfile.web}
+    build:
+      context: ../apps/web
+      dockerfile: ../../infra/docker/Dockerfile.web
+      args:
+        API_URL: http://api:8000     # baked at build time: next.config bakes the /api/* rewrite target
     environment:
-      API_URL: http://api:8000       # Next server proxies /api/* to the API service (server-side, internal network)
+      API_URL: http://api:8000       # also set at runtime (harmless)
     depends_on: [api]
     ports: ["3000:3000"]
 
