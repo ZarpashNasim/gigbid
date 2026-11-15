@@ -4,6 +4,14 @@ A multi-agent copilot that helps a freelancer triage marketplace jobs, assess ri
 evidence, price, and draft proposals and client replies — **stopping at a human approval gate before any
 external action**. Built for AI-4016 (Agentic AI, Assignment II).
 
+## Live demo
+
+- **Web UI:** https://gigbid-web-1aym.onrender.com/  (login token provided privately in the submission comment; then try job `syn-dev-ai_engineer-002`, or `syn-dev-ai_engineer-034` to see a scam skipped)
+- **API (health + Swagger):** https://gigbid-api-f0mo.onrender.com/docs
+- **Demo video:** https://drive.google.com/file/d/1mxSYZ8749E-FXlobFYA2ZzMVJRfBy0Ot/view?usp=sharing
+
+> Deployed on Render free tier in `MARKETPLACE_MODE=synthetic`; the first request may take ~50s to wake the service.
+
 > **Honesty banner.** Evaluation data is **synthetic** except the real-data rule audit (`docs/RESULTS.md`).
 > The marketplace backend is a **self-built GigSim simulator** (`gigsim/`), not the instructor's service,
 > which was not provided. Some components run as named stand-ins (strict-lexical grader, lexical reranker).
